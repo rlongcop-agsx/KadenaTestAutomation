@@ -1,5 +1,6 @@
 *** Settings ***
 Resource                                   ../variables/KadenaVariable.robot
+Resource                                   ../variables/KadenaURL.robot
 Resource                                   ../locators/LoginLocators.robot
 Resource                                   ../locators/HomeLocators.robot
 Resource                                   ../resources/Common.robot
