@@ -1,551 +1,551 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.12.7 on win32)" generated="2024-11-21T04:49:22.727289" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.12.7 on win32)" generated="2024-11-21T04:54:42.840715" rpa="false" schemaversion="5">
 <suite id="s1" name="Kadena Tests" source="D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\Kadena_Tests.robot">
-<test id="s1-t1" name="Test Scenario 1: Login with invalid password" line="14">
+<test id="s1-t1" name="Test Scenario 1: Login with invalid password" line="15">
 <kw name="Open Test Browser" owner="Common" type="SETUP">
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-11-21T04:49:22.992919" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-21T04:54:43.122019" elapsed="0.000000"/>
 </kw>
 <kw name="Empty Directory" owner="OperatingSystem">
-<msg time="2024-11-21T04:49:22.992919" level="INFO" html="true">Listing contents of directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
-<msg time="2024-11-21T04:49:22.992919" level="INFO" html="true">Emptied directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-21T04:54:43.122019" level="INFO" html="true">Listing contents of directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-21T04:54:43.122019" level="INFO" html="true">Emptied directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
 <arg>testsuites/screenshots</arg>
 <doc>Deletes all the content from the given directory.</doc>
-<status status="PASS" start="2024-11-21T04:49:22.992919" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-21T04:54:43.122019" elapsed="0.000000"/>
 </kw>
 <kw name="Set Screenshot Directory" owner="SeleniumLibrary">
 <arg>testsuites/screenshots</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" start="2024-11-21T04:49:22.992919" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-21T04:54:43.122019" elapsed="0.000000"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-21T04:49:22.992919" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000015AC51CD2B0&gt;</msg>
+<msg time="2024-11-21T04:54:43.122019" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000020C60B29640&gt;</msg>
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].${name}Options()</arg>
 <arg>sys, selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-21T04:49:22.992919" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-21T04:54:43.122019" elapsed="0.000000"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--incognito</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2024-11-21T04:49:22.992919" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-21T04:54:43.122019" elapsed="0.000000"/>
 </kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-11-21T04:49:22.992919" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-11-21T04:54:43.122019" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>${name}</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-11-21T04:49:22.992919" elapsed="10.455580"/>
+<status status="PASS" start="2024-11-21T04:54:43.122019" elapsed="8.610713"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-21T04:49:33.448499" elapsed="0.030015"/>
+<status status="PASS" start="2024-11-21T04:54:51.732732" elapsed="0.023713"/>
 </kw>
 <arg>${BROWSER_NAME}</arg>
-<status status="PASS" start="2024-11-21T04:49:22.992919" elapsed="10.485595"/>
+<status status="PASS" start="2024-11-21T04:54:43.122019" elapsed="8.634426"/>
 </kw>
 <kw name="GIVEN I go to Login page" owner="KadenaApp">
 <kw name="Navigate to login page" owner="Login">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-21T04:49:33.479511" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
+<msg time="2024-11-21T04:54:51.756445" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
 <arg>${LOGINPAGE_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-21T04:49:33.479511" elapsed="2.086605"/>
+<status status="PASS" start="2024-11-21T04:54:51.756445" elapsed="2.082583"/>
 </kw>
-<status status="PASS" start="2024-11-21T04:49:33.479511" elapsed="2.086605"/>
+<status status="PASS" start="2024-11-21T04:54:51.756445" elapsed="2.082583"/>
 </kw>
 <kw name="Verify Page Loaded" owner="Login">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${LOGIN_HEADER}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-21T04:49:35.567114" elapsed="0.026753"/>
+<status status="PASS" start="2024-11-21T04:54:53.840029" elapsed="0.024933"/>
 </kw>
-<status status="PASS" start="2024-11-21T04:49:35.566116" elapsed="0.027751"/>
+<status status="PASS" start="2024-11-21T04:54:53.840029" elapsed="0.024933"/>
 </kw>
-<status status="PASS" start="2024-11-21T04:49:33.478514" elapsed="2.115353"/>
+<status status="PASS" start="2024-11-21T04:54:51.756445" elapsed="2.108517"/>
 </kw>
 <kw name="AND I enter" owner="KadenaApp">
-<msg time="2024-11-21T04:49:35.594876" level="FAIL">Variable '${VALID_ORDERING_EMAIL}' not found.</msg>
+<msg time="2024-11-21T04:54:53.865958" level="FAIL">Variable '${VALID_ORDERING_EMAIL}' not found.</msg>
 <arg>${VALID_ORDERING_EMAIL}</arg>
 <arg>${EMAIL}</arg>
-<status status="FAIL" start="2024-11-21T04:49:35.594876" elapsed="0.000000">Variable '${VALID_ORDERING_EMAIL}' not found.</status>
+<status status="FAIL" start="2024-11-21T04:54:53.865958" elapsed="0.000000">Variable '${VALID_ORDERING_EMAIL}' not found.</status>
 </kw>
 <kw name="AND I enter" owner="KadenaApp">
 <arg>${INVALID_PASSWORD}</arg>
 <arg>${PASSWORD}</arg>
-<status status="NOT RUN" start="2024-11-21T04:49:35.595874" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-21T04:54:53.866955" elapsed="0.000000"/>
 </kw>
 <kw name="WHEN I click the button" owner="KadenaApp">
 <arg>${LOGIN_BUTTON}</arg>
-<status status="NOT RUN" start="2024-11-21T04:49:35.595874" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-21T04:54:53.866955" elapsed="0.000000"/>
 </kw>
 <kw name="THEN A message should display" owner="KadenaApp">
 <arg>${INVALID_ERROR_MESSAGE}</arg>
-<status status="NOT RUN" start="2024-11-21T04:49:35.595874" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-21T04:54:53.866955" elapsed="0.000000"/>
 </kw>
 <kw name="Close Test Browser" owner="Common" type="TEARDOWN">
 <kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-21T04:49:35.650113" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T04:54:53.912559" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-21T04:49:35.596874" elapsed="0.053239"/>
+<status status="PASS" start="2024-11-21T04:54:53.867954" elapsed="0.044605"/>
 </kw>
 <arg>10</arg>
 <arg>1s</arg>
 <arg>Capture Page Screenshot</arg>
 <doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2024-11-21T04:49:35.596874" elapsed="0.053239"/>
+<status status="PASS" start="2024-11-21T04:54:53.867954" elapsed="0.045599"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-11-21T04:49:35.650113" elapsed="6.212651"/>
+<status status="PASS" start="2024-11-21T04:54:53.913553" elapsed="6.189770"/>
 </kw>
-<status status="PASS" start="2024-11-21T04:49:35.595874" elapsed="6.266890"/>
+<status status="PASS" start="2024-11-21T04:54:53.866955" elapsed="6.236368"/>
 </kw>
 <doc>Login with invalid credentials</doc>
 <tag>M0MAIN-SIT-001</tag>
 <tag>TS-SIT-001</tag>
-<status status="FAIL" start="2024-11-21T04:49:22.992919" elapsed="18.869845">Variable '${VALID_ORDERING_EMAIL}' not found.</status>
+<status status="FAIL" start="2024-11-21T04:54:43.106397" elapsed="16.996926">Variable '${VALID_ORDERING_EMAIL}' not found.</status>
 </test>
-<test id="s1-t2" name="Test Scenario 2: Login with invalid email" line="24">
+<test id="s1-t2" name="Test Scenario 2: Login with invalid email" line="25">
 <kw name="Open Test Browser" owner="Common" type="SETUP">
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-11-21T04:49:41.862764" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-21T04:55:00.103323" elapsed="0.000000"/>
 </kw>
 <kw name="Empty Directory" owner="OperatingSystem">
-<msg time="2024-11-21T04:49:41.862764" level="INFO" html="true">Listing contents of directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
-<msg time="2024-11-21T04:49:41.862764" level="INFO" html="true">Emptied directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-21T04:55:00.103323" level="INFO" html="true">Listing contents of directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-21T04:55:00.103323" level="INFO" html="true">Emptied directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
 <arg>testsuites/screenshots</arg>
 <doc>Deletes all the content from the given directory.</doc>
-<status status="PASS" start="2024-11-21T04:49:41.862764" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-21T04:55:00.103323" elapsed="0.000000"/>
 </kw>
 <kw name="Set Screenshot Directory" owner="SeleniumLibrary">
 <arg>testsuites/screenshots</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" start="2024-11-21T04:49:41.862764" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-21T04:55:00.103323" elapsed="0.000000"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-21T04:49:41.862764" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000015AC51FA870&gt;</msg>
+<msg time="2024-11-21T04:55:00.103323" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000020C60B569F0&gt;</msg>
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].${name}Options()</arg>
 <arg>sys, selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-21T04:49:41.862764" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-21T04:55:00.103323" elapsed="0.000000"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--incognito</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2024-11-21T04:49:41.862764" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-21T04:55:00.103323" elapsed="0.000000"/>
 </kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-11-21T04:49:41.862764" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-11-21T04:55:00.103323" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>${name}</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-11-21T04:49:41.862764" elapsed="1.268096"/>
+<status status="PASS" start="2024-11-21T04:55:00.103323" elapsed="1.241652"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-21T04:49:43.130860" elapsed="0.032646"/>
+<status status="PASS" start="2024-11-21T04:55:01.344975" elapsed="0.025686"/>
 </kw>
 <arg>${BROWSER_NAME}</arg>
-<status status="PASS" start="2024-11-21T04:49:41.862764" elapsed="1.300742"/>
+<status status="PASS" start="2024-11-21T04:55:00.103323" elapsed="1.267338"/>
 </kw>
 <kw name="GIVEN I go to Login page" owner="KadenaApp">
 <kw name="Navigate to login page" owner="Login">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-21T04:49:43.165501" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
+<msg time="2024-11-21T04:55:01.371652" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
 <arg>${LOGINPAGE_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-21T04:49:43.165501" elapsed="2.034353"/>
+<status status="PASS" start="2024-11-21T04:55:01.370661" elapsed="2.522461"/>
 </kw>
-<status status="PASS" start="2024-11-21T04:49:43.165501" elapsed="2.034353"/>
+<status status="PASS" start="2024-11-21T04:55:01.370661" elapsed="2.523467"/>
 </kw>
 <kw name="Verify Page Loaded" owner="Login">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${LOGIN_HEADER}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-21T04:49:45.200849" elapsed="0.013181"/>
+<status status="PASS" start="2024-11-21T04:55:03.894128" elapsed="0.013525"/>
 </kw>
-<status status="PASS" start="2024-11-21T04:49:45.199854" elapsed="0.014176"/>
+<status status="PASS" start="2024-11-21T04:55:03.894128" elapsed="0.013525"/>
 </kw>
-<status status="PASS" start="2024-11-21T04:49:43.164503" elapsed="2.049527"/>
+<status status="PASS" start="2024-11-21T04:55:01.370661" elapsed="2.536992"/>
 </kw>
 <kw name="AND I enter" owner="KadenaApp">
 <kw name="Enter Credential" owner="Login">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-21T04:49:45.214030" level="INFO">Typing text 'invalid@email.com' into text field 'id=username'.</msg>
+<msg time="2024-11-21T04:55:03.909517" level="INFO">Typing text 'invalid@email.com' into text field 'id=username'.</msg>
 <arg>${locator}</arg>
 <arg>${credential}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T04:49:45.214030" elapsed="0.121019"/>
+<status status="PASS" start="2024-11-21T04:55:03.908519" elapsed="0.107712"/>
 </kw>
 <arg>${credential}</arg>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-21T04:49:45.214030" elapsed="0.122022"/>
+<status status="PASS" start="2024-11-21T04:55:03.908519" elapsed="0.107712"/>
 </kw>
 <arg>${INVALID_EMAIL}</arg>
 <arg>${EMAIL}</arg>
-<status status="PASS" start="2024-11-21T04:49:45.214030" elapsed="0.122022"/>
+<status status="PASS" start="2024-11-21T04:55:03.907653" elapsed="0.108578"/>
 </kw>
 <kw name="AND I enter" owner="KadenaApp">
 <kw name="Enter Credential" owner="Login">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-21T04:49:45.337050" level="INFO">Typing text 'password' into text field 'id=password'.</msg>
+<msg time="2024-11-21T04:55:04.017238" level="INFO">Typing text 'password' into text field 'id=password'.</msg>
 <arg>${locator}</arg>
 <arg>${credential}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T04:49:45.337050" elapsed="0.086233"/>
+<status status="PASS" start="2024-11-21T04:55:04.017238" elapsed="0.094793"/>
 </kw>
 <arg>${credential}</arg>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-21T04:49:45.336052" elapsed="0.087231"/>
+<status status="PASS" start="2024-11-21T04:55:04.017238" elapsed="0.094793"/>
 </kw>
 <arg>${VALID_PASSWORD}</arg>
 <arg>${PASSWORD}</arg>
-<status status="PASS" start="2024-11-21T04:49:45.336052" elapsed="0.087231"/>
+<status status="PASS" start="2024-11-21T04:55:04.017238" elapsed="0.094793"/>
 </kw>
 <kw name="WHEN I click the button" owner="KadenaApp">
 <kw name="Click submit button" owner="Login">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-21T04:49:45.424279" level="INFO">Clicking button 'name=login'.</msg>
+<msg time="2024-11-21T04:55:04.113023" level="INFO">Clicking button 'name=login'.</msg>
 <arg>${locator}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T04:49:45.424279" elapsed="1.148009"/>
+<status status="PASS" start="2024-11-21T04:55:04.113023" elapsed="1.174286"/>
 </kw>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-21T04:49:45.423283" elapsed="1.149005"/>
+<status status="PASS" start="2024-11-21T04:55:04.113023" elapsed="1.174286"/>
 </kw>
 <arg>${LOGIN_BUTTON}</arg>
-<status status="PASS" start="2024-11-21T04:49:45.423283" elapsed="1.149005"/>
+<status status="PASS" start="2024-11-21T04:55:04.112031" elapsed="1.175278"/>
 </kw>
 <kw name="THEN A message should display" owner="KadenaApp">
 <kw name="Validate Error Message" owner="Login">
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-11-21T04:49:46.587676" level="INFO">Current page contains text 'Invalid username or password.'.</msg>
+<msg time="2024-11-21T04:55:05.302717" level="INFO">Current page contains text 'Invalid username or password.'.</msg>
 <arg>${text}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-11-21T04:49:46.573293" elapsed="0.014383"/>
+<status status="PASS" start="2024-11-21T04:55:05.288308" elapsed="0.015414"/>
 </kw>
 <arg>${text}</arg>
-<status status="PASS" start="2024-11-21T04:49:46.573293" elapsed="0.014383"/>
+<status status="PASS" start="2024-11-21T04:55:05.288308" elapsed="0.015414"/>
 </kw>
 <arg>${INVALID_ERROR_MESSAGE}</arg>
-<status status="PASS" start="2024-11-21T04:49:46.572288" elapsed="0.015388"/>
+<status status="PASS" start="2024-11-21T04:55:05.288308" elapsed="0.015414"/>
 </kw>
 <kw name="Close Test Browser" owner="Common" type="TEARDOWN">
 <kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-21T04:49:46.650819" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T04:55:05.369199" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-21T04:49:46.588677" elapsed="0.062142"/>
+<status status="PASS" start="2024-11-21T04:55:05.304721" elapsed="0.064478"/>
 </kw>
 <arg>10</arg>
 <arg>1s</arg>
 <arg>Capture Page Screenshot</arg>
 <doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2024-11-21T04:49:46.588677" elapsed="0.062142"/>
+<status status="PASS" start="2024-11-21T04:55:05.303722" elapsed="0.065477"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-11-21T04:49:46.651821" elapsed="6.080421"/>
+<status status="PASS" start="2024-11-21T04:55:05.369199" elapsed="6.106102"/>
 </kw>
-<status status="PASS" start="2024-11-21T04:49:46.587676" elapsed="6.144566"/>
+<status status="PASS" start="2024-11-21T04:55:05.303722" elapsed="6.171579"/>
 </kw>
 <doc>Login with invalid credentials</doc>
 <tag>M0MAIN-SIT-001</tag>
 <tag>TS-SIT-001</tag>
-<status status="PASS" start="2024-11-21T04:49:41.862764" elapsed="10.869478"/>
+<status status="PASS" start="2024-11-21T04:55:00.103323" elapsed="11.371978"/>
 </test>
-<test id="s1-t3" name="Test Scenario 3: Login with access to Forecasting" line="34">
+<test id="s1-t3" name="Test Scenario 3: Login with access to Forecasting" line="35">
 <kw name="Open Test Browser" owner="Common" type="SETUP">
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-11-21T04:49:52.732242" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-21T04:55:11.475301" elapsed="0.000000"/>
 </kw>
 <kw name="Empty Directory" owner="OperatingSystem">
-<msg time="2024-11-21T04:49:52.732242" level="INFO" html="true">Listing contents of directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
-<msg time="2024-11-21T04:49:52.732242" level="INFO" html="true">Emptied directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-21T04:55:11.475301" level="INFO" html="true">Listing contents of directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-21T04:55:11.475301" level="INFO" html="true">Emptied directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
 <arg>testsuites/screenshots</arg>
 <doc>Deletes all the content from the given directory.</doc>
-<status status="PASS" start="2024-11-21T04:49:52.732242" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-21T04:55:11.475301" elapsed="0.000000"/>
 </kw>
 <kw name="Set Screenshot Directory" owner="SeleniumLibrary">
 <arg>testsuites/screenshots</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" start="2024-11-21T04:49:52.732242" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-21T04:55:11.475301" elapsed="0.000000"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-21T04:49:52.732242" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000015AC5235B80&gt;</msg>
+<msg time="2024-11-21T04:55:11.475301" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000020C60BB1CD0&gt;</msg>
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].${name}Options()</arg>
 <arg>sys, selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-21T04:49:52.732242" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-21T04:55:11.475301" elapsed="0.000000"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--incognito</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2024-11-21T04:49:52.732242" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-21T04:55:11.475301" elapsed="0.000000"/>
 </kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-11-21T04:49:52.732242" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-11-21T04:55:11.475301" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>${name}</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-11-21T04:49:52.732242" elapsed="1.290760"/>
+<status status="PASS" start="2024-11-21T04:55:11.475301" elapsed="1.332095"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-21T04:49:54.023002" elapsed="0.033290"/>
+<status status="PASS" start="2024-11-21T04:55:12.807396" elapsed="0.028128"/>
 </kw>
 <arg>${BROWSER_NAME}</arg>
-<status status="PASS" start="2024-11-21T04:49:52.732242" elapsed="1.325058"/>
+<status status="PASS" start="2024-11-21T04:55:11.475301" elapsed="1.360223"/>
 </kw>
 <kw name="GIVEN I go to Login page" owner="KadenaApp">
 <kw name="Navigate to login page" owner="Login">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-21T04:49:54.057300" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
+<msg time="2024-11-21T04:55:12.837526" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
 <arg>${LOGINPAGE_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-21T04:49:54.057300" elapsed="2.393041"/>
+<status status="PASS" start="2024-11-21T04:55:12.837526" elapsed="2.284653"/>
 </kw>
-<status status="PASS" start="2024-11-21T04:49:54.057300" elapsed="2.393041"/>
+<status status="PASS" start="2024-11-21T04:55:12.837526" elapsed="2.284653"/>
 </kw>
 <kw name="Verify Page Loaded" owner="Login">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${LOGIN_HEADER}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-21T04:49:56.451344" elapsed="0.012672"/>
+<status status="PASS" start="2024-11-21T04:55:15.123184" elapsed="0.011848"/>
 </kw>
-<status status="PASS" start="2024-11-21T04:49:56.451344" elapsed="0.012672"/>
+<status status="PASS" start="2024-11-21T04:55:15.122179" elapsed="0.013853"/>
 </kw>
-<status status="PASS" start="2024-11-21T04:49:54.057300" elapsed="2.406716"/>
+<status status="PASS" start="2024-11-21T04:55:12.836524" elapsed="2.299508"/>
 </kw>
 <kw name="AND I enter" owner="KadenaApp">
-<msg time="2024-11-21T04:49:56.464016" level="FAIL">Variable '${VALID_FORECASTING_EMAIL}' not found.</msg>
+<msg time="2024-11-21T04:55:15.136424" level="FAIL">Variable '${VALID_FORECASTING_EMAIL}' not found.</msg>
 <arg>${VALID_FORECASTING_EMAIL}</arg>
 <arg>${EMAIL}</arg>
-<status status="FAIL" start="2024-11-21T04:49:56.464016" elapsed="0.000000">Variable '${VALID_FORECASTING_EMAIL}' not found.</status>
+<status status="FAIL" start="2024-11-21T04:55:15.136424" elapsed="0.000000">Variable '${VALID_FORECASTING_EMAIL}' not found.</status>
 </kw>
 <kw name="AND I enter" owner="KadenaApp">
 <arg>${VALID_PASSWORD}</arg>
 <arg>${PASSWORD}</arg>
-<status status="NOT RUN" start="2024-11-21T04:49:56.464016" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-21T04:55:15.136424" elapsed="0.000000"/>
 </kw>
 <kw name="WHEN I click the button" owner="KadenaApp">
 <arg>${LOGIN_BUTTON}</arg>
-<status status="NOT RUN" start="2024-11-21T04:49:56.464016" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-21T04:55:15.136424" elapsed="0.000000"/>
 </kw>
 <kw name="AND A message should display" owner="KadenaApp">
 <arg>Welcome</arg>
-<status status="NOT RUN" start="2024-11-21T04:49:56.464016" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-21T04:55:15.136424" elapsed="0.000000"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <arg>${ORDERING_LINK}</arg>
-<status status="NOT RUN" start="2024-11-21T04:49:56.464016" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-21T04:55:15.136424" elapsed="0.000000"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <arg>${PROCUREMENT_LINK}</arg>
-<status status="NOT RUN" start="2024-11-21T04:49:56.466556" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-21T04:55:15.136424" elapsed="0.000000"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <arg>${VENDOR_LINK}</arg>
-<status status="NOT RUN" start="2024-11-21T04:49:56.466556" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-21T04:55:15.136424" elapsed="0.000000"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <arg>${QUALITY_LINK}</arg>
-<status status="NOT RUN" start="2024-11-21T04:49:56.466556" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-21T04:55:15.136424" elapsed="0.000000"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <arg>${INVENTORY_LINK}</arg>
-<status status="NOT RUN" start="2024-11-21T04:49:56.466556" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-21T04:55:15.136424" elapsed="0.000000"/>
 </kw>
 <kw name="AND The link should be clickable" owner="KadenaApp">
 <arg>${FORECAST_LINK}</arg>
-<status status="NOT RUN" start="2024-11-21T04:49:56.466556" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-21T04:55:15.136424" elapsed="0.000000"/>
 </kw>
 <kw name="THEN I should be redirected to the" owner="KadenaApp">
 <arg>Forecasting</arg>
-<status status="NOT RUN" start="2024-11-21T04:49:56.466556" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-21T04:55:15.136424" elapsed="0.000000"/>
 </kw>
 <kw name="Close Test Browser" owner="Common" type="TEARDOWN">
 <kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-21T04:49:56.524961" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T04:55:15.195930" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-21T04:49:56.467554" elapsed="0.057407"/>
+<status status="PASS" start="2024-11-21T04:55:15.139279" elapsed="0.056651"/>
 </kw>
 <arg>10</arg>
 <arg>1s</arg>
 <arg>Capture Page Screenshot</arg>
 <doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2024-11-21T04:49:56.467554" elapsed="0.057407"/>
+<status status="PASS" start="2024-11-21T04:55:15.139279" elapsed="0.056651"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-11-21T04:49:56.524961" elapsed="6.124387"/>
+<status status="PASS" start="2024-11-21T04:55:15.196926" elapsed="6.109587"/>
 </kw>
-<status status="PASS" start="2024-11-21T04:49:56.467554" elapsed="6.181794"/>
+<status status="PASS" start="2024-11-21T04:55:15.139279" elapsed="6.167234"/>
 </kw>
 <doc>Login with access to Forecasting</doc>
 <tag>fcast</tag>
 <tag>M0MAIN-SIT-002</tag>
 <tag>TS-SIT-001</tag>
-<status status="FAIL" start="2024-11-21T04:49:52.732242" elapsed="9.917106">Variable '${VALID_FORECASTING_EMAIL}' not found.</status>
+<status status="FAIL" start="2024-11-21T04:55:11.475301" elapsed="9.831212">Variable '${VALID_FORECASTING_EMAIL}' not found.</status>
 </test>
-<test id="s1-t4" name="Test Scenario 4: Login with access to Supply Planning modules" line="52">
+<test id="s1-t4" name="Test Scenario 4: Login with access to Supply Planning modules" line="53">
 <kw name="Open Test Browser" owner="Common" type="SETUP">
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-11-21T04:50:02.649348" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-21T04:55:21.306513" elapsed="0.000000"/>
 </kw>
 <kw name="Empty Directory" owner="OperatingSystem">
-<msg time="2024-11-21T04:50:02.649348" level="INFO" html="true">Listing contents of directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
-<msg time="2024-11-21T04:50:02.649348" level="INFO" html="true">Emptied directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-21T04:55:21.306513" level="INFO" html="true">Listing contents of directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-21T04:55:21.306513" level="INFO" html="true">Emptied directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
 <arg>testsuites/screenshots</arg>
 <doc>Deletes all the content from the given directory.</doc>
-<status status="PASS" start="2024-11-21T04:50:02.649348" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-21T04:55:21.306513" elapsed="0.000000"/>
 </kw>
 <kw name="Set Screenshot Directory" owner="SeleniumLibrary">
 <arg>testsuites/screenshots</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" start="2024-11-21T04:50:02.649348" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-21T04:55:21.306513" elapsed="0.000000"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-21T04:50:02.649348" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000015AC5235040&gt;</msg>
+<msg time="2024-11-21T04:55:21.306513" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000020C60BB1F70&gt;</msg>
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].${name}Options()</arg>
 <arg>sys, selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-21T04:50:02.649348" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-21T04:55:21.306513" elapsed="0.000000"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--incognito</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2024-11-21T04:50:02.649348" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-21T04:55:21.306513" elapsed="0.000000"/>
 </kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-11-21T04:50:02.649348" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-11-21T04:55:21.306513" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>${name}</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-11-21T04:50:02.649348" elapsed="1.263097"/>
+<status status="PASS" start="2024-11-21T04:55:21.306513" elapsed="1.245890"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-21T04:50:03.912445" elapsed="0.034161"/>
+<status status="PASS" start="2024-11-21T04:55:22.552403" elapsed="0.036207"/>
 </kw>
 <arg>${BROWSER_NAME}</arg>
-<status status="PASS" start="2024-11-21T04:50:02.649348" elapsed="1.297258"/>
+<status status="PASS" start="2024-11-21T04:55:21.306513" elapsed="1.282097"/>
 </kw>
 <kw name="GIVEN I go to Login page" owner="KadenaApp">
 <kw name="Navigate to login page" owner="Login">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-21T04:50:03.947605" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
+<msg time="2024-11-21T04:55:22.589642" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
 <arg>${LOGINPAGE_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-21T04:50:03.946606" elapsed="2.392702"/>
+<status status="PASS" start="2024-11-21T04:55:22.589642" elapsed="2.550802"/>
 </kw>
-<status status="PASS" start="2024-11-21T04:50:03.946606" elapsed="2.392702"/>
+<status status="PASS" start="2024-11-21T04:55:22.589642" elapsed="2.551804"/>
 </kw>
 <kw name="Verify Page Loaded" owner="Login">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${LOGIN_HEADER}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-21T04:50:06.340309" elapsed="0.013251"/>
+<status status="PASS" start="2024-11-21T04:55:25.141446" elapsed="0.013224"/>
 </kw>
-<status status="PASS" start="2024-11-21T04:50:06.339308" elapsed="0.014252"/>
+<status status="PASS" start="2024-11-21T04:55:25.141446" elapsed="0.013224"/>
 </kw>
-<status status="PASS" start="2024-11-21T04:50:03.946606" elapsed="2.407954"/>
+<status status="PASS" start="2024-11-21T04:55:22.589642" elapsed="2.565028"/>
 </kw>
 <kw name="AND I enter" owner="KadenaApp">
-<msg time="2024-11-21T04:50:06.354797" level="FAIL">Variable '${VALID_FORECASTING_EMAIL}' not found.</msg>
+<msg time="2024-11-21T04:55:25.154670" level="FAIL">Variable '${VALID_FORECASTING_EMAIL}' not found.</msg>
 <arg>${VALID_FORECASTING_EMAIL}</arg>
 <arg>${EMAIL}</arg>
-<status status="FAIL" start="2024-11-21T04:50:06.354797" elapsed="0.000000">Variable '${VALID_FORECASTING_EMAIL}' not found.</status>
+<status status="FAIL" start="2024-11-21T04:55:25.154670" elapsed="0.000000">Variable '${VALID_FORECASTING_EMAIL}' not found.</status>
 </kw>
 <kw name="AND I enter" owner="KadenaApp">
 <arg>${VALID_PASSWORD}</arg>
 <arg>${PASSWORD}</arg>
-<status status="NOT RUN" start="2024-11-21T04:50:06.354797" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-21T04:55:25.154670" elapsed="0.000000"/>
 </kw>
 <kw name="WHEN I click the button" owner="KadenaApp">
 <arg>${LOGIN_BUTTON}</arg>
-<status status="NOT RUN" start="2024-11-21T04:50:06.354797" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-21T04:55:25.154670" elapsed="0.000000"/>
 </kw>
 <kw name="AND A message should display" owner="KadenaApp">
 <arg>Welcome</arg>
-<status status="NOT RUN" start="2024-11-21T04:50:06.354797" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-21T04:55:25.154670" elapsed="0.000000"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <arg>${ORDERING_LINK}</arg>
-<status status="NOT RUN" start="2024-11-21T04:50:06.354797" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-21T04:55:25.154670" elapsed="0.000000"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <arg>${PROCUREMENT_LINK}</arg>
-<status status="NOT RUN" start="2024-11-21T04:50:06.354797" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-21T04:55:25.154670" elapsed="0.000000"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <arg>${VENDOR_LINK}</arg>
-<status status="NOT RUN" start="2024-11-21T04:50:06.354797" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-21T04:55:25.154670" elapsed="0.000000"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <arg>${QUALITY_LINK}</arg>
-<status status="NOT RUN" start="2024-11-21T04:50:06.354797" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-21T04:55:25.154670" elapsed="0.000000"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <arg>${INVENTORY_LINK}</arg>
-<status status="NOT RUN" start="2024-11-21T04:50:06.354797" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-21T04:55:25.157943" elapsed="0.000000"/>
 </kw>
 <kw name="AND The link should be clickable" owner="KadenaApp">
 <arg>${SUPPLY_LINK}</arg>
-<status status="NOT RUN" start="2024-11-21T04:50:06.354797" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-21T04:55:25.157943" elapsed="0.000000"/>
 </kw>
 <kw name="THEN I should be redirected to the" owner="KadenaApp">
 <arg>Supply Planning</arg>
-<status status="NOT RUN" start="2024-11-21T04:50:06.354797" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-21T04:55:25.157943" elapsed="0.000000"/>
 </kw>
 <kw name="Close Test Browser" owner="Common" type="TEARDOWN">
 <kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-21T04:50:06.415895" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T04:55:25.210909" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-21T04:50:06.357166" elapsed="0.058729"/>
+<status status="PASS" start="2024-11-21T04:55:25.158938" elapsed="0.052970"/>
 </kw>
 <arg>10</arg>
 <arg>1s</arg>
 <arg>Capture Page Screenshot</arg>
 <doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2024-11-21T04:50:06.357166" elapsed="0.058729"/>
+<status status="PASS" start="2024-11-21T04:55:25.158938" elapsed="0.052970"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-11-21T04:50:06.415895" elapsed="6.125648"/>
+<status status="PASS" start="2024-11-21T04:55:25.211908" elapsed="6.115642"/>
 </kw>
-<status status="PASS" start="2024-11-21T04:50:06.357166" elapsed="6.184377"/>
+<status status="PASS" start="2024-11-21T04:55:25.157943" elapsed="6.169607"/>
 </kw>
 <doc>Login with access to Supply Planning</doc>
 <tag>M0MAIN-SIT-002</tag>
 <tag>TS-SIT-001</tag>
-<status status="FAIL" start="2024-11-21T04:50:02.649348" elapsed="9.892195">Variable '${VALID_FORECASTING_EMAIL}' not found.</status>
+<status status="FAIL" start="2024-11-21T04:55:21.306513" elapsed="10.021037">Variable '${VALID_FORECASTING_EMAIL}' not found.</status>
 </test>
-<status status="FAIL" start="2024-11-21T04:49:22.727289" elapsed="49.814791"/>
+<status status="FAIL" start="2024-11-21T04:54:42.840715" elapsed="48.486835"/>
 </suite>
 <statistics>
 <total>
@@ -562,7 +562,7 @@
 </suite>
 </statistics>
 <errors>
-<msg time="2024-11-21T04:49:22.758542" level="ERROR">Error in file 'D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\Kadena_Tests.robot' on line 3: Resource file '..\variables\KadenaURL.robot' does not exist.</msg>
-<msg time="2024-11-21T04:49:22.992919" level="WARN">Imported resource file 'D:\a\KadenaTestAutomation\KadenaTestAutomation\resources\PO\Ordering.robot' is empty.</msg>
+<msg time="2024-11-21T04:54:42.871974" level="ERROR">Error in file 'D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\Kadena_Tests.robot' on line 3: Resource file '..\variables\KadenaCredentials.robot' does not exist.</msg>
+<msg time="2024-11-21T04:54:43.106397" level="WARN">Imported resource file 'D:\a\KadenaTestAutomation\KadenaTestAutomation\resources\PO\Ordering.robot' is empty.</msg>
 </errors>
 </robot>
