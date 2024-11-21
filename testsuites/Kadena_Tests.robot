@@ -1,6 +1,6 @@
 *** Settings ***
 Resource                                   ../variables/KadenaVariable.robot
-Resource                                   ../variables/KadenaURL.robot
+Resource                                   ../variables/KadenaCredentials.robot
 Resource                                   ../locators/LoginLocators.robot
 Resource                                   ../locators/HomeLocators.robot
 Resource                                   ../resources/Common.robot
@@ -9,6 +9,7 @@ Test Setup                                 Common.Open Test Browser            $
 Test Teardown                              Common.Close Test Browser
 
 # robot -d results -v BROWSER_NAME:Edge testsuites
+
 
 *** Test Cases ***
 Test Scenario 1: Login with invalid password
