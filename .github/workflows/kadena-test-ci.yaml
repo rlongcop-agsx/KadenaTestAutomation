@@ -31,7 +31,7 @@ jobs:
 
     - name: Run Robot Framework tests
       run: |
-        robot -d results testsuites/
+        robot -d results -v LOGINPAGE_URL:${{ secrets.LOGINPAGE_URL }} testsuites/Kadena_Tests.robot
 
     - name: Archive test results
       if: always()
