@@ -36,7 +36,6 @@ Test Scenario 3: Login with access to Forecasting
     [Documentation]                        Login with access to Forecasting
     [Tags]                                 TS-SIT-001
     ...                                    M0MAIN-SIT-002
-    ...                                    fcast
     GIVEN I go to Login page
     AND I enter                            ${VALID_FORECASTING_EMAIL}  ${EMAIL}
     AND I enter                            ${VALID_PASSWORD}           ${PASSWORD}
