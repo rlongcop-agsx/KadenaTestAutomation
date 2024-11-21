@@ -1,1459 +1,1578 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.0 on darwin)" generated="2024-11-21T11:17:44.725997" rpa="false" schemaversion="5">
-<suite id="s1" name="Testsuites" source="/Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites">
-<suite id="s1-s1" name="Kadena Tests" source="/Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/Kadena_Tests.robot">
-<test id="s1-s1-t1" name="Test Scenario 1: Login with invalid password" line="13">
+<robot generator="Robot 7.1.1 (Python 3.12.7 on win32)" generated="2024-11-21T05:01:45.026357" rpa="false" schemaversion="5">
+<suite id="s1" name="Kadena Tests" source="D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\Kadena_Tests.robot">
+<test id="s1-t1" name="Test Scenario 1: Login with invalid password" line="15">
 <kw name="Open Test Browser" owner="Common" type="SETUP">
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-11-21T11:17:44.816034" elapsed="0.000105"/>
+<status status="PASS" start="2024-11-21T05:01:45.370096" elapsed="0.000000"/>
 </kw>
 <kw name="Empty Directory" owner="OperatingSystem">
-<msg time="2024-11-21T11:17:44.816278" level="INFO" html="true">Listing contents of directory '&lt;a href="file:///Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/screenshots"&gt;/Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/screenshots&lt;/a&gt;'.</msg>
-<msg time="2024-11-21T11:17:44.816327" level="INFO" html="true">Emptied directory '&lt;a href="file:///Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/screenshots"&gt;/Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-21T05:01:45.370096" level="INFO" html="true">Listing contents of directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-21T05:01:45.370096" level="INFO" html="true">Emptied directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
 <arg>testsuites/screenshots</arg>
 <doc>Deletes all the content from the given directory.</doc>
-<status status="PASS" start="2024-11-21T11:17:44.816208" elapsed="0.000142"/>
+<status status="PASS" start="2024-11-21T05:01:45.370096" elapsed="0.000000"/>
 </kw>
 <kw name="Set Screenshot Directory" owner="SeleniumLibrary">
 <arg>testsuites/screenshots</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" start="2024-11-21T11:17:44.816407" elapsed="0.000081"/>
+<status status="PASS" start="2024-11-21T05:01:45.370096" elapsed="0.000000"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-21T11:17:44.816673" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x10301a660&gt;</msg>
+<msg time="2024-11-21T05:01:45.370096" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000028DC1CC6510&gt;</msg>
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].${name}Options()</arg>
 <arg>sys, selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-21T11:17:44.816541" elapsed="0.000144"/>
+<status status="PASS" start="2024-11-21T05:01:45.370096" elapsed="0.000000"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--incognito</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2024-11-21T11:17:44.816736" elapsed="0.000050"/>
+<status status="PASS" start="2024-11-21T05:01:45.370096" elapsed="0.000000"/>
 </kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:17:44.816907" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-11-21T05:01:45.370096" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>${name}</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-11-21T11:17:44.816835" elapsed="2.694418"/>
+<status status="PASS" start="2024-11-21T05:01:45.370096" elapsed="42.648546"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-21T11:17:47.511553" elapsed="0.376940"/>
+<status status="PASS" start="2024-11-21T05:02:28.018642" elapsed="0.030779"/>
 </kw>
 <arg>${BROWSER_NAME}</arg>
-<status status="PASS" start="2024-11-21T11:17:44.815618" elapsed="3.072992"/>
+<status status="PASS" start="2024-11-21T05:01:45.354467" elapsed="42.695648"/>
 </kw>
 <kw name="GIVEN I go to Login page" owner="KadenaApp">
 <kw name="Navigate to login page" owner="Login">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:17:47.889424" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
+<msg time="2024-11-21T05:02:28.051123" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
 <arg>${LOGINPAGE_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-21T11:17:47.889326" elapsed="1.715541"/>
+<status status="PASS" start="2024-11-21T05:02:28.050115" elapsed="3.068299"/>
 </kw>
-<status status="PASS" start="2024-11-21T11:17:47.889187" elapsed="1.716019"/>
+<status status="PASS" start="2024-11-21T05:02:28.050115" elapsed="3.069300"/>
 </kw>
 <kw name="Verify Page Loaded" owner="Login">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${LOGIN_HEADER}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-21T11:17:49.606249" elapsed="0.019188"/>
+<status status="PASS" start="2024-11-21T05:02:31.120422" elapsed="0.315247"/>
 </kw>
-<status status="PASS" start="2024-11-21T11:17:49.605651" elapsed="0.019921"/>
+<status status="PASS" start="2024-11-21T05:02:31.119415" elapsed="0.316254"/>
 </kw>
-<status status="PASS" start="2024-11-21T11:17:47.888936" elapsed="1.736699"/>
+<status status="PASS" start="2024-11-21T05:02:28.050115" elapsed="3.385554"/>
 </kw>
 <kw name="AND I enter" owner="KadenaApp">
 <kw name="Enter Credential" owner="Login">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:17:49.627672" level="INFO">Typing text 'test-order-receiver-3@example.com' into text field 'id=username'.</msg>
+<msg time="2024-11-21T05:02:31.435669" level="INFO">Typing text 'test-order-receiver-3@example.com' into text field 'id=username'.</msg>
 <arg>${locator}</arg>
 <arg>${credential}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T11:17:49.626663" elapsed="0.118239"/>
+<status status="PASS" start="2024-11-21T05:02:31.435669" elapsed="0.543364"/>
 </kw>
 <arg>${credential}</arg>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-21T11:17:49.626366" elapsed="0.118628"/>
+<status status="PASS" start="2024-11-21T05:02:31.435669" elapsed="0.543364"/>
 </kw>
 <arg>${VALID_ORDERING_EMAIL}</arg>
 <arg>${EMAIL}</arg>
-<status status="PASS" start="2024-11-21T11:17:49.625949" elapsed="0.119081"/>
+<status status="PASS" start="2024-11-21T05:02:31.435669" elapsed="0.543960"/>
 </kw>
 <kw name="AND I enter" owner="KadenaApp">
 <kw name="Enter Credential" owner="Login">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:17:49.745677" level="INFO">Typing text 'invalidpassword' into text field 'id=password'.</msg>
+<msg time="2024-11-21T05:02:31.980155" level="INFO">Typing text 'invalidpassword' into text field 'id=password'.</msg>
 <arg>${locator}</arg>
 <arg>${credential}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T11:17:49.745557" elapsed="0.036967"/>
+<status status="PASS" start="2024-11-21T05:02:31.980155" elapsed="0.147893"/>
 </kw>
 <arg>${credential}</arg>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-21T11:17:49.745404" elapsed="0.037189"/>
+<status status="PASS" start="2024-11-21T05:02:31.980155" elapsed="0.148205"/>
 </kw>
 <arg>${INVALID_PASSWORD}</arg>
 <arg>${PASSWORD}</arg>
-<status status="PASS" start="2024-11-21T11:17:49.745185" elapsed="0.037438"/>
+<status status="PASS" start="2024-11-21T05:02:31.979629" elapsed="0.148731"/>
 </kw>
 <kw name="WHEN I click the button" owner="KadenaApp">
 <kw name="Click submit button" owner="Login">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:17:49.783146" level="INFO">Clicking button 'name=login'.</msg>
+<msg time="2024-11-21T05:02:32.130277" level="INFO">Clicking button 'name=login'.</msg>
 <arg>${locator}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T11:17:49.783054" elapsed="1.567708"/>
+<status status="PASS" start="2024-11-21T05:02:32.130277" elapsed="1.664137"/>
 </kw>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-21T11:17:49.782944" elapsed="1.568245"/>
+<status status="PASS" start="2024-11-21T05:02:32.129819" elapsed="1.664595"/>
 </kw>
 <arg>${LOGIN_BUTTON}</arg>
-<status status="PASS" start="2024-11-21T11:17:49.782775" elapsed="1.568528"/>
+<status status="PASS" start="2024-11-21T05:02:32.128891" elapsed="1.665523"/>
 </kw>
 <kw name="THEN A message should display" owner="KadenaApp">
 <kw name="Validate Error Message" owner="Login">
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:17:51.370158" level="INFO">Current page contains text 'Invalid username or password.'.</msg>
+<msg time="2024-11-21T05:02:33.809091" level="INFO">Current page contains text 'Invalid username or password.'.</msg>
 <arg>${text}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-11-21T11:17:51.353117" elapsed="0.017147"/>
+<status status="PASS" start="2024-11-21T05:02:33.794980" elapsed="0.014111"/>
 </kw>
 <arg>${text}</arg>
-<status status="PASS" start="2024-11-21T11:17:51.352745" elapsed="0.017632"/>
+<status status="PASS" start="2024-11-21T05:02:33.794980" elapsed="0.014111"/>
 </kw>
 <arg>${INVALID_ERROR_MESSAGE}</arg>
-<status status="PASS" start="2024-11-21T11:17:51.352116" elapsed="0.018324"/>
+<status status="PASS" start="2024-11-21T05:02:33.794980" elapsed="0.014111"/>
 </kw>
 <kw name="Close Test Browser" owner="Common" type="TEARDOWN">
 <kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:17:51.723816" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T05:02:33.897506" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-21T11:17:51.371534" elapsed="0.352347"/>
+<status status="PASS" start="2024-11-21T05:02:33.812026" elapsed="0.086476"/>
 </kw>
 <arg>10</arg>
 <arg>1s</arg>
 <arg>Capture Page Screenshot</arg>
 <doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2024-11-21T11:17:51.371184" elapsed="0.352742"/>
+<status status="PASS" start="2024-11-21T05:02:33.812026" elapsed="0.086476"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-11-21T11:17:51.724018" elapsed="0.073070"/>
+<status status="PASS" start="2024-11-21T05:02:33.898502" elapsed="6.264953"/>
 </kw>
-<status status="PASS" start="2024-11-21T11:17:51.370831" elapsed="0.426330"/>
+<status status="PASS" start="2024-11-21T05:02:33.812026" elapsed="6.351429"/>
 </kw>
 <doc>Login with invalid credentials</doc>
 <tag>M0MAIN-SIT-001</tag>
 <tag>TS-SIT-001</tag>
-<status status="PASS" start="2024-11-21T11:17:44.815236" elapsed="6.981995"/>
+<status status="PASS" start="2024-11-21T05:01:45.354467" elapsed="54.808988"/>
 </test>
-<test id="s1-s1-t2" name="Test Scenario 2: Login with invalid email" line="23">
+<test id="s1-t2" name="Test Scenario 2: Login with invalid email" line="25">
 <kw name="Open Test Browser" owner="Common" type="SETUP">
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-11-21T11:17:51.797943" elapsed="0.000112"/>
+<status status="PASS" start="2024-11-21T05:02:40.163455" elapsed="0.000000"/>
 </kw>
 <kw name="Empty Directory" owner="OperatingSystem">
-<msg time="2024-11-21T11:17:51.798246" level="INFO" html="true">Listing contents of directory '&lt;a href="file:///Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/screenshots"&gt;/Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/screenshots&lt;/a&gt;'.</msg>
-<msg time="2024-11-21T11:17:51.798405" level="INFO" html="true">Emptied directory '&lt;a href="file:///Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/screenshots"&gt;/Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-21T05:02:40.163455" level="INFO" html="true">Listing contents of directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-21T05:02:40.163455" level="INFO" html="true">Emptied directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
 <arg>testsuites/screenshots</arg>
 <doc>Deletes all the content from the given directory.</doc>
-<status status="PASS" start="2024-11-21T11:17:51.798119" elapsed="0.000311"/>
+<status status="PASS" start="2024-11-21T05:02:40.163455" elapsed="0.000000"/>
 </kw>
 <kw name="Set Screenshot Directory" owner="SeleniumLibrary">
 <arg>testsuites/screenshots</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" start="2024-11-21T11:17:51.798490" elapsed="0.000089"/>
+<status status="PASS" start="2024-11-21T05:02:40.163455" elapsed="0.000000"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-21T11:17:51.798861" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x10301e5d0&gt;</msg>
+<msg time="2024-11-21T05:02:40.163455" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000028DC1D06FF0&gt;</msg>
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].${name}Options()</arg>
 <arg>sys, selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-21T11:17:51.798646" elapsed="0.000229"/>
+<status status="PASS" start="2024-11-21T05:02:40.163455" elapsed="0.000000"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--incognito</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2024-11-21T11:17:51.798935" elapsed="0.000059"/>
+<status status="PASS" start="2024-11-21T05:02:40.163455" elapsed="0.000000"/>
 </kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:17:51.799134" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-11-21T05:02:40.163455" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>${name}</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-11-21T11:17:51.799053" elapsed="0.718662"/>
+<status status="PASS" start="2024-11-21T05:02:40.163455" elapsed="1.260522"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-21T11:17:52.518049" elapsed="0.373141"/>
+<status status="PASS" start="2024-11-21T05:02:41.423977" elapsed="0.034975"/>
 </kw>
 <arg>${BROWSER_NAME}</arg>
-<status status="PASS" start="2024-11-21T11:17:51.797760" elapsed="1.093554"/>
+<status status="PASS" start="2024-11-21T05:02:40.163455" elapsed="1.295497"/>
 </kw>
 <kw name="GIVEN I go to Login page" owner="KadenaApp">
 <kw name="Navigate to login page" owner="Login">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:17:52.892280" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
+<msg time="2024-11-21T05:02:41.459952" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
 <arg>${LOGINPAGE_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-21T11:17:52.892159" elapsed="80.781676"/>
+<status status="PASS" start="2024-11-21T05:02:41.459952" elapsed="2.640586"/>
 </kw>
-<status status="PASS" start="2024-11-21T11:17:52.891993" elapsed="80.782298"/>
+<status status="PASS" start="2024-11-21T05:02:41.459952" elapsed="2.640586"/>
 </kw>
 <kw name="Verify Page Loaded" owner="Login">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${LOGIN_HEADER}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-21T11:19:13.675784" elapsed="0.016794"/>
+<status status="PASS" start="2024-11-21T05:02:44.100538" elapsed="0.013237"/>
 </kw>
-<status status="PASS" start="2024-11-21T11:19:13.675063" elapsed="0.017643"/>
+<status status="PASS" start="2024-11-21T05:02:44.100538" elapsed="0.013237"/>
 </kw>
-<status status="PASS" start="2024-11-21T11:17:52.891695" elapsed="80.801073"/>
+<status status="PASS" start="2024-11-21T05:02:41.458952" elapsed="2.654823"/>
 </kw>
 <kw name="AND I enter" owner="KadenaApp">
 <kw name="Enter Credential" owner="Login">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:13.694016" level="INFO">Typing text 'invalid@email.com' into text field 'id=username'.</msg>
+<msg time="2024-11-21T05:02:44.115330" level="INFO">Typing text 'invalid@email.com' into text field 'id=username'.</msg>
 <arg>${locator}</arg>
 <arg>${credential}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T11:19:13.693753" elapsed="0.115704"/>
+<status status="PASS" start="2024-11-21T05:02:44.114780" elapsed="0.081319"/>
 </kw>
 <arg>${credential}</arg>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-21T11:19:13.693445" elapsed="0.116089"/>
+<status status="PASS" start="2024-11-21T05:02:44.114780" elapsed="0.081319"/>
 </kw>
 <arg>${INVALID_EMAIL}</arg>
 <arg>${EMAIL}</arg>
-<status status="PASS" start="2024-11-21T11:19:13.693042" elapsed="0.116523"/>
+<status status="PASS" start="2024-11-21T05:02:44.113775" elapsed="0.082324"/>
 </kw>
 <kw name="AND I enter" owner="KadenaApp">
 <kw name="Enter Credential" owner="Login">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:13.810180" level="INFO">Typing text 'password' into text field 'id=password'.</msg>
+<msg time="2024-11-21T05:02:44.198095" level="INFO">Typing text 'password' into text field 'id=password'.</msg>
 <arg>${locator}</arg>
 <arg>${credential}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T11:19:13.810076" elapsed="0.037444"/>
+<status status="PASS" start="2024-11-21T05:02:44.197101" elapsed="0.077482"/>
 </kw>
 <arg>${credential}</arg>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-21T11:19:13.809936" elapsed="0.037652"/>
+<status status="PASS" start="2024-11-21T05:02:44.197101" elapsed="0.077482"/>
 </kw>
 <arg>${VALID_PASSWORD}</arg>
 <arg>${PASSWORD}</arg>
-<status status="PASS" start="2024-11-21T11:19:13.809722" elapsed="0.037895"/>
+<status status="PASS" start="2024-11-21T05:02:44.197101" elapsed="0.077482"/>
 </kw>
 <kw name="WHEN I click the button" owner="KadenaApp">
 <kw name="Click submit button" owner="Login">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:13.848160" level="INFO">Clicking button 'name=login'.</msg>
+<msg time="2024-11-21T05:02:44.276578" level="INFO">Clicking button 'name=login'.</msg>
 <arg>${locator}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T11:19:13.848052" elapsed="1.326993"/>
+<status status="PASS" start="2024-11-21T05:02:44.275581" elapsed="1.552366"/>
 </kw>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-21T11:19:13.847938" elapsed="1.327459"/>
+<status status="PASS" start="2024-11-21T05:02:44.275581" elapsed="1.553366"/>
 </kw>
 <arg>${LOGIN_BUTTON}</arg>
-<status status="PASS" start="2024-11-21T11:19:13.847759" elapsed="1.327740"/>
+<status status="PASS" start="2024-11-21T05:02:44.275581" elapsed="1.553366"/>
 </kw>
 <kw name="THEN A message should display" owner="KadenaApp">
 <kw name="Validate Error Message" owner="Login">
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:15.194413" level="INFO">Current page contains text 'Invalid username or password.'.</msg>
+<msg time="2024-11-21T05:02:45.844171" level="INFO">Current page contains text 'Invalid username or password.'.</msg>
 <arg>${text}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-11-21T11:19:15.177311" elapsed="0.017214"/>
+<status status="PASS" start="2024-11-21T05:02:45.829943" elapsed="0.014228"/>
 </kw>
 <arg>${text}</arg>
-<status status="PASS" start="2024-11-21T11:19:15.176611" elapsed="0.018025"/>
+<status status="PASS" start="2024-11-21T05:02:45.828947" elapsed="0.015224"/>
 </kw>
 <arg>${INVALID_ERROR_MESSAGE}</arg>
-<status status="PASS" start="2024-11-21T11:19:15.176053" elapsed="0.018644"/>
+<status status="PASS" start="2024-11-21T05:02:45.828947" elapsed="0.015224"/>
 </kw>
 <kw name="Close Test Browser" owner="Common" type="TEARDOWN">
 <kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:15.394538" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T05:02:45.895963" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-21T11:19:15.195748" elapsed="0.198852"/>
+<status status="PASS" start="2024-11-21T05:02:45.845173" elapsed="0.050790"/>
 </kw>
 <arg>10</arg>
 <arg>1s</arg>
 <arg>Capture Page Screenshot</arg>
 <doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2024-11-21T11:19:15.195433" elapsed="0.199213"/>
+<status status="PASS" start="2024-11-21T05:02:45.844171" elapsed="0.051792"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-11-21T11:19:15.394734" elapsed="0.076811"/>
+<status status="PASS" start="2024-11-21T05:02:45.895963" elapsed="6.119926"/>
 </kw>
-<status status="PASS" start="2024-11-21T11:19:15.195097" elapsed="0.276520"/>
+<status status="PASS" start="2024-11-21T05:02:45.844171" elapsed="6.171718"/>
 </kw>
 <doc>Login with invalid credentials</doc>
 <tag>M0MAIN-SIT-001</tag>
 <tag>TS-SIT-001</tag>
-<status status="PASS" start="2024-11-21T11:17:51.797440" elapsed="83.674240"/>
+<status status="PASS" start="2024-11-21T05:02:40.163455" elapsed="11.852434"/>
 </test>
-<test id="s1-s1-t3" name="Test Scenario 3: Login with access to Forecasting" line="33">
+<test id="s1-t3" name="Test Scenario 3: Login with access to Forecasting" line="35">
 <kw name="Open Test Browser" owner="Common" type="SETUP">
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-11-21T11:19:15.472296" elapsed="0.000105"/>
+<status status="PASS" start="2024-11-21T05:02:52.015889" elapsed="0.000000"/>
 </kw>
 <kw name="Empty Directory" owner="OperatingSystem">
-<msg time="2024-11-21T11:19:15.472569" level="INFO" html="true">Listing contents of directory '&lt;a href="file:///Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/screenshots"&gt;/Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/screenshots&lt;/a&gt;'.</msg>
-<msg time="2024-11-21T11:19:15.472977" level="INFO" html="true">Emptied directory '&lt;a href="file:///Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/screenshots"&gt;/Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-21T05:02:52.015889" level="INFO" html="true">Listing contents of directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-21T05:02:52.015889" level="INFO" html="true">Emptied directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
 <arg>testsuites/screenshots</arg>
 <doc>Deletes all the content from the given directory.</doc>
-<status status="PASS" start="2024-11-21T11:19:15.472460" elapsed="0.000557"/>
+<status status="PASS" start="2024-11-21T05:02:52.015889" elapsed="0.000000"/>
 </kw>
 <kw name="Set Screenshot Directory" owner="SeleniumLibrary">
 <arg>testsuites/screenshots</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" start="2024-11-21T11:19:15.473093" elapsed="0.000106"/>
+<status status="PASS" start="2024-11-21T05:02:52.015889" elapsed="0.000000"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-21T11:19:15.473438" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x10301ed50&gt;</msg>
+<msg time="2024-11-21T05:02:52.015889" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000028DC1CDAFC0&gt;</msg>
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].${name}Options()</arg>
 <arg>sys, selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-21T11:19:15.473264" elapsed="0.000189"/>
+<status status="PASS" start="2024-11-21T05:02:52.015889" elapsed="0.000000"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--incognito</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2024-11-21T11:19:15.473516" elapsed="0.000057"/>
+<status status="PASS" start="2024-11-21T05:02:52.015889" elapsed="0.000000"/>
 </kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:15.473709" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-11-21T05:02:52.015889" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>${name}</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-11-21T11:19:15.473631" elapsed="0.857790"/>
+<status status="PASS" start="2024-11-21T05:02:52.015889" elapsed="1.331625"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-21T11:19:16.331797" elapsed="0.371250"/>
+<status status="PASS" start="2024-11-21T05:02:53.347514" elapsed="0.034527"/>
 </kw>
 <arg>${BROWSER_NAME}</arg>
-<status status="PASS" start="2024-11-21T11:19:15.472134" elapsed="1.231038"/>
+<status status="PASS" start="2024-11-21T05:02:52.015889" elapsed="1.366152"/>
 </kw>
 <kw name="GIVEN I go to Login page" owner="KadenaApp">
 <kw name="Navigate to login page" owner="Login">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:16.704094" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
+<msg time="2024-11-21T05:02:53.383052" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
 <arg>${LOGINPAGE_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-21T11:19:16.703992" elapsed="0.583436"/>
+<status status="PASS" start="2024-11-21T05:02:53.383052" elapsed="2.583295"/>
 </kw>
-<status status="PASS" start="2024-11-21T11:19:16.703851" elapsed="0.583856"/>
+<status status="PASS" start="2024-11-21T05:02:53.383052" elapsed="2.583295"/>
 </kw>
 <kw name="Verify Page Loaded" owner="Login">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${LOGIN_HEADER}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-21T11:19:17.290927" elapsed="1.241029"/>
+<status status="PASS" start="2024-11-21T05:02:55.966347" elapsed="0.013128"/>
 </kw>
-<status status="PASS" start="2024-11-21T11:19:17.288196" elapsed="1.243964"/>
+<status status="PASS" start="2024-11-21T05:02:55.966347" elapsed="0.013128"/>
 </kw>
-<status status="PASS" start="2024-11-21T11:19:16.703593" elapsed="1.828664"/>
+<status status="PASS" start="2024-11-21T05:02:53.382041" elapsed="2.598435"/>
 </kw>
 <kw name="AND I enter" owner="KadenaApp">
 <kw name="Enter Credential" owner="Login">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:18.533954" level="INFO">Typing text 'econsista@agsx.net' into text field 'id=username'.</msg>
+<msg time="2024-11-21T05:02:55.980721" level="INFO">Typing text 'econsista@agsx.net' into text field 'id=username'.</msg>
 <arg>${locator}</arg>
 <arg>${credential}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T11:19:18.533607" elapsed="0.138635"/>
+<status status="PASS" start="2024-11-21T05:02:55.980721" elapsed="0.083288"/>
 </kw>
 <arg>${credential}</arg>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-21T11:19:18.533250" elapsed="0.139075"/>
+<status status="PASS" start="2024-11-21T05:02:55.980721" elapsed="0.083288"/>
 </kw>
 <arg>${VALID_FORECASTING_EMAIL}</arg>
 <arg>${EMAIL}</arg>
-<status status="PASS" start="2024-11-21T11:19:18.532696" elapsed="0.139668"/>
+<status status="PASS" start="2024-11-21T05:02:55.980721" elapsed="0.083288"/>
 </kw>
 <kw name="AND I enter" owner="KadenaApp">
 <kw name="Enter Credential" owner="Login">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:18.673042" level="INFO">Typing text 'password' into text field 'id=password'.</msg>
+<msg time="2024-11-21T05:02:56.065004" level="INFO">Typing text 'password' into text field 'id=password'.</msg>
 <arg>${locator}</arg>
 <arg>${credential}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T11:19:18.672928" elapsed="0.035356"/>
+<status status="PASS" start="2024-11-21T05:02:56.065004" elapsed="0.077097"/>
 </kw>
 <arg>${credential}</arg>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-21T11:19:18.672764" elapsed="0.035626"/>
+<status status="PASS" start="2024-11-21T05:02:56.065004" elapsed="0.077097"/>
 </kw>
 <arg>${VALID_PASSWORD}</arg>
 <arg>${PASSWORD}</arg>
-<status status="PASS" start="2024-11-21T11:19:18.672540" elapsed="0.035883"/>
+<status status="PASS" start="2024-11-21T05:02:56.064009" elapsed="0.078092"/>
 </kw>
 <kw name="WHEN I click the button" owner="KadenaApp">
 <kw name="Click submit button" owner="Login">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:18.708985" level="INFO">Clicking button 'name=login'.</msg>
+<msg time="2024-11-21T05:02:56.143243" level="INFO">Clicking button 'name=login'.</msg>
 <arg>${locator}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T11:19:18.708895" elapsed="5.084148"/>
+<status status="PASS" start="2024-11-21T05:02:56.143243" elapsed="2.617799"/>
 </kw>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-21T11:19:18.708770" elapsed="5.084371"/>
+<status status="PASS" start="2024-11-21T05:02:56.142101" elapsed="2.618941"/>
 </kw>
 <arg>${LOGIN_BUTTON}</arg>
-<status status="PASS" start="2024-11-21T11:19:18.708587" elapsed="5.084593"/>
+<status status="PASS" start="2024-11-21T05:02:56.142101" elapsed="2.618941"/>
 </kw>
 <kw name="AND A message should display" owner="KadenaApp">
 <kw name="Validate Error Message" owner="Login">
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:23.806171" level="INFO">Current page contains text 'Welcome'.</msg>
+<msg time="2024-11-21T05:02:58.794317" level="INFO">Current page contains text 'Welcome'.</msg>
 <arg>${text}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-11-21T11:19:23.794519" elapsed="0.011713"/>
+<status status="PASS" start="2024-11-21T05:02:58.763482" elapsed="0.030835"/>
 </kw>
 <arg>${text}</arg>
-<status status="PASS" start="2024-11-21T11:19:23.794296" elapsed="0.011996"/>
+<status status="PASS" start="2024-11-21T05:02:58.762042" elapsed="0.032275"/>
 </kw>
 <arg>Welcome</arg>
-<status status="PASS" start="2024-11-21T11:19:23.793808" elapsed="0.012513"/>
+<status status="PASS" start="2024-11-21T05:02:58.761042" elapsed="0.033275"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <kw name="Verify element if clickable" owner="Home">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:23.807059" level="INFO">Clicking element 'css=img[alt="Ordering"]'.</msg>
-<msg time="2024-11-21T11:19:25.083933" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-11-21T11:19:25.084105" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Ordering" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fordering-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (1559, 416). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.71)
+<msg time="2024-11-21T05:02:58.795320" level="INFO">Clicking element 'css=img[alt="Ordering"]'.</msg>
+<msg time="2024-11-21T05:02:59.939321" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T05:02:59.939321" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Ordering" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fordering-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (941, 302). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
 Stacktrace:
-0   chromedriver                        0x0000000103213ac4 cxxbridge1$str$ptr + 3651580
-1   chromedriver                        0x000000010320c314 cxxbridge1$str$ptr + 3620940
-2   chromedriver                        0x0000000102c744b4 cxxbridge1$string$len + 89224
-3   chromedriver                        0x0000000102cbe12c cxxbridge1$string$len + 391424
-4   chromedriver                        0x0000000102cbc77c cxxbridge1$string$len + 384848
-5   chromedriver                        0x0000000102cba6c0 cxxbridge1$string$len + 376468
-6   chromedriver                        0x0000000102cb9af8 cxxbridge1$string$len + 373452
-7   chromedriver                        0x0000000102caefbc cxxbridge1$string$len + 329616
-8   chromedriver                        0x0000000102caea10 cxxbridge1$string$len + 328164
-9   chromedriver                        0x0000000102cf20fc cxxbridge1$string$len + 604368
-10  chromedriver                        0x0000000102cad0b0 cxxbridge1$string$len + 321668
-11  chromedriver                        0x0000000102cadd00 cxxbridge1$string$len + 324820
-12  chromedriver                        0x00000001031dee08 cxxbridge1$str$ptr + 3435328
-13  chromedriver                        0x00000001031e2120 cxxbridge1$str$ptr + 3448408
-14  chromedriver                        0x00000001031c617c cxxbridge1$str$ptr + 3333812
-15  chromedriver                        0x00000001031e29e0 cxxbridge1$str$ptr + 3450648
-16  chromedriver                        0x00000001031b7988 cxxbridge1$str$ptr + 3274432
-17  chromedriver                        0x00000001031fd0f4 cxxbridge1$str$ptr + 3558956
-18  chromedriver                        0x00000001031fd270 cxxbridge1$str$ptr + 3559336
-19  chromedriver                        0x000000010320bf88 cxxbridge1$str$ptr + 3620032
-20  libsystem_pthread.dylib             0x000000019faab2e4 _pthread_start + 136
-21  libsystem_pthread.dylib             0x000000019faa60fc thread_start + 8
+	GetHandleVerifier [0x00007FF7248F2775+28773]
+	(No symbol) [0x00007FF72485AFB0]
+	(No symbol) [0x00007FF7246F552A]
+	(No symbol) [0x00007FF724750B5E]
+	(No symbol) [0x00007FF72474E5FC]
+	(No symbol) [0x00007FF72474B7E6]
+	(No symbol) [0x00007FF72474A741]
+	(No symbol) [0x00007FF72473C970]
+	(No symbol) [0x00007FF72476EF9A]
+	(No symbol) [0x00007FF72473C1C6]
+	(No symbol) [0x00007FF72476F1B0]
+	(No symbol) [0x00007FF72478F1A4]
+	(No symbol) [0x00007FF72476ED43]
+	(No symbol) [0x00007FF72473A548]
+	(No symbol) [0x00007FF72473B6B1]
+	GetHandleVerifier [0x00007FF724C1F45D+3358029]
+	GetHandleVerifier [0x00007FF724C3430D+3443709]
+	GetHandleVerifier [0x00007FF724C283FD+3394797]
+	GetHandleVerifier [0x00007FF7249B929B+842635]
+	(No symbol) [0x00007FF72486654F]
+	(No symbol) [0x00007FF724861FA4]
+	(No symbol) [0x00007FF72486213D]
+	(No symbol) [0x00007FF724851629]
+	BaseThreadInitThunk [0x00007FFE21634CB0+16]
+	RtlUserThreadStart [0x00007FFE21D7EDCB+43]
 </msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-11-21T11:19:23.806964" elapsed="1.282005">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Ordering" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fordering-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (1559, 416). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.71)
+<status status="FAIL" start="2024-11-21T05:02:58.795320" elapsed="1.159636">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Ordering" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fordering-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (941, 302). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
 Stacktrace:
-0   chromedriver                        0x0000000103213ac4 cxxbridge1$str$ptr + 3651580
-1   chromedriver                        0x000000010320c314 cxxbridge1$str$ptr + 3620940
-2   chromedriver                        0x0000000102c744b4 cxxbridge1$string$len + 89224
-3   chromedriver                        0x0000000102cbe12c cxxbridge1$string$len + 391424
-4   chromedriver                        0x0000000102cbc77c cxxbridge1$string$len + 384848
-    [ Message content over the limit has been removed. ]
-...er                        0x0000000102cadd00 cxxbridge1$string$len + 324820
-12  chromedriver                        0x00000001031dee08 cxxbridge1$str$ptr + 3435328
-13  chromedriver                        0x00000001031e2120 cxxbridge1$str$ptr + 3448408
-14  chromedriver                        0x00000001031c617c cxxbridge1$str$ptr + 3333812
-15  chromedriver                        0x00000001031e29e0 cxxbridge1$str$ptr + 3450648
-16  chromedriver                        0x00000001031b7988 cxxbridge1$str$ptr + 3274432
-17  chromedriver                        0x00000001031fd0f4 cxxbridge1$str$ptr + 3558956
-18  chromedriver                        0x00000001031fd270 cxxbridge1$str$ptr + 3559336
-19  chromedriver                        0x000000010320bf88 cxxbridge1$str$ptr + 3620032
-20  libsystem_pthread.dylib             0x000000019faab2e4 _pthread_start + 136
-21  libsystem_pthread.dylib             0x000000019faa60fc thread_start + 8</status>
+	GetHandleVerifier [0x00007FF7248F2775+28773]
+	(No symbol) [0x00007FF72485AFB0]
+	(No symbol) [0x00007FF7246F552A]
+	(No symbol) [0x00007FF724750B5E]
+	(No symbol) [0x00007FF72474E5FC]
+	(No symbol) [0x00007FF72474B7E6]
+	(No symbol) [0x00007FF72474A741]
+	(No symbol) [0x00007FF72473C970]
+	(No symbol) [0x00007FF72476EF9A]
+	(No symbol) [0x00007FF72473C1C6]
+	(No symbol) [0x00007FF72476F1B0]
+	(No symbol) [0x00007FF72478F1A4]
+	(No symbol) [0x00007FF72476ED43]
+	(No symbol) [0x00007FF72473A548]
+	(No symbol) [0x00007FF72473B6B1]
+	GetHandleVerifier [0x00007FF724C1F45D+3358029]
+	GetHandleVerifier [0x00007FF724C3430D+3443709]
+	GetHandleVerifier [0x00007FF724C283FD+3394797]
+	GetHandleVerifier [0x00007FF7249B929B+842635]
+	(No symbol) [0x00007FF72486654F]
+	(No symbol) [0x00007FF724861FA4]
+	(No symbol) [0x00007FF72486213D]
+	(No symbol) [0x00007FF724851629]
+	BaseThreadInitThunk [0x00007FFE21634CB0+16]
+	RtlUserThreadStart [0x00007FFE21D7EDCB+43]
+</status>
 </kw>
-<msg time="2024-11-21T11:19:25.089064" level="INFO">${actual_status} = False</msg>
+<msg time="2024-11-21T05:02:59.954956" level="INFO">${actual_status} = False</msg>
 <var>${actual_status}</var>
 <arg>Click Element</arg>
 <arg>${locator}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-11-21T11:19:23.806846" elapsed="1.282232"/>
+<status status="PASS" start="2024-11-21T05:02:58.795320" elapsed="1.159636"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${actual_status}</arg>
 <arg>${expected_status}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-21T11:19:25.089168" elapsed="0.000120"/>
+<status status="PASS" start="2024-11-21T05:02:59.954956" elapsed="0.000000"/>
 </kw>
 <arg>${locator}</arg>
 <arg>${False}</arg>
-<status status="PASS" start="2024-11-21T11:19:23.806665" elapsed="1.282659"/>
+<status status="PASS" start="2024-11-21T05:02:58.795320" elapsed="1.159636"/>
 </kw>
 <arg>${ORDERING_LINK}</arg>
-<status status="PASS" start="2024-11-21T11:19:23.806471" elapsed="1.282880"/>
+<status status="PASS" start="2024-11-21T05:02:58.794317" elapsed="1.160639"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <kw name="Verify element if clickable" owner="Home">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:25.089904" level="INFO">Clicking element 'css=img[alt="Procurement"]'.</msg>
-<msg time="2024-11-21T11:19:26.387862" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-2.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-11-21T11:19:26.387991" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Procurement" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (1447, 636). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.71)
+<msg time="2024-11-21T05:02:59.954956" level="INFO">Clicking element 'css=img[alt="Procurement"]'.</msg>
+<msg time="2024-11-21T05:03:01.048837" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-2.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T05:03:01.048837" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Procurement" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (853, 494). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
 Stacktrace:
-0   chromedriver                        0x0000000103213ac4 cxxbridge1$str$ptr + 3651580
-1   chromedriver                        0x000000010320c314 cxxbridge1$str$ptr + 3620940
-2   chromedriver                        0x0000000102c744b4 cxxbridge1$string$len + 89224
-3   chromedriver                        0x0000000102cbe12c cxxbridge1$string$len + 391424
-4   chromedriver                        0x0000000102cbc77c cxxbridge1$string$len + 384848
-5   chromedriver                        0x0000000102cba6c0 cxxbridge1$string$len + 376468
-6   chromedriver                        0x0000000102cb9af8 cxxbridge1$string$len + 373452
-7   chromedriver                        0x0000000102caefbc cxxbridge1$string$len + 329616
-8   chromedriver                        0x0000000102caea10 cxxbridge1$string$len + 328164
-9   chromedriver                        0x0000000102cf20fc cxxbridge1$string$len + 604368
-10  chromedriver                        0x0000000102cad0b0 cxxbridge1$string$len + 321668
-11  chromedriver                        0x0000000102cadd00 cxxbridge1$string$len + 324820
-12  chromedriver                        0x00000001031dee08 cxxbridge1$str$ptr + 3435328
-13  chromedriver                        0x00000001031e2120 cxxbridge1$str$ptr + 3448408
-14  chromedriver                        0x00000001031c617c cxxbridge1$str$ptr + 3333812
-15  chromedriver                        0x00000001031e29e0 cxxbridge1$str$ptr + 3450648
-16  chromedriver                        0x00000001031b7988 cxxbridge1$str$ptr + 3274432
-17  chromedriver                        0x00000001031fd0f4 cxxbridge1$str$ptr + 3558956
-18  chromedriver                        0x00000001031fd270 cxxbridge1$str$ptr + 3559336
-19  chromedriver                        0x000000010320bf88 cxxbridge1$str$ptr + 3620032
-20  libsystem_pthread.dylib             0x000000019faab2e4 _pthread_start + 136
-21  libsystem_pthread.dylib             0x000000019faa60fc thread_start + 8
+	GetHandleVerifier [0x00007FF7248F2775+28773]
+	(No symbol) [0x00007FF72485AFB0]
+	(No symbol) [0x00007FF7246F552A]
+	(No symbol) [0x00007FF724750B5E]
+	(No symbol) [0x00007FF72474E5FC]
+	(No symbol) [0x00007FF72474B7E6]
+	(No symbol) [0x00007FF72474A741]
+	(No symbol) [0x00007FF72473C970]
+	(No symbol) [0x00007FF72476EF9A]
+	(No symbol) [0x00007FF72473C1C6]
+	(No symbol) [0x00007FF72476F1B0]
+	(No symbol) [0x00007FF72478F1A4]
+	(No symbol) [0x00007FF72476ED43]
+	(No symbol) [0x00007FF72473A548]
+	(No symbol) [0x00007FF72473B6B1]
+	GetHandleVerifier [0x00007FF724C1F45D+3358029]
+	GetHandleVerifier [0x00007FF724C3430D+3443709]
+	GetHandleVerifier [0x00007FF724C283FD+3394797]
+	GetHandleVerifier [0x00007FF7249B929B+842635]
+	(No symbol) [0x00007FF72486654F]
+	(No symbol) [0x00007FF724861FA4]
+	(No symbol) [0x00007FF72486213D]
+	(No symbol) [0x00007FF724851629]
+	BaseThreadInitThunk [0x00007FFE21634CB0+16]
+	RtlUserThreadStart [0x00007FFE21D7EDCB+43]
 </msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-11-21T11:19:25.089822" elapsed="1.298785">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Procurement" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (1447, 636). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.71)
+<status status="FAIL" start="2024-11-21T05:02:59.954956" elapsed="1.093881">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Procurement" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (853, 494). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
 Stacktrace:
-0   chromedriver                        0x0000000103213ac4 cxxbridge1$str$ptr + 3651580
-1   chromedriver                        0x000000010320c314 cxxbridge1$str$ptr + 3620940
-2   chromedriver                        0x0000000102c744b4 cxxbridge1$string$len + 89224
-3   chromedriver                        0x0000000102cbe12c cxxbridge1$string$len + 391424
-4   chromedriver                        0x0000000102cbc77c cxxbridge1$strin...
-    [ Message content over the limit has been removed. ]
-...er                        0x0000000102cadd00 cxxbridge1$string$len + 324820
-12  chromedriver                        0x00000001031dee08 cxxbridge1$str$ptr + 3435328
-13  chromedriver                        0x00000001031e2120 cxxbridge1$str$ptr + 3448408
-14  chromedriver                        0x00000001031c617c cxxbridge1$str$ptr + 3333812
-15  chromedriver                        0x00000001031e29e0 cxxbridge1$str$ptr + 3450648
-16  chromedriver                        0x00000001031b7988 cxxbridge1$str$ptr + 3274432
-17  chromedriver                        0x00000001031fd0f4 cxxbridge1$str$ptr + 3558956
-18  chromedriver                        0x00000001031fd270 cxxbridge1$str$ptr + 3559336
-19  chromedriver                        0x000000010320bf88 cxxbridge1$str$ptr + 3620032
-20  libsystem_pthread.dylib             0x000000019faab2e4 _pthread_start + 136
-21  libsystem_pthread.dylib             0x000000019faa60fc thread_start + 8</status>
+	GetHandleVerifier [0x00007FF7248F2775+28773]
+	(No symbol) [0x00007FF72485AFB0]
+	(No symbol) [0x00007FF7246F552A]
+	(No symbol) [0x00007FF724750B5E]
+	(No symbol) [0x00007FF72474E5FC]
+	(No symbol) [0x00007FF72474B7E6]
+	(No symbol) [0x00007FF72474A741]
+	(No symbol) [0x00007FF72473C970]
+	(No symbol) [0x00007FF72476EF9A]
+	(No symbol) [0x00007FF72473C1C6]
+	(No symbol) [0x00007FF72476F1B0]
+	(No symbol) [0x00007FF72478F1A4]
+	(No symbol) [0x00007FF72476ED43]
+	(No symbol) [0x00007FF72473A548]
+	(No symbol) [0x00007FF72473B6B1]
+	GetHandleVerifier [0x00007FF724C1F45D+3358029]
+	GetHandleVerifier [0x00007FF724C3430D+3443709]
+	GetHandleVerifier [0x00007FF724C283FD+3394797]
+	GetHandleVerifier [0x00007FF7249B929B+842635]
+	(No symbol) [0x00007FF72486654F]
+	(No symbol) [0x00007FF724861FA4]
+	(No symbol) [0x00007FF72486213D]
+	(No symbol) [0x00007FF724851629]
+	BaseThreadInitThunk [0x00007FFE21634CB0+16]
+	RtlUserThreadStart [0x00007FFE21D7EDCB+43]
+</status>
 </kw>
-<msg time="2024-11-21T11:19:26.391645" level="INFO">${actual_status} = False</msg>
+<msg time="2024-11-21T05:03:01.048837" level="INFO">${actual_status} = False</msg>
 <var>${actual_status}</var>
 <arg>Click Element</arg>
 <arg>${locator}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-11-21T11:19:25.089746" elapsed="1.301920"/>
+<status status="PASS" start="2024-11-21T05:02:59.954956" elapsed="1.093881"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${actual_status}</arg>
 <arg>${expected_status}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-21T11:19:26.391771" elapsed="0.000124"/>
+<status status="PASS" start="2024-11-21T05:03:01.048837" elapsed="0.000000"/>
 </kw>
 <arg>${locator}</arg>
 <arg>${False}</arg>
-<status status="PASS" start="2024-11-21T11:19:25.089616" elapsed="1.302319"/>
+<status status="PASS" start="2024-11-21T05:02:59.954956" elapsed="1.093881"/>
 </kw>
 <arg>${PROCUREMENT_LINK}</arg>
-<status status="PASS" start="2024-11-21T11:19:25.089466" elapsed="1.302496"/>
+<status status="PASS" start="2024-11-21T05:02:59.954956" elapsed="1.093881"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <kw name="Verify element if clickable" owner="Home">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:26.392535" level="INFO">Clicking element 'css=img[alt="Vendor Portal"]'.</msg>
-<msg time="2024-11-21T11:19:27.694100" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-3.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-11-21T11:19:27.694219" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Vendor Portal" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (1237, 706). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.71)
+<msg time="2024-11-21T05:03:01.064467" level="INFO">Clicking element 'css=img[alt="Vendor Portal"]'.</msg>
+<msg time="2024-11-21T05:03:02.221231" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-3.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T05:03:02.221231" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Vendor Portal" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (653, 542). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
 Stacktrace:
-0   chromedriver                        0x0000000103213ac4 cxxbridge1$str$ptr + 3651580
-1   chromedriver                        0x000000010320c314 cxxbridge1$str$ptr + 3620940
-2   chromedriver                        0x0000000102c744b4 cxxbridge1$string$len + 89224
-3   chromedriver                        0x0000000102cbe12c cxxbridge1$string$len + 391424
-4   chromedriver                        0x0000000102cbc77c cxxbridge1$string$len + 384848
-5   chromedriver                        0x0000000102cba6c0 cxxbridge1$string$len + 376468
-6   chromedriver                        0x0000000102cb9af8 cxxbridge1$string$len + 373452
-7   chromedriver                        0x0000000102caefbc cxxbridge1$string$len + 329616
-8   chromedriver                        0x0000000102caea10 cxxbridge1$string$len + 328164
-9   chromedriver                        0x0000000102cf20fc cxxbridge1$string$len + 604368
-10  chromedriver                        0x0000000102cad0b0 cxxbridge1$string$len + 321668
-11  chromedriver                        0x0000000102cadd00 cxxbridge1$string$len + 324820
-12  chromedriver                        0x00000001031dee08 cxxbridge1$str$ptr + 3435328
-13  chromedriver                        0x00000001031e2120 cxxbridge1$str$ptr + 3448408
-14  chromedriver                        0x00000001031c617c cxxbridge1$str$ptr + 3333812
-15  chromedriver                        0x00000001031e29e0 cxxbridge1$str$ptr + 3450648
-16  chromedriver                        0x00000001031b7988 cxxbridge1$str$ptr + 3274432
-17  chromedriver                        0x00000001031fd0f4 cxxbridge1$str$ptr + 3558956
-18  chromedriver                        0x00000001031fd270 cxxbridge1$str$ptr + 3559336
-19  chromedriver                        0x000000010320bf88 cxxbridge1$str$ptr + 3620032
-20  libsystem_pthread.dylib             0x000000019faab2e4 _pthread_start + 136
-21  libsystem_pthread.dylib             0x000000019faa60fc thread_start + 8
+	GetHandleVerifier [0x00007FF7248F2775+28773]
+	(No symbol) [0x00007FF72485AFB0]
+	(No symbol) [0x00007FF7246F552A]
+	(No symbol) [0x00007FF724750B5E]
+	(No symbol) [0x00007FF72474E5FC]
+	(No symbol) [0x00007FF72474B7E6]
+	(No symbol) [0x00007FF72474A741]
+	(No symbol) [0x00007FF72473C970]
+	(No symbol) [0x00007FF72476EF9A]
+	(No symbol) [0x00007FF72473C1C6]
+	(No symbol) [0x00007FF72476F1B0]
+	(No symbol) [0x00007FF72478F1A4]
+	(No symbol) [0x00007FF72476ED43]
+	(No symbol) [0x00007FF72473A548]
+	(No symbol) [0x00007FF72473B6B1]
+	GetHandleVerifier [0x00007FF724C1F45D+3358029]
+	GetHandleVerifier [0x00007FF724C3430D+3443709]
+	GetHandleVerifier [0x00007FF724C283FD+3394797]
+	GetHandleVerifier [0x00007FF7249B929B+842635]
+	(No symbol) [0x00007FF72486654F]
+	(No symbol) [0x00007FF724861FA4]
+	(No symbol) [0x00007FF72486213D]
+	(No symbol) [0x00007FF724851629]
+	BaseThreadInitThunk [0x00007FFE21634CB0+16]
+	RtlUserThreadStart [0x00007FFE21D7EDCB+43]
 </msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-11-21T11:19:26.392450" elapsed="1.302314">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Vendor Portal" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (1237, 706). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.71)
+<status status="FAIL" start="2024-11-21T05:03:01.064467" elapsed="1.156764">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Vendor Portal" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (653, 542). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
 Stacktrace:
-0   chromedriver                        0x0000000103213ac4 cxxbridge1$str$ptr + 3651580
-1   chromedriver                        0x000000010320c314 cxxbridge1$str$ptr + 3620940
-2   chromedriver                        0x0000000102c744b4 cxxbridge1$string$len + 89224
-3   chromedriver                        0x0000000102cbe12c cxxbridge1$string$len + 391424
-4   chromedriver                        0x0000000102cbc77c cxxbridge1$strin...
-    [ Message content over the limit has been removed. ]
-...er                        0x0000000102cadd00 cxxbridge1$string$len + 324820
-12  chromedriver                        0x00000001031dee08 cxxbridge1$str$ptr + 3435328
-13  chromedriver                        0x00000001031e2120 cxxbridge1$str$ptr + 3448408
-14  chromedriver                        0x00000001031c617c cxxbridge1$str$ptr + 3333812
-15  chromedriver                        0x00000001031e29e0 cxxbridge1$str$ptr + 3450648
-16  chromedriver                        0x00000001031b7988 cxxbridge1$str$ptr + 3274432
-17  chromedriver                        0x00000001031fd0f4 cxxbridge1$str$ptr + 3558956
-18  chromedriver                        0x00000001031fd270 cxxbridge1$str$ptr + 3559336
-19  chromedriver                        0x000000010320bf88 cxxbridge1$str$ptr + 3620032
-20  libsystem_pthread.dylib             0x000000019faab2e4 _pthread_start + 136
-21  libsystem_pthread.dylib             0x000000019faa60fc thread_start + 8</status>
+	GetHandleVerifier [0x00007FF7248F2775+28773]
+	(No symbol) [0x00007FF72485AFB0]
+	(No symbol) [0x00007FF7246F552A]
+	(No symbol) [0x00007FF724750B5E]
+	(No symbol) [0x00007FF72474E5FC]
+	(No symbol) [0x00007FF72474B7E6]
+	(No symbol) [0x00007FF72474A741]
+	(No symbol) [0x00007FF72473C970]
+	(No symbol) [0x00007FF72476EF9A]
+	(No symbol) [0x00007FF72473C1C6]
+	(No symbol) [0x00007FF72476F1B0]
+	(No symbol) [0x00007FF72478F1A4]
+	(No symbol) [0x00007FF72476ED43]
+	(No symbol) [0x00007FF72473A548]
+	(No symbol) [0x00007FF72473B6B1]
+	GetHandleVerifier [0x00007FF724C1F45D+3358029]
+	GetHandleVerifier [0x00007FF724C3430D+3443709]
+	GetHandleVerifier [0x00007FF724C283FD+3394797]
+	GetHandleVerifier [0x00007FF7249B929B+842635]
+	(No symbol) [0x00007FF72486654F]
+	(No symbol) [0x00007FF724861FA4]
+	(No symbol) [0x00007FF72486213D]
+	(No symbol) [0x00007FF724851629]
+	BaseThreadInitThunk [0x00007FFE21634CB0+16]
+	RtlUserThreadStart [0x00007FFE21D7EDCB+43]
+</status>
 </kw>
-<msg time="2024-11-21T11:19:27.694847" level="INFO">${actual_status} = False</msg>
+<msg time="2024-11-21T05:03:02.221231" level="INFO">${actual_status} = False</msg>
 <var>${actual_status}</var>
 <arg>Click Element</arg>
 <arg>${locator}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-11-21T11:19:26.392371" elapsed="1.302487"/>
+<status status="PASS" start="2024-11-21T05:03:01.064467" elapsed="1.156764"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${actual_status}</arg>
 <arg>${expected_status}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-21T11:19:27.694943" elapsed="0.000102"/>
+<status status="PASS" start="2024-11-21T05:03:02.221231" elapsed="0.000000"/>
 </kw>
 <arg>${locator}</arg>
 <arg>${False}</arg>
-<status status="PASS" start="2024-11-21T11:19:26.392236" elapsed="1.302842"/>
+<status status="PASS" start="2024-11-21T05:03:01.064467" elapsed="1.156764"/>
 </kw>
 <arg>${VENDOR_LINK}</arg>
-<status status="PASS" start="2024-11-21T11:19:26.392080" elapsed="1.303021"/>
+<status status="PASS" start="2024-11-21T05:03:01.048837" elapsed="1.172394"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <kw name="Verify element if clickable" owner="Home">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:27.695645" level="INFO">Clicking element 'css=img[alt="Quality Management"]'.</msg>
-<msg time="2024-11-21T11:19:28.946026" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-4.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-11-21T11:19:28.946149" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Quality Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (1007, 596). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.71)
+<msg time="2024-11-21T05:03:02.236868" level="INFO">Clicking element 'css=img[alt="Quality Management"]'.</msg>
+<msg time="2024-11-21T05:03:03.423878" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-4.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T05:03:03.423878" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Quality Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (461, 454). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
 Stacktrace:
-0   chromedriver                        0x0000000103213ac4 cxxbridge1$str$ptr + 3651580
-1   chromedriver                        0x000000010320c314 cxxbridge1$str$ptr + 3620940
-2   chromedriver                        0x0000000102c744b4 cxxbridge1$string$len + 89224
-3   chromedriver                        0x0000000102cbe12c cxxbridge1$string$len + 391424
-4   chromedriver                        0x0000000102cbc77c cxxbridge1$string$len + 384848
-5   chromedriver                        0x0000000102cba6c0 cxxbridge1$string$len + 376468
-6   chromedriver                        0x0000000102cb9af8 cxxbridge1$string$len + 373452
-7   chromedriver                        0x0000000102caefbc cxxbridge1$string$len + 329616
-8   chromedriver                        0x0000000102caea10 cxxbridge1$string$len + 328164
-9   chromedriver                        0x0000000102cf20fc cxxbridge1$string$len + 604368
-10  chromedriver                        0x0000000102cad0b0 cxxbridge1$string$len + 321668
-11  chromedriver                        0x0000000102cadd00 cxxbridge1$string$len + 324820
-12  chromedriver                        0x00000001031dee08 cxxbridge1$str$ptr + 3435328
-13  chromedriver                        0x00000001031e2120 cxxbridge1$str$ptr + 3448408
-14  chromedriver                        0x00000001031c617c cxxbridge1$str$ptr + 3333812
-15  chromedriver                        0x00000001031e29e0 cxxbridge1$str$ptr + 3450648
-16  chromedriver                        0x00000001031b7988 cxxbridge1$str$ptr + 3274432
-17  chromedriver                        0x00000001031fd0f4 cxxbridge1$str$ptr + 3558956
-18  chromedriver                        0x00000001031fd270 cxxbridge1$str$ptr + 3559336
-19  chromedriver                        0x000000010320bf88 cxxbridge1$str$ptr + 3620032
-20  libsystem_pthread.dylib             0x000000019faab2e4 _pthread_start + 136
-21  libsystem_pthread.dylib             0x000000019faa60fc thread_start + 8
+	GetHandleVerifier [0x00007FF7248F2775+28773]
+	(No symbol) [0x00007FF72485AFB0]
+	(No symbol) [0x00007FF7246F552A]
+	(No symbol) [0x00007FF724750B5E]
+	(No symbol) [0x00007FF72474E5FC]
+	(No symbol) [0x00007FF72474B7E6]
+	(No symbol) [0x00007FF72474A741]
+	(No symbol) [0x00007FF72473C970]
+	(No symbol) [0x00007FF72476EF9A]
+	(No symbol) [0x00007FF72473C1C6]
+	(No symbol) [0x00007FF72476F1B0]
+	(No symbol) [0x00007FF72478F1A4]
+	(No symbol) [0x00007FF72476ED43]
+	(No symbol) [0x00007FF72473A548]
+	(No symbol) [0x00007FF72473B6B1]
+	GetHandleVerifier [0x00007FF724C1F45D+3358029]
+	GetHandleVerifier [0x00007FF724C3430D+3443709]
+	GetHandleVerifier [0x00007FF724C283FD+3394797]
+	GetHandleVerifier [0x00007FF7249B929B+842635]
+	(No symbol) [0x00007FF72486654F]
+	(No symbol) [0x00007FF724861FA4]
+	(No symbol) [0x00007FF72486213D]
+	(No symbol) [0x00007FF724851629]
+	BaseThreadInitThunk [0x00007FFE21634CB0+16]
+	RtlUserThreadStart [0x00007FFE21D7EDCB+43]
 </msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-11-21T11:19:27.695571" elapsed="1.251151">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Quality Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (1007, 596). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.71)
+<status status="FAIL" start="2024-11-21T05:03:02.236868" elapsed="1.187010">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Quality Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (461, 454). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
 Stacktrace:
-0   chromedriver                        0x0000000103213ac4 cxxbridge1$str$ptr + 3651580
-1   chromedriver                        0x000000010320c314 cxxbridge1$str$ptr + 3620940
-2   chromedriver                        0x0000000102c744b4 cxxbridge1$string$len + 89224
-3   chromedriver                        0x0000000102cbe12c cxxbridge1$string$len + 391424
-4   chromedriver                        0x0000000102cbc77c cxxbridge1$strin...
-    [ Message content over the limit has been removed. ]
-...er                        0x0000000102cadd00 cxxbridge1$string$len + 324820
-12  chromedriver                        0x00000001031dee08 cxxbridge1$str$ptr + 3435328
-13  chromedriver                        0x00000001031e2120 cxxbridge1$str$ptr + 3448408
-14  chromedriver                        0x00000001031c617c cxxbridge1$str$ptr + 3333812
-15  chromedriver                        0x00000001031e29e0 cxxbridge1$str$ptr + 3450648
-16  chromedriver                        0x00000001031b7988 cxxbridge1$str$ptr + 3274432
-17  chromedriver                        0x00000001031fd0f4 cxxbridge1$str$ptr + 3558956
-18  chromedriver                        0x00000001031fd270 cxxbridge1$str$ptr + 3559336
-19  chromedriver                        0x000000010320bf88 cxxbridge1$str$ptr + 3620032
-20  libsystem_pthread.dylib             0x000000019faab2e4 _pthread_start + 136
-21  libsystem_pthread.dylib             0x000000019faa60fc thread_start + 8</status>
+	GetHandleVerifier [0x00007FF7248F2775+28773]
+	(No symbol) [0x00007FF72485AFB0]
+	(No symbol) [0x00007FF7246F552A]
+	(No symbol) [0x00007FF724750B5E]
+	(No symbol) [0x00007FF72474E5FC]
+	(No symbol) [0x00007FF72474B7E6]
+	(No symbol) [0x00007FF72474A741]
+	(No symbol) [0x00007FF72473C970]
+	(No symbol) [0x00007FF72476EF9A]
+	(No symbol) [0x00007FF72473C1C6]
+	(No symbol) [0x00007FF72476F1B0]
+	(No symbol) [0x00007FF72478F1A4]
+	(No symbol) [0x00007FF72476ED43]
+	(No symbol) [0x00007FF72473A548]
+	(No symbol) [0x00007FF72473B6B1]
+	GetHandleVerifier [0x00007FF724C1F45D+3358029]
+	GetHandleVerifier [0x00007FF724C3430D+3443709]
+	GetHandleVerifier [0x00007FF724C283FD+3394797]
+	GetHandleVerifier [0x00007FF7249B929B+842635]
+	(No symbol) [0x00007FF72486654F]
+	(No symbol) [0x00007FF724861FA4]
+	(No symbol) [0x00007FF72486213D]
+	(No symbol) [0x00007FF724851629]
+	BaseThreadInitThunk [0x00007FFE21634CB0+16]
+	RtlUserThreadStart [0x00007FFE21D7EDCB+43]
+</status>
 </kw>
-<msg time="2024-11-21T11:19:28.946813" level="INFO">${actual_status} = False</msg>
+<msg time="2024-11-21T05:03:03.423878" level="INFO">${actual_status} = False</msg>
 <var>${actual_status}</var>
 <arg>Click Element</arg>
 <arg>${locator}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-11-21T11:19:27.695497" elapsed="1.251327"/>
+<status status="PASS" start="2024-11-21T05:03:02.221231" elapsed="1.202647"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${actual_status}</arg>
 <arg>${expected_status}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-21T11:19:28.946910" elapsed="0.000100"/>
+<status status="PASS" start="2024-11-21T05:03:03.423878" elapsed="0.000000"/>
 </kw>
 <arg>${locator}</arg>
 <arg>${False}</arg>
-<status status="PASS" start="2024-11-21T11:19:27.695368" elapsed="1.251675"/>
+<status status="PASS" start="2024-11-21T05:03:02.221231" elapsed="1.202647"/>
 </kw>
 <arg>${QUALITY_LINK}</arg>
-<status status="PASS" start="2024-11-21T11:19:27.695221" elapsed="1.251845"/>
+<status status="PASS" start="2024-11-21T05:03:02.221231" elapsed="1.202647"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <kw name="Verify element if clickable" owner="Home">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:28.947581" level="INFO">Clicking element 'css=img[alt="Inventory Management"]'.</msg>
-<msg time="2024-11-21T11:19:30.279531" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-5.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-11-21T11:19:30.279648" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Inventory Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (936, 396). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.71)
+<msg time="2024-11-21T05:03:03.423878" level="INFO">Clicking element 'css=img[alt="Inventory Management"]'.</msg>
+<msg time="2024-11-21T05:03:04.565263" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-5.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T05:03:04.565263" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Inventory Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (413, 274). Other element would receive the click: &lt;div class="sm:mb-[100px] lg:mb-[174px]"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
 Stacktrace:
-0   chromedriver                        0x0000000103213ac4 cxxbridge1$str$ptr + 3651580
-1   chromedriver                        0x000000010320c314 cxxbridge1$str$ptr + 3620940
-2   chromedriver                        0x0000000102c744b4 cxxbridge1$string$len + 89224
-3   chromedriver                        0x0000000102cbe12c cxxbridge1$string$len + 391424
-4   chromedriver                        0x0000000102cbc77c cxxbridge1$string$len + 384848
-5   chromedriver                        0x0000000102cba6c0 cxxbridge1$string$len + 376468
-6   chromedriver                        0x0000000102cb9af8 cxxbridge1$string$len + 373452
-7   chromedriver                        0x0000000102caefbc cxxbridge1$string$len + 329616
-8   chromedriver                        0x0000000102caea10 cxxbridge1$string$len + 328164
-9   chromedriver                        0x0000000102cf20fc cxxbridge1$string$len + 604368
-10  chromedriver                        0x0000000102cad0b0 cxxbridge1$string$len + 321668
-11  chromedriver                        0x0000000102cadd00 cxxbridge1$string$len + 324820
-12  chromedriver                        0x00000001031dee08 cxxbridge1$str$ptr + 3435328
-13  chromedriver                        0x00000001031e2120 cxxbridge1$str$ptr + 3448408
-14  chromedriver                        0x00000001031c617c cxxbridge1$str$ptr + 3333812
-15  chromedriver                        0x00000001031e29e0 cxxbridge1$str$ptr + 3450648
-16  chromedriver                        0x00000001031b7988 cxxbridge1$str$ptr + 3274432
-17  chromedriver                        0x00000001031fd0f4 cxxbridge1$str$ptr + 3558956
-18  chromedriver                        0x00000001031fd270 cxxbridge1$str$ptr + 3559336
-19  chromedriver                        0x000000010320bf88 cxxbridge1$str$ptr + 3620032
-20  libsystem_pthread.dylib             0x000000019faab2e4 _pthread_start + 136
-21  libsystem_pthread.dylib             0x000000019faa60fc thread_start + 8
+	GetHandleVerifier [0x00007FF7248F2775+28773]
+	(No symbol) [0x00007FF72485AFB0]
+	(No symbol) [0x00007FF7246F552A]
+	(No symbol) [0x00007FF724750B5E]
+	(No symbol) [0x00007FF72474E5FC]
+	(No symbol) [0x00007FF72474B7E6]
+	(No symbol) [0x00007FF72474A741]
+	(No symbol) [0x00007FF72473C970]
+	(No symbol) [0x00007FF72476EF9A]
+	(No symbol) [0x00007FF72473C1C6]
+	(No symbol) [0x00007FF72476F1B0]
+	(No symbol) [0x00007FF72478F1A4]
+	(No symbol) [0x00007FF72476ED43]
+	(No symbol) [0x00007FF72473A548]
+	(No symbol) [0x00007FF72473B6B1]
+	GetHandleVerifier [0x00007FF724C1F45D+3358029]
+	GetHandleVerifier [0x00007FF724C3430D+3443709]
+	GetHandleVerifier [0x00007FF724C283FD+3394797]
+	GetHandleVerifier [0x00007FF7249B929B+842635]
+	(No symbol) [0x00007FF72486654F]
+	(No symbol) [0x00007FF724861FA4]
+	(No symbol) [0x00007FF72486213D]
+	(No symbol) [0x00007FF724851629]
+	BaseThreadInitThunk [0x00007FFE21634CB0+16]
+	RtlUserThreadStart [0x00007FFE21D7EDCB+43]
 </msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-11-21T11:19:28.947499" elapsed="1.332700">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Inventory Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (936, 396). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.71)
+<status status="FAIL" start="2024-11-21T05:03:03.423878" elapsed="1.141385">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Inventory Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (413, 274). Other element would receive the click: &lt;div class="sm:mb-[100px] lg:mb-[174px]"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
 Stacktrace:
-0   chromedriver                        0x0000000103213ac4 cxxbridge1$str$ptr + 3651580
-1   chromedriver                        0x000000010320c314 cxxbridge1$str$ptr + 3620940
-2   chromedriver                        0x0000000102c744b4 cxxbridge1$string$len + 89224
-3   chromedriver                        0x0000000102cbe12c cxxbridge1$string$len + 391424
-    [ Message content over the limit has been removed. ]
-...er                        0x0000000102cadd00 cxxbridge1$string$len + 324820
-12  chromedriver                        0x00000001031dee08 cxxbridge1$str$ptr + 3435328
-13  chromedriver                        0x00000001031e2120 cxxbridge1$str$ptr + 3448408
-14  chromedriver                        0x00000001031c617c cxxbridge1$str$ptr + 3333812
-15  chromedriver                        0x00000001031e29e0 cxxbridge1$str$ptr + 3450648
-16  chromedriver                        0x00000001031b7988 cxxbridge1$str$ptr + 3274432
-17  chromedriver                        0x00000001031fd0f4 cxxbridge1$str$ptr + 3558956
-18  chromedriver                        0x00000001031fd270 cxxbridge1$str$ptr + 3559336
-19  chromedriver                        0x000000010320bf88 cxxbridge1$str$ptr + 3620032
-20  libsystem_pthread.dylib             0x000000019faab2e4 _pthread_start + 136
-21  libsystem_pthread.dylib             0x000000019faa60fc thread_start + 8</status>
+	GetHandleVerifier [0x00007FF7248F2775+28773]
+	(No symbol) [0x00007FF72485AFB0]
+	(No symbol) [0x00007FF7246F552A]
+	(No symbol) [0x00007FF724750B5E]
+	(No symbol) [0x00007FF72474E5FC]
+	(No symbol) [0x00007FF72474B7E6]
+	(No symbol) [0x00007FF72474A741]
+	(No symbol) [0x00007FF72473C970]
+	(No symbol) [0x00007FF72476EF9A]
+	(No symbol) [0x00007FF72473C1C6]
+	(No symbol) [0x00007FF72476F1B0]
+	(No symbol) [0x00007FF72478F1A4]
+	(No symbol) [0x00007FF72476ED43]
+	(No symbol) [0x00007FF72473A548]
+	(No symbol) [0x00007FF72473B6B1]
+	GetHandleVerifier [0x00007FF724C1F45D+3358029]
+	GetHandleVerifier [0x00007FF724C3430D+3443709]
+	GetHandleVerifier [0x00007FF724C283FD+3394797]
+	GetHandleVerifier [0x00007FF7249B929B+842635]
+	(No symbol) [0x00007FF72486654F]
+	(No symbol) [0x00007FF724861FA4]
+	(No symbol) [0x00007FF72486213D]
+	(No symbol) [0x00007FF724851629]
+	BaseThreadInitThunk [0x00007FFE21634CB0+16]
+	RtlUserThreadStart [0x00007FFE21D7EDCB+43]
+</status>
 </kw>
-<msg time="2024-11-21T11:19:30.280315" level="INFO">${actual_status} = False</msg>
+<msg time="2024-11-21T05:03:04.565263" level="INFO">${actual_status} = False</msg>
 <var>${actual_status}</var>
 <arg>Click Element</arg>
 <arg>${locator}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-11-21T11:19:28.947430" elapsed="1.332897"/>
+<status status="PASS" start="2024-11-21T05:03:03.423878" elapsed="1.141385"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${actual_status}</arg>
 <arg>${expected_status}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-21T11:19:30.280412" elapsed="0.000099"/>
+<status status="PASS" start="2024-11-21T05:03:04.565263" elapsed="0.000000"/>
 </kw>
 <arg>${locator}</arg>
 <arg>${False}</arg>
-<status status="PASS" start="2024-11-21T11:19:28.947314" elapsed="1.333230"/>
+<status status="PASS" start="2024-11-21T05:03:03.423878" elapsed="1.141385"/>
 </kw>
 <arg>${INVENTORY_LINK}</arg>
-<status status="PASS" start="2024-11-21T11:19:28.947169" elapsed="1.333398"/>
+<status status="PASS" start="2024-11-21T05:03:03.423878" elapsed="1.141385"/>
 </kw>
 <kw name="AND The link should be clickable" owner="KadenaApp">
 <kw name="Verify element if clickable" owner="Home">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:30.281104" level="INFO">Clicking element 'css=img[alt="Forecasting"]'.</msg>
+<msg time="2024-11-21T05:03:04.580894" level="INFO">Clicking element 'css=img[alt="Forecasting"]'.</msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T11:19:30.281028" elapsed="1.033932"/>
+<status status="PASS" start="2024-11-21T05:03:04.580894" elapsed="1.950209"/>
 </kw>
-<msg time="2024-11-21T11:19:31.315106" level="INFO">${actual_status} = True</msg>
+<msg time="2024-11-21T05:03:06.531873" level="INFO">${actual_status} = True</msg>
 <var>${actual_status}</var>
 <arg>Click Element</arg>
 <arg>${locator}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-11-21T11:19:30.280957" elapsed="1.034170"/>
+<status status="PASS" start="2024-11-21T05:03:04.565263" elapsed="1.966610"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${actual_status}</arg>
 <arg>${expected_status}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-21T11:19:31.315261" elapsed="0.000165"/>
+<status status="PASS" start="2024-11-21T05:03:06.531873" elapsed="0.000000"/>
 </kw>
 <arg>${locator}</arg>
 <arg>${True}</arg>
-<status status="PASS" start="2024-11-21T11:19:30.280836" elapsed="1.034643"/>
+<status status="PASS" start="2024-11-21T05:03:04.565263" elapsed="1.966610"/>
 </kw>
 <arg>${FORECAST_LINK}</arg>
-<status status="PASS" start="2024-11-21T11:19:30.280686" elapsed="1.034834"/>
+<status status="PASS" start="2024-11-21T05:03:04.565263" elapsed="1.966610"/>
 </kw>
 <kw name="THEN I should be redirected to the" owner="KadenaApp">
 <kw name="I redirected to the" owner="Home">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${text}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-21T11:19:31.316050" elapsed="0.494675"/>
+<status status="PASS" start="2024-11-21T05:03:06.532878" elapsed="1.579899"/>
 </kw>
 <arg>${text}</arg>
-<status status="PASS" start="2024-11-21T11:19:31.315887" elapsed="0.494908"/>
+<status status="PASS" start="2024-11-21T05:03:06.532878" elapsed="1.579899"/>
 </kw>
 <arg>Forecasting</arg>
-<status status="PASS" start="2024-11-21T11:19:31.315688" elapsed="0.495139"/>
+<status status="PASS" start="2024-11-21T05:03:06.531873" elapsed="1.580904"/>
 </kw>
 <kw name="Close Test Browser" owner="Common" type="TEARDOWN">
 <kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:31.959704" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-6.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T05:03:08.154092" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-6.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-21T11:19:31.811313" elapsed="0.148446"/>
+<status status="PASS" start="2024-11-21T05:03:08.112777" elapsed="0.041315"/>
 </kw>
 <arg>10</arg>
 <arg>1s</arg>
 <arg>Capture Page Screenshot</arg>
 <doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2024-11-21T11:19:31.811170" elapsed="0.148634"/>
+<status status="PASS" start="2024-11-21T05:03:08.112777" elapsed="0.042318"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-11-21T11:19:31.959888" elapsed="0.083335"/>
+<status status="PASS" start="2024-11-21T05:03:08.155095" elapsed="6.142807"/>
 </kw>
-<status status="PASS" start="2024-11-21T11:19:31.811017" elapsed="0.232292"/>
+<status status="PASS" start="2024-11-21T05:03:08.112777" elapsed="6.185125"/>
 </kw>
 <doc>Login with access to Forecasting</doc>
 <tag>fcast</tag>
 <tag>M0MAIN-SIT-002</tag>
 <tag>TS-SIT-001</tag>
-<status status="PASS" start="2024-11-21T11:19:15.471867" elapsed="16.571511"/>
+<status status="PASS" start="2024-11-21T05:02:52.015889" elapsed="22.282554"/>
 </test>
-<test id="s1-s1-t4" name="Test Scenario 4: Login with access to Supply Planning modules" line="51">
+<test id="s1-t4" name="Test Scenario 4: Login with access to Supply Planning modules" line="53">
 <kw name="Open Test Browser" owner="Common" type="SETUP">
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-11-21T11:19:32.044042" elapsed="0.000114"/>
+<status status="PASS" start="2024-11-21T05:03:14.298443" elapsed="0.000000"/>
 </kw>
 <kw name="Empty Directory" owner="OperatingSystem">
-<msg time="2024-11-21T11:19:32.044351" level="INFO" html="true">Listing contents of directory '&lt;a href="file:///Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/screenshots"&gt;/Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/screenshots&lt;/a&gt;'.</msg>
-<msg time="2024-11-21T11:19:32.044887" level="INFO" html="true">Emptied directory '&lt;a href="file:///Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/screenshots"&gt;/Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-21T05:03:14.298443" level="INFO" html="true">Listing contents of directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-21T05:03:14.298443" level="INFO" html="true">Emptied directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
 <arg>testsuites/screenshots</arg>
 <doc>Deletes all the content from the given directory.</doc>
-<status status="PASS" start="2024-11-21T11:19:32.044222" elapsed="0.000692"/>
+<status status="PASS" start="2024-11-21T05:03:14.298443" elapsed="0.000000"/>
 </kw>
 <kw name="Set Screenshot Directory" owner="SeleniumLibrary">
 <arg>testsuites/screenshots</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" start="2024-11-21T11:19:32.044978" elapsed="0.000089"/>
+<status status="PASS" start="2024-11-21T05:03:14.298443" elapsed="0.000000"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-21T11:19:32.045297" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x10304fa80&gt;</msg>
+<msg time="2024-11-21T05:03:14.298443" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000028DC1D06E10&gt;</msg>
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].${name}Options()</arg>
 <arg>sys, selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-21T11:19:32.045128" elapsed="0.000184"/>
+<status status="PASS" start="2024-11-21T05:03:14.298443" elapsed="0.000000"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--incognito</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2024-11-21T11:19:32.045373" elapsed="0.000059"/>
+<status status="PASS" start="2024-11-21T05:03:14.298443" elapsed="0.000000"/>
 </kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:32.045577" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-11-21T05:03:14.298443" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>${name}</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-11-21T11:19:32.045494" elapsed="0.723748"/>
+<status status="PASS" start="2024-11-21T05:03:14.298443" elapsed="1.340193"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-21T11:19:32.769743" elapsed="0.388597"/>
+<status status="PASS" start="2024-11-21T05:03:15.638636" elapsed="0.027734"/>
 </kw>
 <arg>${BROWSER_NAME}</arg>
-<status status="PASS" start="2024-11-21T11:19:32.043860" elapsed="1.114590"/>
+<status status="PASS" start="2024-11-21T05:03:14.298443" elapsed="1.367927"/>
 </kw>
 <kw name="GIVEN I go to Login page" owner="KadenaApp">
 <kw name="Navigate to login page" owner="Login">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:33.159194" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
+<msg time="2024-11-21T05:03:15.667362" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
 <arg>${LOGINPAGE_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-21T11:19:33.159100" elapsed="1.635278"/>
+<status status="PASS" start="2024-11-21T05:03:15.667362" elapsed="2.906022"/>
 </kw>
-<status status="PASS" start="2024-11-21T11:19:33.158972" elapsed="1.635483"/>
+<status status="PASS" start="2024-11-21T05:03:15.667362" elapsed="2.906022"/>
 </kw>
 <kw name="Verify Page Loaded" owner="Login">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${LOGIN_HEADER}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-21T11:19:34.794758" elapsed="0.007661"/>
+<status status="PASS" start="2024-11-21T05:03:18.573958" elapsed="0.014795"/>
 </kw>
-<status status="PASS" start="2024-11-21T11:19:34.794581" elapsed="0.007914"/>
+<status status="PASS" start="2024-11-21T05:03:18.573958" elapsed="0.014795"/>
 </kw>
-<status status="PASS" start="2024-11-21T11:19:33.158732" elapsed="1.643792"/>
+<status status="PASS" start="2024-11-21T05:03:15.666370" elapsed="2.922383"/>
 </kw>
 <kw name="AND I enter" owner="KadenaApp">
 <kw name="Enter Credential" owner="Login">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:34.803182" level="INFO">Typing text 'econsista@agsx.net' into text field 'id=username'.</msg>
+<msg time="2024-11-21T05:03:18.590091" level="INFO">Typing text 'econsista@agsx.net' into text field 'id=username'.</msg>
 <arg>${locator}</arg>
 <arg>${credential}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T11:19:34.803040" elapsed="0.097442"/>
+<status status="PASS" start="2024-11-21T05:03:18.590091" elapsed="0.088443"/>
 </kw>
 <arg>${credential}</arg>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-21T11:19:34.802897" elapsed="0.097826"/>
+<status status="PASS" start="2024-11-21T05:03:18.589507" elapsed="0.089027"/>
 </kw>
 <arg>${VALID_FORECASTING_EMAIL}</arg>
 <arg>${EMAIL}</arg>
-<status status="PASS" start="2024-11-21T11:19:34.802688" elapsed="0.098074"/>
+<status status="PASS" start="2024-11-21T05:03:18.588753" elapsed="0.089781"/>
 </kw>
 <kw name="AND I enter" owner="KadenaApp">
 <kw name="Enter Credential" owner="Login">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:34.901395" level="INFO">Typing text 'password' into text field 'id=password'.</msg>
+<msg time="2024-11-21T05:03:18.679499" level="INFO">Typing text 'password' into text field 'id=password'.</msg>
 <arg>${locator}</arg>
 <arg>${credential}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T11:19:34.901279" elapsed="0.038348"/>
+<status status="PASS" start="2024-11-21T05:03:18.679499" elapsed="0.080939"/>
 </kw>
 <arg>${credential}</arg>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-21T11:19:34.901133" elapsed="0.038568"/>
+<status status="PASS" start="2024-11-21T05:03:18.679499" elapsed="0.080939"/>
 </kw>
 <arg>${VALID_PASSWORD}</arg>
 <arg>${PASSWORD}</arg>
-<status status="PASS" start="2024-11-21T11:19:34.900922" elapsed="0.038807"/>
+<status status="PASS" start="2024-11-21T05:03:18.678534" elapsed="0.081904"/>
 </kw>
 <kw name="WHEN I click the button" owner="KadenaApp">
 <kw name="Click submit button" owner="Login">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:34.940605" level="INFO">Clicking button 'name=login'.</msg>
+<msg time="2024-11-21T05:03:18.761437" level="INFO">Clicking button 'name=login'.</msg>
 <arg>${locator}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T11:19:34.940422" elapsed="5.024757"/>
+<status status="PASS" start="2024-11-21T05:03:18.761437" elapsed="2.694323"/>
 </kw>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-21T11:19:34.940090" elapsed="5.025195"/>
+<status status="PASS" start="2024-11-21T05:03:18.761437" elapsed="2.695330"/>
 </kw>
 <arg>${LOGIN_BUTTON}</arg>
-<status status="PASS" start="2024-11-21T11:19:34.939876" elapsed="5.025458"/>
+<status status="PASS" start="2024-11-21T05:03:18.760438" elapsed="2.696485"/>
 </kw>
 <kw name="AND A message should display" owner="KadenaApp">
 <kw name="Validate Error Message" owner="Login">
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:39.987171" level="INFO">Current page contains text 'Welcome'.</msg>
+<msg time="2024-11-21T05:03:21.491771" level="INFO">Current page contains text 'Welcome'.</msg>
 <arg>${text}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-11-21T11:19:39.966137" elapsed="0.021112"/>
+<status status="PASS" start="2024-11-21T05:03:21.457928" elapsed="0.033843"/>
 </kw>
 <arg>${text}</arg>
-<status status="PASS" start="2024-11-21T11:19:39.965872" elapsed="0.021447"/>
+<status status="PASS" start="2024-11-21T05:03:21.456923" elapsed="0.035847"/>
 </kw>
 <arg>Welcome</arg>
-<status status="PASS" start="2024-11-21T11:19:39.965564" elapsed="0.021790"/>
+<status status="PASS" start="2024-11-21T05:03:21.456923" elapsed="0.035847"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <kw name="Verify element if clickable" owner="Home">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:39.988172" level="INFO">Clicking element 'css=img[alt="Ordering"]'.</msg>
-<msg time="2024-11-21T11:19:41.277248" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-11-21T11:19:41.277385" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Ordering" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fordering-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (1559, 416). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.71)
+<msg time="2024-11-21T05:03:21.493769" level="INFO">Clicking element 'css=img[alt="Ordering"]'.</msg>
+<msg time="2024-11-21T05:03:22.660280" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T05:03:22.660280" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Ordering" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fordering-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (941, 302). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
 Stacktrace:
-0   chromedriver                        0x000000010100bac4 cxxbridge1$str$ptr + 3651580
-1   chromedriver                        0x0000000101004314 cxxbridge1$str$ptr + 3620940
-2   chromedriver                        0x0000000100a6c4b4 cxxbridge1$string$len + 89224
-3   chromedriver                        0x0000000100ab612c cxxbridge1$string$len + 391424
-4   chromedriver                        0x0000000100ab477c cxxbridge1$string$len + 384848
-5   chromedriver                        0x0000000100ab26c0 cxxbridge1$string$len + 376468
-6   chromedriver                        0x0000000100ab1af8 cxxbridge1$string$len + 373452
-7   chromedriver                        0x0000000100aa6fbc cxxbridge1$string$len + 329616
-8   chromedriver                        0x0000000100aa6a10 cxxbridge1$string$len + 328164
-9   chromedriver                        0x0000000100aea0fc cxxbridge1$string$len + 604368
-10  chromedriver                        0x0000000100aa50b0 cxxbridge1$string$len + 321668
-11  chromedriver                        0x0000000100aa5d00 cxxbridge1$string$len + 324820
-12  chromedriver                        0x0000000100fd6e08 cxxbridge1$str$ptr + 3435328
-13  chromedriver                        0x0000000100fda120 cxxbridge1$str$ptr + 3448408
-14  chromedriver                        0x0000000100fbe17c cxxbridge1$str$ptr + 3333812
-15  chromedriver                        0x0000000100fda9e0 cxxbridge1$str$ptr + 3450648
-16  chromedriver                        0x0000000100faf988 cxxbridge1$str$ptr + 3274432
-17  chromedriver                        0x0000000100ff50f4 cxxbridge1$str$ptr + 3558956
-18  chromedriver                        0x0000000100ff5270 cxxbridge1$str$ptr + 3559336
-19  chromedriver                        0x0000000101003f88 cxxbridge1$str$ptr + 3620032
-20  libsystem_pthread.dylib             0x000000019faab2e4 _pthread_start + 136
-21  libsystem_pthread.dylib             0x000000019faa60fc thread_start + 8
+	GetHandleVerifier [0x00007FF7248F2775+28773]
+	(No symbol) [0x00007FF72485AFB0]
+	(No symbol) [0x00007FF7246F552A]
+	(No symbol) [0x00007FF724750B5E]
+	(No symbol) [0x00007FF72474E5FC]
+	(No symbol) [0x00007FF72474B7E6]
+	(No symbol) [0x00007FF72474A741]
+	(No symbol) [0x00007FF72473C970]
+	(No symbol) [0x00007FF72476EF9A]
+	(No symbol) [0x00007FF72473C1C6]
+	(No symbol) [0x00007FF72476F1B0]
+	(No symbol) [0x00007FF72478F1A4]
+	(No symbol) [0x00007FF72476ED43]
+	(No symbol) [0x00007FF72473A548]
+	(No symbol) [0x00007FF72473B6B1]
+	GetHandleVerifier [0x00007FF724C1F45D+3358029]
+	GetHandleVerifier [0x00007FF724C3430D+3443709]
+	GetHandleVerifier [0x00007FF724C283FD+3394797]
+	GetHandleVerifier [0x00007FF7249B929B+842635]
+	(No symbol) [0x00007FF72486654F]
+	(No symbol) [0x00007FF724861FA4]
+	(No symbol) [0x00007FF72486213D]
+	(No symbol) [0x00007FF724851629]
+	BaseThreadInitThunk [0x00007FFE21634CB0+16]
+	RtlUserThreadStart [0x00007FFE21D7EDCB+43]
 </msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-11-21T11:19:39.988057" elapsed="1.289941">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Ordering" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fordering-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (1559, 416). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.71)
+<status status="FAIL" start="2024-11-21T05:03:21.493769" elapsed="1.167643">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Ordering" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fordering-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (941, 302). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
 Stacktrace:
-0   chromedriver                        0x000000010100bac4 cxxbridge1$str$ptr + 3651580
-1   chromedriver                        0x0000000101004314 cxxbridge1$str$ptr + 3620940
-2   chromedriver                        0x0000000100a6c4b4 cxxbridge1$string$len + 89224
-3   chromedriver                        0x0000000100ab612c cxxbridge1$string$len + 391424
-4   chromedriver                        0x0000000100ab477c cxxbridge1$string$len + 384848
-    [ Message content over the limit has been removed. ]
-...er                        0x0000000100aa5d00 cxxbridge1$string$len + 324820
-12  chromedriver                        0x0000000100fd6e08 cxxbridge1$str$ptr + 3435328
-13  chromedriver                        0x0000000100fda120 cxxbridge1$str$ptr + 3448408
-14  chromedriver                        0x0000000100fbe17c cxxbridge1$str$ptr + 3333812
-15  chromedriver                        0x0000000100fda9e0 cxxbridge1$str$ptr + 3450648
-16  chromedriver                        0x0000000100faf988 cxxbridge1$str$ptr + 3274432
-17  chromedriver                        0x0000000100ff50f4 cxxbridge1$str$ptr + 3558956
-18  chromedriver                        0x0000000100ff5270 cxxbridge1$str$ptr + 3559336
-19  chromedriver                        0x0000000101003f88 cxxbridge1$str$ptr + 3620032
-20  libsystem_pthread.dylib             0x000000019faab2e4 _pthread_start + 136
-21  libsystem_pthread.dylib             0x000000019faa60fc thread_start + 8</status>
+	GetHandleVerifier [0x00007FF7248F2775+28773]
+	(No symbol) [0x00007FF72485AFB0]
+	(No symbol) [0x00007FF7246F552A]
+	(No symbol) [0x00007FF724750B5E]
+	(No symbol) [0x00007FF72474E5FC]
+	(No symbol) [0x00007FF72474B7E6]
+	(No symbol) [0x00007FF72474A741]
+	(No symbol) [0x00007FF72473C970]
+	(No symbol) [0x00007FF72476EF9A]
+	(No symbol) [0x00007FF72473C1C6]
+	(No symbol) [0x00007FF72476F1B0]
+	(No symbol) [0x00007FF72478F1A4]
+	(No symbol) [0x00007FF72476ED43]
+	(No symbol) [0x00007FF72473A548]
+	(No symbol) [0x00007FF72473B6B1]
+	GetHandleVerifier [0x00007FF724C1F45D+3358029]
+	GetHandleVerifier [0x00007FF724C3430D+3443709]
+	GetHandleVerifier [0x00007FF724C283FD+3394797]
+	GetHandleVerifier [0x00007FF7249B929B+842635]
+	(No symbol) [0x00007FF72486654F]
+	(No symbol) [0x00007FF724861FA4]
+	(No symbol) [0x00007FF72486213D]
+	(No symbol) [0x00007FF724851629]
+	BaseThreadInitThunk [0x00007FFE21634CB0+16]
+	RtlUserThreadStart [0x00007FFE21D7EDCB+43]
+</status>
 </kw>
-<msg time="2024-11-21T11:19:41.278082" level="INFO">${actual_status} = False</msg>
+<msg time="2024-11-21T05:03:22.661412" level="INFO">${actual_status} = False</msg>
 <var>${actual_status}</var>
 <arg>Click Element</arg>
 <arg>${locator}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-11-21T11:19:39.987945" elapsed="1.290149"/>
+<status status="PASS" start="2024-11-21T05:03:21.493769" elapsed="1.167643"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${actual_status}</arg>
 <arg>${expected_status}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-21T11:19:41.278343" elapsed="0.000112"/>
+<status status="PASS" start="2024-11-21T05:03:22.661971" elapsed="0.000000"/>
 </kw>
 <arg>${locator}</arg>
 <arg>${False}</arg>
-<status status="PASS" start="2024-11-21T11:19:39.987769" elapsed="1.290721"/>
+<status status="PASS" start="2024-11-21T05:03:21.493769" elapsed="1.168202"/>
 </kw>
 <arg>${ORDERING_LINK}</arg>
-<status status="PASS" start="2024-11-21T11:19:39.987544" elapsed="1.290972"/>
+<status status="PASS" start="2024-11-21T05:03:21.492770" elapsed="1.169201"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <kw name="Verify element if clickable" owner="Home">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:41.279032" level="INFO">Clicking element 'css=img[alt="Procurement"]'.</msg>
-<msg time="2024-11-21T11:19:42.569220" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-2.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-11-21T11:19:42.569340" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Procurement" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (1447, 636). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.71)
+<msg time="2024-11-21T05:03:22.663647" level="INFO">Clicking element 'css=img[alt="Procurement"]'.</msg>
+<msg time="2024-11-21T05:03:23.832037" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-2.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T05:03:23.832605" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Procurement" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (853, 494). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
 Stacktrace:
-0   chromedriver                        0x000000010100bac4 cxxbridge1$str$ptr + 3651580
-1   chromedriver                        0x0000000101004314 cxxbridge1$str$ptr + 3620940
-2   chromedriver                        0x0000000100a6c4b4 cxxbridge1$string$len + 89224
-3   chromedriver                        0x0000000100ab612c cxxbridge1$string$len + 391424
-4   chromedriver                        0x0000000100ab477c cxxbridge1$string$len + 384848
-5   chromedriver                        0x0000000100ab26c0 cxxbridge1$string$len + 376468
-6   chromedriver                        0x0000000100ab1af8 cxxbridge1$string$len + 373452
-7   chromedriver                        0x0000000100aa6fbc cxxbridge1$string$len + 329616
-8   chromedriver                        0x0000000100aa6a10 cxxbridge1$string$len + 328164
-9   chromedriver                        0x0000000100aea0fc cxxbridge1$string$len + 604368
-10  chromedriver                        0x0000000100aa50b0 cxxbridge1$string$len + 321668
-11  chromedriver                        0x0000000100aa5d00 cxxbridge1$string$len + 324820
-12  chromedriver                        0x0000000100fd6e08 cxxbridge1$str$ptr + 3435328
-13  chromedriver                        0x0000000100fda120 cxxbridge1$str$ptr + 3448408
-14  chromedriver                        0x0000000100fbe17c cxxbridge1$str$ptr + 3333812
-15  chromedriver                        0x0000000100fda9e0 cxxbridge1$str$ptr + 3450648
-16  chromedriver                        0x0000000100faf988 cxxbridge1$str$ptr + 3274432
-17  chromedriver                        0x0000000100ff50f4 cxxbridge1$str$ptr + 3558956
-18  chromedriver                        0x0000000100ff5270 cxxbridge1$str$ptr + 3559336
-19  chromedriver                        0x0000000101003f88 cxxbridge1$str$ptr + 3620032
-20  libsystem_pthread.dylib             0x000000019faab2e4 _pthread_start + 136
-21  libsystem_pthread.dylib             0x000000019faa60fc thread_start + 8
+	GetHandleVerifier [0x00007FF7248F2775+28773]
+	(No symbol) [0x00007FF72485AFB0]
+	(No symbol) [0x00007FF7246F552A]
+	(No symbol) [0x00007FF724750B5E]
+	(No symbol) [0x00007FF72474E5FC]
+	(No symbol) [0x00007FF72474B7E6]
+	(No symbol) [0x00007FF72474A741]
+	(No symbol) [0x00007FF72473C970]
+	(No symbol) [0x00007FF72476EF9A]
+	(No symbol) [0x00007FF72473C1C6]
+	(No symbol) [0x00007FF72476F1B0]
+	(No symbol) [0x00007FF72478F1A4]
+	(No symbol) [0x00007FF72476ED43]
+	(No symbol) [0x00007FF72473A548]
+	(No symbol) [0x00007FF72473B6B1]
+	GetHandleVerifier [0x00007FF724C1F45D+3358029]
+	GetHandleVerifier [0x00007FF724C3430D+3443709]
+	GetHandleVerifier [0x00007FF724C283FD+3394797]
+	GetHandleVerifier [0x00007FF7249B929B+842635]
+	(No symbol) [0x00007FF72486654F]
+	(No symbol) [0x00007FF724861FA4]
+	(No symbol) [0x00007FF72486213D]
+	(No symbol) [0x00007FF724851629]
+	BaseThreadInitThunk [0x00007FFE21634CB0+16]
+	RtlUserThreadStart [0x00007FFE21D7EDCB+43]
 </msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-11-21T11:19:41.278957" elapsed="1.290945">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Procurement" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (1447, 636). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.71)
+<status status="FAIL" start="2024-11-21T05:03:22.663090" elapsed="1.170079">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Procurement" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (853, 494). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
 Stacktrace:
-0   chromedriver                        0x000000010100bac4 cxxbridge1$str$ptr + 3651580
-1   chromedriver                        0x0000000101004314 cxxbridge1$str$ptr + 3620940
-2   chromedriver                        0x0000000100a6c4b4 cxxbridge1$string$len + 89224
-3   chromedriver                        0x0000000100ab612c cxxbridge1$string$len + 391424
-4   chromedriver                        0x0000000100ab477c cxxbridge1$strin...
-    [ Message content over the limit has been removed. ]
-...er                        0x0000000100aa5d00 cxxbridge1$string$len + 324820
-12  chromedriver                        0x0000000100fd6e08 cxxbridge1$str$ptr + 3435328
-13  chromedriver                        0x0000000100fda120 cxxbridge1$str$ptr + 3448408
-14  chromedriver                        0x0000000100fbe17c cxxbridge1$str$ptr + 3333812
-15  chromedriver                        0x0000000100fda9e0 cxxbridge1$str$ptr + 3450648
-16  chromedriver                        0x0000000100faf988 cxxbridge1$str$ptr + 3274432
-17  chromedriver                        0x0000000100ff50f4 cxxbridge1$str$ptr + 3558956
-18  chromedriver                        0x0000000100ff5270 cxxbridge1$str$ptr + 3559336
-19  chromedriver                        0x0000000101003f88 cxxbridge1$str$ptr + 3620032
-20  libsystem_pthread.dylib             0x000000019faab2e4 _pthread_start + 136
-21  libsystem_pthread.dylib             0x000000019faa60fc thread_start + 8</status>
+	GetHandleVerifier [0x00007FF7248F2775+28773]
+	(No symbol) [0x00007FF72485AFB0]
+	(No symbol) [0x00007FF7246F552A]
+	(No symbol) [0x00007FF724750B5E]
+	(No symbol) [0x00007FF72474E5FC]
+	(No symbol) [0x00007FF72474B7E6]
+	(No symbol) [0x00007FF72474A741]
+	(No symbol) [0x00007FF72473C970]
+	(No symbol) [0x00007FF72476EF9A]
+	(No symbol) [0x00007FF72473C1C6]
+	(No symbol) [0x00007FF72476F1B0]
+	(No symbol) [0x00007FF72478F1A4]
+	(No symbol) [0x00007FF72476ED43]
+	(No symbol) [0x00007FF72473A548]
+	(No symbol) [0x00007FF72473B6B1]
+	GetHandleVerifier [0x00007FF724C1F45D+3358029]
+	GetHandleVerifier [0x00007FF724C3430D+3443709]
+	GetHandleVerifier [0x00007FF724C283FD+3394797]
+	GetHandleVerifier [0x00007FF7249B929B+842635]
+	(No symbol) [0x00007FF72486654F]
+	(No symbol) [0x00007FF724861FA4]
+	(No symbol) [0x00007FF72486213D]
+	(No symbol) [0x00007FF724851629]
+	BaseThreadInitThunk [0x00007FFE21634CB0+16]
+	RtlUserThreadStart [0x00007FFE21D7EDCB+43]
+</status>
 </kw>
-<msg time="2024-11-21T11:19:42.569986" level="INFO">${actual_status} = False</msg>
+<msg time="2024-11-21T05:03:23.833169" level="INFO">${actual_status} = False</msg>
 <var>${actual_status}</var>
 <arg>Click Element</arg>
 <arg>${locator}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-11-21T11:19:41.278889" elapsed="1.291109"/>
+<status status="PASS" start="2024-11-21T05:03:22.663090" elapsed="1.170596"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${actual_status}</arg>
 <arg>${expected_status}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-21T11:19:42.570084" elapsed="0.000100"/>
+<status status="PASS" start="2024-11-21T05:03:23.833734" elapsed="0.000000"/>
 </kw>
 <arg>${locator}</arg>
 <arg>${False}</arg>
-<status status="PASS" start="2024-11-21T11:19:41.278772" elapsed="1.291448"/>
+<status status="PASS" start="2024-11-21T05:03:22.662530" elapsed="1.171204"/>
 </kw>
 <arg>${PROCUREMENT_LINK}</arg>
-<status status="PASS" start="2024-11-21T11:19:41.278627" elapsed="1.291617"/>
+<status status="PASS" start="2024-11-21T05:03:22.662530" elapsed="1.171768"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <kw name="Verify element if clickable" owner="Home">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:42.570766" level="INFO">Clicking element 'css=img[alt="Vendor Portal"]'.</msg>
-<msg time="2024-11-21T11:19:43.879754" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-3.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-11-21T11:19:43.879868" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Vendor Portal" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (1237, 706). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.71)
+<msg time="2024-11-21T05:03:23.835426" level="INFO">Clicking element 'css=img[alt="Vendor Portal"]'.</msg>
+<msg time="2024-11-21T05:03:24.988013" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-3.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T05:03:24.988013" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Vendor Portal" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (653, 542). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
 Stacktrace:
-0   chromedriver                        0x000000010100bac4 cxxbridge1$str$ptr + 3651580
-1   chromedriver                        0x0000000101004314 cxxbridge1$str$ptr + 3620940
-2   chromedriver                        0x0000000100a6c4b4 cxxbridge1$string$len + 89224
-3   chromedriver                        0x0000000100ab612c cxxbridge1$string$len + 391424
-4   chromedriver                        0x0000000100ab477c cxxbridge1$string$len + 384848
-5   chromedriver                        0x0000000100ab26c0 cxxbridge1$string$len + 376468
-6   chromedriver                        0x0000000100ab1af8 cxxbridge1$string$len + 373452
-7   chromedriver                        0x0000000100aa6fbc cxxbridge1$string$len + 329616
-8   chromedriver                        0x0000000100aa6a10 cxxbridge1$string$len + 328164
-9   chromedriver                        0x0000000100aea0fc cxxbridge1$string$len + 604368
-10  chromedriver                        0x0000000100aa50b0 cxxbridge1$string$len + 321668
-11  chromedriver                        0x0000000100aa5d00 cxxbridge1$string$len + 324820
-12  chromedriver                        0x0000000100fd6e08 cxxbridge1$str$ptr + 3435328
-13  chromedriver                        0x0000000100fda120 cxxbridge1$str$ptr + 3448408
-14  chromedriver                        0x0000000100fbe17c cxxbridge1$str$ptr + 3333812
-15  chromedriver                        0x0000000100fda9e0 cxxbridge1$str$ptr + 3450648
-16  chromedriver                        0x0000000100faf988 cxxbridge1$str$ptr + 3274432
-17  chromedriver                        0x0000000100ff50f4 cxxbridge1$str$ptr + 3558956
-18  chromedriver                        0x0000000100ff5270 cxxbridge1$str$ptr + 3559336
-19  chromedriver                        0x0000000101003f88 cxxbridge1$str$ptr + 3620032
-20  libsystem_pthread.dylib             0x000000019faab2e4 _pthread_start + 136
-21  libsystem_pthread.dylib             0x000000019faa60fc thread_start + 8
+	GetHandleVerifier [0x00007FF7248F2775+28773]
+	(No symbol) [0x00007FF72485AFB0]
+	(No symbol) [0x00007FF7246F552A]
+	(No symbol) [0x00007FF724750B5E]
+	(No symbol) [0x00007FF72474E5FC]
+	(No symbol) [0x00007FF72474B7E6]
+	(No symbol) [0x00007FF72474A741]
+	(No symbol) [0x00007FF72473C970]
+	(No symbol) [0x00007FF72476EF9A]
+	(No symbol) [0x00007FF72473C1C6]
+	(No symbol) [0x00007FF72476F1B0]
+	(No symbol) [0x00007FF72478F1A4]
+	(No symbol) [0x00007FF72476ED43]
+	(No symbol) [0x00007FF72473A548]
+	(No symbol) [0x00007FF72473B6B1]
+	GetHandleVerifier [0x00007FF724C1F45D+3358029]
+	GetHandleVerifier [0x00007FF724C3430D+3443709]
+	GetHandleVerifier [0x00007FF724C283FD+3394797]
+	GetHandleVerifier [0x00007FF7249B929B+842635]
+	(No symbol) [0x00007FF72486654F]
+	(No symbol) [0x00007FF724861FA4]
+	(No symbol) [0x00007FF72486213D]
+	(No symbol) [0x00007FF724851629]
+	BaseThreadInitThunk [0x00007FFE21634CB0+16]
+	RtlUserThreadStart [0x00007FFE21D7EDCB+43]
 </msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-11-21T11:19:42.570689" elapsed="1.309745">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Vendor Portal" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (1237, 706). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.71)
+<status status="FAIL" start="2024-11-21T05:03:23.834862" elapsed="1.153151">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Vendor Portal" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (653, 542). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
 Stacktrace:
-0   chromedriver                        0x000000010100bac4 cxxbridge1$str$ptr + 3651580
-1   chromedriver                        0x0000000101004314 cxxbridge1$str$ptr + 3620940
-2   chromedriver                        0x0000000100a6c4b4 cxxbridge1$string$len + 89224
-3   chromedriver                        0x0000000100ab612c cxxbridge1$string$len + 391424
-4   chromedriver                        0x0000000100ab477c cxxbridge1$strin...
-    [ Message content over the limit has been removed. ]
-...er                        0x0000000100aa5d00 cxxbridge1$string$len + 324820
-12  chromedriver                        0x0000000100fd6e08 cxxbridge1$str$ptr + 3435328
-13  chromedriver                        0x0000000100fda120 cxxbridge1$str$ptr + 3448408
-14  chromedriver                        0x0000000100fbe17c cxxbridge1$str$ptr + 3333812
-15  chromedriver                        0x0000000100fda9e0 cxxbridge1$str$ptr + 3450648
-16  chromedriver                        0x0000000100faf988 cxxbridge1$str$ptr + 3274432
-17  chromedriver                        0x0000000100ff50f4 cxxbridge1$str$ptr + 3558956
-18  chromedriver                        0x0000000100ff5270 cxxbridge1$str$ptr + 3559336
-19  chromedriver                        0x0000000101003f88 cxxbridge1$str$ptr + 3620032
-20  libsystem_pthread.dylib             0x000000019faab2e4 _pthread_start + 136
-21  libsystem_pthread.dylib             0x000000019faa60fc thread_start + 8</status>
+	GetHandleVerifier [0x00007FF7248F2775+28773]
+	(No symbol) [0x00007FF72485AFB0]
+	(No symbol) [0x00007FF7246F552A]
+	(No symbol) [0x00007FF724750B5E]
+	(No symbol) [0x00007FF72474E5FC]
+	(No symbol) [0x00007FF72474B7E6]
+	(No symbol) [0x00007FF72474A741]
+	(No symbol) [0x00007FF72473C970]
+	(No symbol) [0x00007FF72476EF9A]
+	(No symbol) [0x00007FF72473C1C6]
+	(No symbol) [0x00007FF72476F1B0]
+	(No symbol) [0x00007FF72478F1A4]
+	(No symbol) [0x00007FF72476ED43]
+	(No symbol) [0x00007FF72473A548]
+	(No symbol) [0x00007FF72473B6B1]
+	GetHandleVerifier [0x00007FF724C1F45D+3358029]
+	GetHandleVerifier [0x00007FF724C3430D+3443709]
+	GetHandleVerifier [0x00007FF724C283FD+3394797]
+	GetHandleVerifier [0x00007FF7249B929B+842635]
+	(No symbol) [0x00007FF72486654F]
+	(No symbol) [0x00007FF724861FA4]
+	(No symbol) [0x00007FF72486213D]
+	(No symbol) [0x00007FF724851629]
+	BaseThreadInitThunk [0x00007FFE21634CB0+16]
+	RtlUserThreadStart [0x00007FFE21D7EDCB+43]
+</status>
 </kw>
-<msg time="2024-11-21T11:19:43.880519" level="INFO">${actual_status} = False</msg>
+<msg time="2024-11-21T05:03:24.988013" level="INFO">${actual_status} = False</msg>
 <var>${actual_status}</var>
 <arg>Click Element</arg>
 <arg>${locator}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-11-21T11:19:42.570618" elapsed="1.309912"/>
+<status status="PASS" start="2024-11-21T05:03:23.834862" elapsed="1.153151"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${actual_status}</arg>
 <arg>${expected_status}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-21T11:19:43.880620" elapsed="0.000101"/>
+<status status="PASS" start="2024-11-21T05:03:24.988013" elapsed="0.000000"/>
 </kw>
 <arg>${locator}</arg>
 <arg>${False}</arg>
-<status status="PASS" start="2024-11-21T11:19:42.570500" elapsed="1.310255"/>
+<status status="PASS" start="2024-11-21T05:03:23.834298" elapsed="1.153715"/>
 </kw>
 <arg>${VENDOR_LINK}</arg>
-<status status="PASS" start="2024-11-21T11:19:42.570353" elapsed="1.310425"/>
+<status status="PASS" start="2024-11-21T05:03:23.834298" elapsed="1.153715"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <kw name="Verify element if clickable" owner="Home">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:43.881318" level="INFO">Clicking element 'css=img[alt="Quality Management"]'.</msg>
-<msg time="2024-11-21T11:19:45.112624" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-4.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-11-21T11:19:45.112751" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Quality Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (1007, 596). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.71)
+<msg time="2024-11-21T05:03:24.988013" level="INFO">Clicking element 'css=img[alt="Quality Management"]'.</msg>
+<msg time="2024-11-21T05:03:26.158019" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-4.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T05:03:26.158019" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Quality Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (461, 454). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
 Stacktrace:
-0   chromedriver                        0x000000010100bac4 cxxbridge1$str$ptr + 3651580
-1   chromedriver                        0x0000000101004314 cxxbridge1$str$ptr + 3620940
-2   chromedriver                        0x0000000100a6c4b4 cxxbridge1$string$len + 89224
-3   chromedriver                        0x0000000100ab612c cxxbridge1$string$len + 391424
-4   chromedriver                        0x0000000100ab477c cxxbridge1$string$len + 384848
-5   chromedriver                        0x0000000100ab26c0 cxxbridge1$string$len + 376468
-6   chromedriver                        0x0000000100ab1af8 cxxbridge1$string$len + 373452
-7   chromedriver                        0x0000000100aa6fbc cxxbridge1$string$len + 329616
-8   chromedriver                        0x0000000100aa6a10 cxxbridge1$string$len + 328164
-9   chromedriver                        0x0000000100aea0fc cxxbridge1$string$len + 604368
-10  chromedriver                        0x0000000100aa50b0 cxxbridge1$string$len + 321668
-11  chromedriver                        0x0000000100aa5d00 cxxbridge1$string$len + 324820
-12  chromedriver                        0x0000000100fd6e08 cxxbridge1$str$ptr + 3435328
-13  chromedriver                        0x0000000100fda120 cxxbridge1$str$ptr + 3448408
-14  chromedriver                        0x0000000100fbe17c cxxbridge1$str$ptr + 3333812
-15  chromedriver                        0x0000000100fda9e0 cxxbridge1$str$ptr + 3450648
-16  chromedriver                        0x0000000100faf988 cxxbridge1$str$ptr + 3274432
-17  chromedriver                        0x0000000100ff50f4 cxxbridge1$str$ptr + 3558956
-18  chromedriver                        0x0000000100ff5270 cxxbridge1$str$ptr + 3559336
-19  chromedriver                        0x0000000101003f88 cxxbridge1$str$ptr + 3620032
-20  libsystem_pthread.dylib             0x000000019faab2e4 _pthread_start + 136
-21  libsystem_pthread.dylib             0x000000019faa60fc thread_start + 8
+	GetHandleVerifier [0x00007FF7248F2775+28773]
+	(No symbol) [0x00007FF72485AFB0]
+	(No symbol) [0x00007FF7246F552A]
+	(No symbol) [0x00007FF724750B5E]
+	(No symbol) [0x00007FF72474E5FC]
+	(No symbol) [0x00007FF72474B7E6]
+	(No symbol) [0x00007FF72474A741]
+	(No symbol) [0x00007FF72473C970]
+	(No symbol) [0x00007FF72476EF9A]
+	(No symbol) [0x00007FF72473C1C6]
+	(No symbol) [0x00007FF72476F1B0]
+	(No symbol) [0x00007FF72478F1A4]
+	(No symbol) [0x00007FF72476ED43]
+	(No symbol) [0x00007FF72473A548]
+	(No symbol) [0x00007FF72473B6B1]
+	GetHandleVerifier [0x00007FF724C1F45D+3358029]
+	GetHandleVerifier [0x00007FF724C3430D+3443709]
+	GetHandleVerifier [0x00007FF724C283FD+3394797]
+	GetHandleVerifier [0x00007FF7249B929B+842635]
+	(No symbol) [0x00007FF72486654F]
+	(No symbol) [0x00007FF724861FA4]
+	(No symbol) [0x00007FF72486213D]
+	(No symbol) [0x00007FF724851629]
+	BaseThreadInitThunk [0x00007FFE21634CB0+16]
+	RtlUserThreadStart [0x00007FFE21D7EDCB+43]
 </msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-11-21T11:19:43.881239" elapsed="1.232099">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Quality Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (1007, 596). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.71)
+<status status="FAIL" start="2024-11-21T05:03:24.988013" elapsed="1.170006">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Quality Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (461, 454). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
 Stacktrace:
-0   chromedriver                        0x000000010100bac4 cxxbridge1$str$ptr + 3651580
-1   chromedriver                        0x0000000101004314 cxxbridge1$str$ptr + 3620940
-2   chromedriver                        0x0000000100a6c4b4 cxxbridge1$string$len + 89224
-3   chromedriver                        0x0000000100ab612c cxxbridge1$string$len + 391424
-4   chromedriver                        0x0000000100ab477c cxxbridge1$strin...
-    [ Message content over the limit has been removed. ]
-...er                        0x0000000100aa5d00 cxxbridge1$string$len + 324820
-12  chromedriver                        0x0000000100fd6e08 cxxbridge1$str$ptr + 3435328
-13  chromedriver                        0x0000000100fda120 cxxbridge1$str$ptr + 3448408
-14  chromedriver                        0x0000000100fbe17c cxxbridge1$str$ptr + 3333812
-15  chromedriver                        0x0000000100fda9e0 cxxbridge1$str$ptr + 3450648
-16  chromedriver                        0x0000000100faf988 cxxbridge1$str$ptr + 3274432
-17  chromedriver                        0x0000000100ff50f4 cxxbridge1$str$ptr + 3558956
-18  chromedriver                        0x0000000100ff5270 cxxbridge1$str$ptr + 3559336
-19  chromedriver                        0x0000000101003f88 cxxbridge1$str$ptr + 3620032
-20  libsystem_pthread.dylib             0x000000019faab2e4 _pthread_start + 136
-21  libsystem_pthread.dylib             0x000000019faa60fc thread_start + 8</status>
+	GetHandleVerifier [0x00007FF7248F2775+28773]
+	(No symbol) [0x00007FF72485AFB0]
+	(No symbol) [0x00007FF7246F552A]
+	(No symbol) [0x00007FF724750B5E]
+	(No symbol) [0x00007FF72474E5FC]
+	(No symbol) [0x00007FF72474B7E6]
+	(No symbol) [0x00007FF72474A741]
+	(No symbol) [0x00007FF72473C970]
+	(No symbol) [0x00007FF72476EF9A]
+	(No symbol) [0x00007FF72473C1C6]
+	(No symbol) [0x00007FF72476F1B0]
+	(No symbol) [0x00007FF72478F1A4]
+	(No symbol) [0x00007FF72476ED43]
+	(No symbol) [0x00007FF72473A548]
+	(No symbol) [0x00007FF72473B6B1]
+	GetHandleVerifier [0x00007FF724C1F45D+3358029]
+	GetHandleVerifier [0x00007FF724C3430D+3443709]
+	GetHandleVerifier [0x00007FF724C283FD+3394797]
+	GetHandleVerifier [0x00007FF7249B929B+842635]
+	(No symbol) [0x00007FF72486654F]
+	(No symbol) [0x00007FF724861FA4]
+	(No symbol) [0x00007FF72486213D]
+	(No symbol) [0x00007FF724851629]
+	BaseThreadInitThunk [0x00007FFE21634CB0+16]
+	RtlUserThreadStart [0x00007FFE21D7EDCB+43]
+</status>
 </kw>
-<msg time="2024-11-21T11:19:45.116182" level="INFO">${actual_status} = False</msg>
+<msg time="2024-11-21T05:03:26.158019" level="INFO">${actual_status} = False</msg>
 <var>${actual_status}</var>
 <arg>Click Element</arg>
 <arg>${locator}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-11-21T11:19:43.881166" elapsed="1.235031"/>
+<status status="PASS" start="2024-11-21T05:03:24.988013" elapsed="1.170006"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${actual_status}</arg>
 <arg>${expected_status}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-21T11:19:45.116292" elapsed="0.000111"/>
+<status status="PASS" start="2024-11-21T05:03:26.158019" elapsed="0.000000"/>
 </kw>
 <arg>${locator}</arg>
 <arg>${False}</arg>
-<status status="PASS" start="2024-11-21T11:19:43.881041" elapsed="1.235398"/>
+<status status="PASS" start="2024-11-21T05:03:24.988013" elapsed="1.170006"/>
 </kw>
 <arg>${QUALITY_LINK}</arg>
-<status status="PASS" start="2024-11-21T11:19:43.880897" elapsed="1.235567"/>
+<status status="PASS" start="2024-11-21T05:03:24.988013" elapsed="1.170006"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <kw name="Verify element if clickable" owner="Home">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:45.117008" level="INFO">Clicking element 'css=img[alt="Inventory Management"]'.</msg>
-<msg time="2024-11-21T11:19:46.396608" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-5.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-11-21T11:19:46.396733" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Inventory Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (936, 396). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.71)
+<msg time="2024-11-21T05:03:26.158019" level="INFO">Clicking element 'css=img[alt="Inventory Management"]'.</msg>
+<msg time="2024-11-21T05:03:27.268157" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-5.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T05:03:27.268157" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Inventory Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (413, 274). Other element would receive the click: &lt;div class="sm:mb-[100px] lg:mb-[174px]"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
 Stacktrace:
-0   chromedriver                        0x000000010100bac4 cxxbridge1$str$ptr + 3651580
-1   chromedriver                        0x0000000101004314 cxxbridge1$str$ptr + 3620940
-2   chromedriver                        0x0000000100a6c4b4 cxxbridge1$string$len + 89224
-3   chromedriver                        0x0000000100ab612c cxxbridge1$string$len + 391424
-4   chromedriver                        0x0000000100ab477c cxxbridge1$string$len + 384848
-5   chromedriver                        0x0000000100ab26c0 cxxbridge1$string$len + 376468
-6   chromedriver                        0x0000000100ab1af8 cxxbridge1$string$len + 373452
-7   chromedriver                        0x0000000100aa6fbc cxxbridge1$string$len + 329616
-8   chromedriver                        0x0000000100aa6a10 cxxbridge1$string$len + 328164
-9   chromedriver                        0x0000000100aea0fc cxxbridge1$string$len + 604368
-10  chromedriver                        0x0000000100aa50b0 cxxbridge1$string$len + 321668
-11  chromedriver                        0x0000000100aa5d00 cxxbridge1$string$len + 324820
-12  chromedriver                        0x0000000100fd6e08 cxxbridge1$str$ptr + 3435328
-13  chromedriver                        0x0000000100fda120 cxxbridge1$str$ptr + 3448408
-14  chromedriver                        0x0000000100fbe17c cxxbridge1$str$ptr + 3333812
-15  chromedriver                        0x0000000100fda9e0 cxxbridge1$str$ptr + 3450648
-16  chromedriver                        0x0000000100faf988 cxxbridge1$str$ptr + 3274432
-17  chromedriver                        0x0000000100ff50f4 cxxbridge1$str$ptr + 3558956
-18  chromedriver                        0x0000000100ff5270 cxxbridge1$str$ptr + 3559336
-19  chromedriver                        0x0000000101003f88 cxxbridge1$str$ptr + 3620032
-20  libsystem_pthread.dylib             0x000000019faab2e4 _pthread_start + 136
-21  libsystem_pthread.dylib             0x000000019faa60fc thread_start + 8
+	GetHandleVerifier [0x00007FF7248F2775+28773]
+	(No symbol) [0x00007FF72485AFB0]
+	(No symbol) [0x00007FF7246F552A]
+	(No symbol) [0x00007FF724750B5E]
+	(No symbol) [0x00007FF72474E5FC]
+	(No symbol) [0x00007FF72474B7E6]
+	(No symbol) [0x00007FF72474A741]
+	(No symbol) [0x00007FF72473C970]
+	(No symbol) [0x00007FF72476EF9A]
+	(No symbol) [0x00007FF72473C1C6]
+	(No symbol) [0x00007FF72476F1B0]
+	(No symbol) [0x00007FF72478F1A4]
+	(No symbol) [0x00007FF72476ED43]
+	(No symbol) [0x00007FF72473A548]
+	(No symbol) [0x00007FF72473B6B1]
+	GetHandleVerifier [0x00007FF724C1F45D+3358029]
+	GetHandleVerifier [0x00007FF724C3430D+3443709]
+	GetHandleVerifier [0x00007FF724C283FD+3394797]
+	GetHandleVerifier [0x00007FF7249B929B+842635]
+	(No symbol) [0x00007FF72486654F]
+	(No symbol) [0x00007FF724861FA4]
+	(No symbol) [0x00007FF72486213D]
+	(No symbol) [0x00007FF724851629]
+	BaseThreadInitThunk [0x00007FFE21634CB0+16]
+	RtlUserThreadStart [0x00007FFE21D7EDCB+43]
 </msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-11-21T11:19:45.116928" elapsed="1.280340">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Inventory Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (936, 396). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
-  (Session info: chrome=131.0.6778.71)
+<status status="FAIL" start="2024-11-21T05:03:26.158019" elapsed="1.110138">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Inventory Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (413, 274). Other element would receive the click: &lt;div class="sm:mb-[100px] lg:mb-[174px]"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
 Stacktrace:
-0   chromedriver                        0x000000010100bac4 cxxbridge1$str$ptr + 3651580
-1   chromedriver                        0x0000000101004314 cxxbridge1$str$ptr + 3620940
-2   chromedriver                        0x0000000100a6c4b4 cxxbridge1$string$len + 89224
-3   chromedriver                        0x0000000100ab612c cxxbridge1$string$len + 391424
-    [ Message content over the limit has been removed. ]
-...er                        0x0000000100aa5d00 cxxbridge1$string$len + 324820
-12  chromedriver                        0x0000000100fd6e08 cxxbridge1$str$ptr + 3435328
-13  chromedriver                        0x0000000100fda120 cxxbridge1$str$ptr + 3448408
-14  chromedriver                        0x0000000100fbe17c cxxbridge1$str$ptr + 3333812
-15  chromedriver                        0x0000000100fda9e0 cxxbridge1$str$ptr + 3450648
-16  chromedriver                        0x0000000100faf988 cxxbridge1$str$ptr + 3274432
-17  chromedriver                        0x0000000100ff50f4 cxxbridge1$str$ptr + 3558956
-18  chromedriver                        0x0000000100ff5270 cxxbridge1$str$ptr + 3559336
-19  chromedriver                        0x0000000101003f88 cxxbridge1$str$ptr + 3620032
-20  libsystem_pthread.dylib             0x000000019faab2e4 _pthread_start + 136
-21  libsystem_pthread.dylib             0x000000019faa60fc thread_start + 8</status>
+	GetHandleVerifier [0x00007FF7248F2775+28773]
+	(No symbol) [0x00007FF72485AFB0]
+	(No symbol) [0x00007FF7246F552A]
+	(No symbol) [0x00007FF724750B5E]
+	(No symbol) [0x00007FF72474E5FC]
+	(No symbol) [0x00007FF72474B7E6]
+	(No symbol) [0x00007FF72474A741]
+	(No symbol) [0x00007FF72473C970]
+	(No symbol) [0x00007FF72476EF9A]
+	(No symbol) [0x00007FF72473C1C6]
+	(No symbol) [0x00007FF72476F1B0]
+	(No symbol) [0x00007FF72478F1A4]
+	(No symbol) [0x00007FF72476ED43]
+	(No symbol) [0x00007FF72473A548]
+	(No symbol) [0x00007FF72473B6B1]
+	GetHandleVerifier [0x00007FF724C1F45D+3358029]
+	GetHandleVerifier [0x00007FF724C3430D+3443709]
+	GetHandleVerifier [0x00007FF724C283FD+3394797]
+	GetHandleVerifier [0x00007FF7249B929B+842635]
+	(No symbol) [0x00007FF72486654F]
+	(No symbol) [0x00007FF724861FA4]
+	(No symbol) [0x00007FF72486213D]
+	(No symbol) [0x00007FF724851629]
+	BaseThreadInitThunk [0x00007FFE21634CB0+16]
+	RtlUserThreadStart [0x00007FFE21D7EDCB+43]
+</status>
 </kw>
-<msg time="2024-11-21T11:19:46.397352" level="INFO">${actual_status} = False</msg>
+<msg time="2024-11-21T05:03:27.268157" level="INFO">${actual_status} = False</msg>
 <var>${actual_status}</var>
 <arg>Click Element</arg>
 <arg>${locator}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-11-21T11:19:45.116857" elapsed="1.280507"/>
+<status status="PASS" start="2024-11-21T05:03:26.158019" elapsed="1.110138"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${actual_status}</arg>
 <arg>${expected_status}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-21T11:19:46.397451" elapsed="0.000101"/>
+<status status="PASS" start="2024-11-21T05:03:27.268157" elapsed="0.000000"/>
 </kw>
 <arg>${locator}</arg>
 <arg>${False}</arg>
-<status status="PASS" start="2024-11-21T11:19:45.116731" elapsed="1.280854"/>
+<status status="PASS" start="2024-11-21T05:03:26.158019" elapsed="1.110138"/>
 </kw>
 <arg>${INVENTORY_LINK}</arg>
-<status status="PASS" start="2024-11-21T11:19:45.116580" elapsed="1.281028"/>
+<status status="PASS" start="2024-11-21T05:03:26.158019" elapsed="1.110138"/>
 </kw>
 <kw name="AND The link should be clickable" owner="KadenaApp">
 <kw name="Verify element if clickable" owner="Home">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:46.398131" level="INFO">Clicking element 'css=img[alt="Supply Planning"]'.</msg>
+<msg time="2024-11-21T05:03:27.283792" level="INFO">Clicking element 'css=img[alt="Supply Planning"]'.</msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T11:19:46.398057" elapsed="1.292229"/>
+<status status="PASS" start="2024-11-21T05:03:27.283792" elapsed="1.930869"/>
 </kw>
-<msg time="2024-11-21T11:19:47.690417" level="INFO">${actual_status} = True</msg>
+<msg time="2024-11-21T05:03:29.215310" level="INFO">${actual_status} = True</msg>
 <var>${actual_status}</var>
 <arg>Click Element</arg>
 <arg>${locator}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-11-21T11:19:46.397984" elapsed="1.292454"/>
+<status status="PASS" start="2024-11-21T05:03:27.283792" elapsed="1.931518"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${actual_status}</arg>
 <arg>${expected_status}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-21T11:19:47.690648" elapsed="0.000176"/>
+<status status="PASS" start="2024-11-21T05:03:29.215310" elapsed="0.001008"/>
 </kw>
 <arg>${locator}</arg>
 <arg>${True}</arg>
-<status status="PASS" start="2024-11-21T11:19:46.397862" elapsed="1.293032"/>
+<status status="PASS" start="2024-11-21T05:03:27.283792" elapsed="1.932526"/>
 </kw>
 <arg>${SUPPLY_LINK}</arg>
-<status status="PASS" start="2024-11-21T11:19:46.397717" elapsed="1.293217"/>
+<status status="PASS" start="2024-11-21T05:03:27.268157" elapsed="1.948161"/>
 </kw>
 <kw name="THEN I should be redirected to the" owner="KadenaApp">
 <kw name="I redirected to the" owner="Home">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${text}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-21T11:19:47.691476" elapsed="0.712164"/>
+<status status="PASS" start="2024-11-21T05:03:29.216318" elapsed="1.575078"/>
 </kw>
 <arg>${text}</arg>
-<status status="PASS" start="2024-11-21T11:19:47.691305" elapsed="0.712413"/>
+<status status="PASS" start="2024-11-21T05:03:29.216318" elapsed="1.575078"/>
 </kw>
 <arg>Supply Planning</arg>
-<status status="PASS" start="2024-11-21T11:19:47.691099" elapsed="0.712651"/>
+<status status="PASS" start="2024-11-21T05:03:29.216318" elapsed="1.575601"/>
 </kw>
 <kw name="Close Test Browser" owner="Common" type="TEARDOWN">
 <kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-21T11:19:48.556294" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-6.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-21T05:03:30.828166" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-6.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-21T11:19:48.404276" elapsed="0.152082"/>
+<status status="PASS" start="2024-11-21T05:03:30.792482" elapsed="0.035684"/>
 </kw>
 <arg>10</arg>
 <arg>1s</arg>
 <arg>Capture Page Screenshot</arg>
 <doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2024-11-21T11:19:48.404130" elapsed="0.152278"/>
+<status status="PASS" start="2024-11-21T05:03:30.792482" elapsed="0.036418"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-11-21T11:19:48.556510" elapsed="0.079702"/>
+<status status="PASS" start="2024-11-21T05:03:30.828900" elapsed="6.124625"/>
 </kw>
-<status status="PASS" start="2024-11-21T11:19:48.403961" elapsed="0.232327"/>
+<status status="PASS" start="2024-11-21T05:03:30.791959" elapsed="6.162101"/>
 </kw>
 <doc>Login with access to Supply Planning</doc>
 <tag>M0MAIN-SIT-002</tag>
 <tag>TS-SIT-001</tag>
-<status status="PASS" start="2024-11-21T11:19:32.043559" elapsed="16.592791"/>
+<status status="PASS" start="2024-11-21T05:03:14.298443" elapsed="22.655617"/>
 </test>
-<status status="PASS" start="2024-11-21T11:17:44.739361" elapsed="123.897314"/>
-</suite>
-<status status="PASS" start="2024-11-21T11:17:44.726720" elapsed="123.910243"/>
+<status status="PASS" start="2024-11-21T05:01:45.026357" elapsed="111.928376"/>
 </suite>
 <statistics>
 <total>
@@ -1466,11 +1585,11 @@ Stacktrace:
 <stat pass="4" fail="0" skip="0">TS-SIT-001</stat>
 </tag>
 <suite>
-<stat pass="4" fail="0" skip="0" id="s1" name="Testsuites">Testsuites</stat>
-<stat pass="4" fail="0" skip="0" id="s1-s1" name="Kadena Tests">Testsuites.Kadena Tests</stat>
+<stat pass="4" fail="0" skip="0" id="s1" name="Kadena Tests">Kadena Tests</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-11-21T11:17:44.814835" level="WARN">Imported resource file '/Users/redenlongcop/Documents/KADENA_AUTOMATION/resources/PO/Ordering.robot' is empty.</msg>
+<msg time="2024-11-21T05:01:45.041984" level="ERROR">Error in file 'D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\Kadena_Tests.robot' on line 3: Resource file '..\variables\KadenaCredentials.robot' does not exist.</msg>
+<msg time="2024-11-21T05:01:45.354467" level="WARN">Imported resource file 'D:\a\KadenaTestAutomation\KadenaTestAutomation\resources\PO\Ordering.robot' is empty.</msg>
 </errors>
 </robot>
