@@ -30,6 +30,7 @@ jobs:
         python -c "from webdriver_manager.chrome import ChromeDriverManager; ChromeDriverManager().install()"
 
     - name: Run Robot Framework tests
+      shell: bash
       run: |
         robot -d results \
         -v LOGINPAGE_URL:${{ secrets.LOGINPAGE_URL }} \
