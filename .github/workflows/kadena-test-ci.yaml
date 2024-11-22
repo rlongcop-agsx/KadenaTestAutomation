@@ -31,12 +31,12 @@ jobs:
 
     - name: Run Robot Framework tests
       run: |
-        robot -d results \
-          -v LOGINPAGE_URL:${{ secrets.LOGINPAGE_URL }} \
-          -v VALID_ORDERING_EMAIL:${{ secrets.VALID_ORDERING_EMAIL }} \
-          -v VALID_FORECASTING_EMAIL:${{ secrets.VALID_FORECASTING_EMAIL }} \
-          -v VALID_PROCUREMENT_EMAIL:${{ secrets.VALID_PROCUREMENT_EMAIL }} \
-          testsuites/Kadena_Tests.robot
+        robot -d results 
+        -v LOGINPAGE_URL:${{ secrets.LOGINPAGE_URL }} 
+        -v VALID_ORDERING_EMAIL:${{ secrets.VALID_ORDERING_EMAIL }} 
+        -v VALID_FORECASTING_EMAIL:${{ secrets.VALID_FORECASTING_EMAIL }} 
+        -v VALID_PROCUREMENT_EMAIL:${{ secrets.VALID_PROCUREMENT_EMAIL }} 
+        testsuites/Kadena_Tests.robot
 
     - name: Archive test results
       if: always()
