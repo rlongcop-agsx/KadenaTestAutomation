@@ -28,12 +28,6 @@ I click the link
     [Arguments]                    ${element}
     Forecast.Click Forecast link    ${element}
 
-I should be redirected to the Forcasting Page
-    Forecast.I redirected to the        Forecasting
-
-I should be redirected to the Supply Planning Page
-    SupplyPlanning.I redirected to the        Supply Planning
-
 I should be redirected to the
     [Arguments]                         ${text}
     Home.I redirected to the            ${text}

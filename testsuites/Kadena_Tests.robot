@@ -1,4 +1,5 @@
 *** Settings ***
+Documentation                              This is the main test suite of the Kadena project
 Resource                                   ../variables/KadenaVariable.robot
 Resource                                   ../variables/KadenaCredentials.robot
 Resource                                   ../locators/LoginLocators.robot
@@ -12,30 +13,30 @@ Test Teardown                              Common.Close Test Browser
 
 
 *** Test Cases ***
-Test Scenario 1: Login with invalid password
+Test Case 1: Login with invalid password
     [Documentation]                        Login with invalid credentials
-    [Tags]                                 TS-SIT-001    
-    ...                                    M0MAIN-SIT-001
+    [Tags]                                 M0MAIN-SIT-001    
+    ...                                    MAIN
     GIVEN I go to Login page
     AND I enter                            ${VALID_ORDERING_EMAIL}    ${EMAIL}
     AND I enter                            ${INVALID_PASSWORD}        ${PASSWORD}
     WHEN I click the button                ${LOGIN_BUTTON}
     THEN A message should display          ${INVALID_ERROR_MESSAGE}
 
-Test Scenario 2: Login with invalid email
+Test Case 2: Login with invalid email
     [Documentation]                        Login with invalid credentials
-    [Tags]                                 TS-SIT-001    
-    ...                                    M0MAIN-SIT-001
+    [Tags]                                 M0MAIN-SIT-001
+    ...                                    MAIN
     GIVEN I go to Login page
     AND I enter                            ${INVALID_EMAIL}           ${EMAIL}
     AND I enter                            ${VALID_PASSWORD}          ${PASSWORD}
     WHEN I click the button                ${LOGIN_BUTTON}
     THEN A message should display          ${INVALID_ERROR_MESSAGE}
 
-Test Scenario 3: Login with access to Forecasting
+Test Case 3: Login with access to Forecasting
     [Documentation]                        Login with access to Forecasting
-    [Tags]                                 TS-SIT-001
-    ...                                    M0MAIN-SIT-002
+    [Tags]                                 M0MAIN-SIT-002
+    ...                                    MAIN
     GIVEN I go to Login page
     AND I enter                            ${VALID_FORECASTING_EMAIL}  ${EMAIL}
     AND I enter                            ${VALID_PASSWORD}           ${PASSWORD}
@@ -47,12 +48,12 @@ Test Scenario 3: Login with access to Forecasting
     AND The link should not be clickable   ${QUALITY_LINK}
     AND The link should not be clickable   ${INVENTORY_LINK}
     AND The link should be clickable       ${FORECAST_LINK}
-    THEN I should be redirected to the     Forecasting
+    THEN I should be redirected to the     Forecasting                
 
-Test Scenario 4: Login with access to Supply Planning modules
+Test Case 4: Login with access to Supply Planning modules
     [Documentation]                        Login with access to Supply Planning
-    [Tags]                                 TS-SIT-001
-    ...                                    M0MAIN-SIT-002
+    [Tags]                                 M0MAIN-SIT-002
+    ...                                    MAIN
     GIVEN I go to Login page
     AND I enter                            ${VALID_FORECASTING_EMAIL}  ${EMAIL}
     AND I enter                            ${VALID_PASSWORD}           ${PASSWORD}
@@ -64,4 +65,38 @@ Test Scenario 4: Login with access to Supply Planning modules
     AND The link should not be clickable   ${QUALITY_LINK}
     AND The link should not be clickable   ${INVENTORY_LINK}
     AND The link should be clickable       ${SUPPLY_LINK}
-    THEN I should be redirected to the     Supply Planning
+    THEN I should be redirected to the     Supply Planning            
+
+Test Case 5: Login with access to Ordering module
+    [Documentation]                        Login with access to Ordering module
+    [Tags]                                 M0MAIN-SIT-003    
+    ...                                    MAIN
+    GIVEN I go to Login page
+    AND I enter                            ${VALID_ORDERING_EMAIL}    ${EMAIL}
+    AND I enter                            ${VALID_PASSWORD}          ${PASSWORD}   
+    WHEN I click the button                ${LOGIN_BUTTON} 
+    AND The link should not be clickable   ${FORECAST_LINK}
+    AND The link should not be clickable   ${SUPPLY_LINK}
+    AND The link should not be clickable   ${PROCUREMENT_LINK}
+    AND The link should not be clickable   ${VENDOR_LINK}
+    AND The link should not be clickable   ${QUALITY_LINK}
+    AND The link should not be clickable   ${INVENTORY_LINK}
+    AND The link should be clickable       ${ORDERING_LINK}
+    THEN I should be redirected to the     Ordering                   
+    
+Test Case 6: Login with access to Procurement module as a Procurement Supervisor
+    [Documentation]                        Login with access to Procurement module as a Procurement Supervisor
+    [Tags]                                 M0MAIN-SIT-004
+    ...                                    MAIN
+    GIVEN I go to Login page
+    AND I enter                            ${VALID_PROCUREMENT_EMAIL}    ${EMAIL}
+    AND I enter                            ${VALID_PASSWORD}          ${PASSWORD}   
+    WHEN I click the button                ${LOGIN_BUTTON} 
+    AND The link should not be clickable   ${FORECAST_LINK}
+    AND The link should not be clickable   ${SUPPLY_LINK}
+    AND The link should not be clickable   ${ORDERING_LINK}
+    AND The link should not be clickable   ${VENDOR_LINK}
+    AND The link should not be clickable   ${QUALITY_LINK}
+    AND The link should not be clickable   ${INVENTORY_LINK}
+    AND The link should be clickable       ${PROCUREMENT_LINK}
+    THEN I should be redirected to the     Procurement
