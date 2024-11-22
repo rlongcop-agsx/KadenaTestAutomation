@@ -1,1593 +1,2439 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.12.7 on win32)" generated="2024-11-21T23:44:36.442530" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1.1 (Python 3.12.7 on win32)" generated="2024-11-22T05:49:36.125007" rpa="false" schemaversion="5">
 <suite id="s1" name="Kadena Tests" source="D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\Kadena_Tests.robot">
-<test id="s1-t1" name="Test Scenario 1: Login with invalid password" line="15">
+<test id="s1-t1" name="Test Case 1: Login with invalid password" line="16">
 <kw name="Open Test Browser" owner="Common" type="SETUP">
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-11-21T23:44:36.755580" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:49:36.437886" elapsed="0.000000"/>
 </kw>
 <kw name="Empty Directory" owner="OperatingSystem">
-<msg time="2024-11-21T23:44:36.755580" level="INFO" html="true">Listing contents of directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
-<msg time="2024-11-21T23:44:36.755580" level="INFO" html="true">Emptied directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-22T05:49:36.437886" level="INFO" html="true">Listing contents of directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-22T05:49:36.437886" level="INFO" html="true">Emptied directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
 <arg>testsuites/screenshots</arg>
 <doc>Deletes all the content from the given directory.</doc>
-<status status="PASS" start="2024-11-21T23:44:36.755580" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:49:36.437886" elapsed="0.000000"/>
 </kw>
 <kw name="Set Screenshot Directory" owner="SeleniumLibrary">
 <arg>testsuites/screenshots</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" start="2024-11-21T23:44:36.755580" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:49:36.437886" elapsed="0.000000"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-21T23:44:36.755580" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002461A9395B0&gt;</msg>
+<msg time="2024-11-22T05:49:36.437886" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002545460D910&gt;</msg>
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].${name}Options()</arg>
 <arg>sys, selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-21T23:44:36.755580" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:49:36.437886" elapsed="0.000000"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--incognito</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2024-11-21T23:44:36.755580" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:49:36.437886" elapsed="0.000000"/>
 </kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:44:36.755580" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-11-22T05:49:36.437886" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>${name}</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-11-21T23:44:36.755580" elapsed="7.913468"/>
+<status status="PASS" start="2024-11-22T05:49:36.437886" elapsed="37.884374"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-21T23:44:44.669048" elapsed="0.031394"/>
+<status status="PASS" start="2024-11-22T05:50:14.322260" elapsed="0.106172"/>
 </kw>
 <arg>${BROWSER_NAME}</arg>
-<status status="PASS" start="2024-11-21T23:44:36.755580" elapsed="7.944862"/>
+<status status="PASS" start="2024-11-22T05:49:36.437886" elapsed="37.990546"/>
 </kw>
 <kw name="GIVEN I go to Login page" owner="KadenaApp">
 <kw name="Navigate to login page" owner="Login">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:44:44.701442" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
+<msg time="2024-11-22T05:50:14.429442" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
 <arg>${LOGINPAGE_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-21T23:44:44.701442" elapsed="2.236817"/>
+<status status="PASS" start="2024-11-22T05:50:14.429442" elapsed="2.933955"/>
 </kw>
-<status status="PASS" start="2024-11-21T23:44:44.700442" elapsed="2.237817"/>
+<status status="PASS" start="2024-11-22T05:50:14.429442" elapsed="2.933955"/>
 </kw>
 <kw name="Verify Page Loaded" owner="Login">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${LOGIN_HEADER}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-21T23:44:46.940029" elapsed="0.026142"/>
+<status status="PASS" start="2024-11-22T05:50:17.363397" elapsed="0.342320"/>
 </kw>
-<status status="PASS" start="2024-11-21T23:44:46.939257" elapsed="0.026914"/>
+<status status="PASS" start="2024-11-22T05:50:17.363397" elapsed="0.342320"/>
 </kw>
-<status status="PASS" start="2024-11-21T23:44:44.700442" elapsed="2.265729"/>
+<status status="PASS" start="2024-11-22T05:50:14.429442" elapsed="3.276275"/>
 </kw>
 <kw name="AND I enter" owner="KadenaApp">
 <kw name="Enter Credential" owner="Login">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:44:46.967166" level="INFO">Typing text 'test-order-receiver-3@example.com' into text field 'id=username'.</msg>
+<msg time="2024-11-22T05:50:17.705717" level="INFO">Typing text 'test-order-receiver-3@example.com' into text field 'id=username'.</msg>
 <arg>${locator}</arg>
 <arg>${credential}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T23:44:46.967166" elapsed="0.134714"/>
+<status status="PASS" start="2024-11-22T05:50:17.705717" elapsed="0.605147"/>
 </kw>
 <arg>${credential}</arg>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-21T23:44:46.967166" elapsed="0.134714"/>
+<status status="PASS" start="2024-11-22T05:50:17.705717" elapsed="0.605147"/>
 </kw>
 <arg>${VALID_ORDERING_EMAIL}</arg>
 <arg>${EMAIL}</arg>
-<status status="PASS" start="2024-11-21T23:44:46.966171" elapsed="0.135709"/>
+<status status="PASS" start="2024-11-22T05:50:17.705717" elapsed="0.605147"/>
 </kw>
 <kw name="AND I enter" owner="KadenaApp">
 <kw name="Enter Credential" owner="Login">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:44:47.102880" level="INFO">Typing text 'invalidpassword' into text field 'id=password'.</msg>
+<msg time="2024-11-22T05:50:18.311867" level="INFO">Typing text 'invalidpassword' into text field 'id=password'.</msg>
 <arg>${locator}</arg>
 <arg>${credential}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T23:44:47.102880" elapsed="0.093524"/>
+<status status="PASS" start="2024-11-22T05:50:18.311867" elapsed="0.144141"/>
 </kw>
 <arg>${credential}</arg>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-21T23:44:47.101880" elapsed="0.094524"/>
+<status status="PASS" start="2024-11-22T05:50:18.311867" elapsed="0.145018"/>
 </kw>
 <arg>${INVALID_PASSWORD}</arg>
 <arg>${PASSWORD}</arg>
-<status status="PASS" start="2024-11-21T23:44:47.101880" elapsed="0.094524"/>
+<status status="PASS" start="2024-11-22T05:50:18.311867" elapsed="0.145018"/>
 </kw>
 <kw name="WHEN I click the button" owner="KadenaApp">
 <kw name="Click submit button" owner="Login">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:44:47.197406" level="INFO">Clicking button 'name=login'.</msg>
+<msg time="2024-11-22T05:50:18.458193" level="INFO">Clicking button 'name=login'.</msg>
 <arg>${locator}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T23:44:47.197406" elapsed="1.149656"/>
+<status status="PASS" start="2024-11-22T05:50:18.457197" elapsed="1.596010"/>
 </kw>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-21T23:44:47.196404" elapsed="1.150658"/>
+<status status="PASS" start="2024-11-22T05:50:18.457197" elapsed="1.596010"/>
 </kw>
 <arg>${LOGIN_BUTTON}</arg>
-<status status="PASS" start="2024-11-21T23:44:47.196404" elapsed="1.150658"/>
+<status status="PASS" start="2024-11-22T05:50:18.457197" elapsed="1.596010"/>
 </kw>
 <kw name="THEN A message should display" owner="KadenaApp">
 <kw name="Validate Error Message" owner="Login">
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:44:48.362641" level="INFO">Current page contains text 'Invalid username or password.'.</msg>
+<msg time="2024-11-22T05:50:20.068729" level="INFO">Current page contains text 'Invalid username or password.'.</msg>
 <arg>${text}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-11-21T23:44:48.348067" elapsed="0.015569"/>
+<status status="PASS" start="2024-11-22T05:50:20.054206" elapsed="0.014523"/>
 </kw>
 <arg>${text}</arg>
-<status status="PASS" start="2024-11-21T23:44:48.348067" elapsed="0.015569"/>
+<status status="PASS" start="2024-11-22T05:50:20.054206" elapsed="0.014523"/>
 </kw>
 <arg>${INVALID_ERROR_MESSAGE}</arg>
-<status status="PASS" start="2024-11-21T23:44:48.348067" elapsed="0.015569"/>
+<status status="PASS" start="2024-11-22T05:50:20.054206" elapsed="0.014523"/>
 </kw>
 <kw name="Close Test Browser" owner="Common" type="TEARDOWN">
 <kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:44:48.426952" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-22T05:50:20.129748" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-21T23:44:48.364633" elapsed="0.062319"/>
+<status status="PASS" start="2024-11-22T05:50:20.068729" elapsed="0.061019"/>
 </kw>
 <arg>10</arg>
 <arg>1s</arg>
 <arg>Capture Page Screenshot</arg>
 <doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2024-11-21T23:44:48.363636" elapsed="0.064314"/>
+<status status="PASS" start="2024-11-22T05:50:20.068729" elapsed="0.061019"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-11-21T23:44:48.427950" elapsed="6.217871"/>
+<status status="PASS" start="2024-11-22T05:50:20.129748" elapsed="6.225875"/>
 </kw>
-<status status="PASS" start="2024-11-21T23:44:48.363636" elapsed="6.282185"/>
+<status status="PASS" start="2024-11-22T05:50:20.068729" elapsed="6.286894"/>
 </kw>
 <doc>Login with invalid credentials</doc>
 <tag>M0MAIN-SIT-001</tag>
-<tag>TS-SIT-001</tag>
-<status status="PASS" start="2024-11-21T23:44:36.755580" elapsed="17.890241"/>
+<tag>MAIN</tag>
+<status status="PASS" start="2024-11-22T05:49:36.437886" elapsed="49.917737"/>
 </test>
-<test id="s1-t2" name="Test Scenario 2: Login with invalid email" line="25">
+<test id="s1-t2" name="Test Case 2: Login with invalid email" line="26">
 <kw name="Open Test Browser" owner="Common" type="SETUP">
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-11-21T23:44:54.645821" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:50:26.355623" elapsed="0.000000"/>
 </kw>
 <kw name="Empty Directory" owner="OperatingSystem">
-<msg time="2024-11-21T23:44:54.645821" level="INFO" html="true">Listing contents of directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
-<msg time="2024-11-21T23:44:54.645821" level="INFO" html="true">Emptied directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-22T05:50:26.355623" level="INFO" html="true">Listing contents of directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-22T05:50:26.355623" level="INFO" html="true">Emptied directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
 <arg>testsuites/screenshots</arg>
 <doc>Deletes all the content from the given directory.</doc>
-<status status="PASS" start="2024-11-21T23:44:54.645821" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:50:26.355623" elapsed="0.000000"/>
 </kw>
 <kw name="Set Screenshot Directory" owner="SeleniumLibrary">
 <arg>testsuites/screenshots</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" start="2024-11-21T23:44:54.645821" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:50:26.355623" elapsed="0.000000"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-21T23:44:54.645821" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002461A96A120&gt;</msg>
+<msg time="2024-11-22T05:50:26.355623" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002545463B3E0&gt;</msg>
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].${name}Options()</arg>
 <arg>sys, selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-21T23:44:54.645821" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:50:26.355623" elapsed="0.000000"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--incognito</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2024-11-21T23:44:54.645821" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:50:26.355623" elapsed="0.000000"/>
 </kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:44:54.645821" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-11-22T05:50:26.355623" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>${name}</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-11-21T23:44:54.645821" elapsed="1.246020"/>
+<status status="PASS" start="2024-11-22T05:50:26.355623" elapsed="1.271450"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-21T23:44:55.891841" elapsed="0.024978"/>
+<status status="PASS" start="2024-11-22T05:50:27.627073" elapsed="0.036298"/>
 </kw>
 <arg>${BROWSER_NAME}</arg>
-<status status="PASS" start="2024-11-21T23:44:54.645821" elapsed="1.270998"/>
+<status status="PASS" start="2024-11-22T05:50:26.355623" elapsed="1.307748"/>
 </kw>
 <kw name="GIVEN I go to Login page" owner="KadenaApp">
 <kw name="Navigate to login page" owner="Login">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:44:55.917820" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
+<msg time="2024-11-22T05:50:27.664371" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
 <arg>${LOGINPAGE_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-21T23:44:55.916819" elapsed="2.347415"/>
+<status status="PASS" start="2024-11-22T05:50:27.664371" elapsed="2.821354"/>
 </kw>
-<status status="PASS" start="2024-11-21T23:44:55.916819" elapsed="2.347415"/>
+<status status="PASS" start="2024-11-22T05:50:27.664371" elapsed="2.821354"/>
 </kw>
 <kw name="Verify Page Loaded" owner="Login">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${LOGIN_HEADER}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-21T23:44:58.265220" elapsed="0.013351"/>
+<status status="PASS" start="2024-11-22T05:50:30.486872" elapsed="0.013002"/>
 </kw>
-<status status="PASS" start="2024-11-21T23:44:58.265220" elapsed="0.013351"/>
+<status status="PASS" start="2024-11-22T05:50:30.486872" elapsed="0.013002"/>
 </kw>
-<status status="PASS" start="2024-11-21T23:44:55.916819" elapsed="2.361752"/>
+<status status="PASS" start="2024-11-22T05:50:27.664371" elapsed="2.835503"/>
 </kw>
 <kw name="AND I enter" owner="KadenaApp">
 <kw name="Enter Credential" owner="Login">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:44:58.278571" level="INFO">Typing text 'invalid@email.com' into text field 'id=username'.</msg>
+<msg time="2024-11-22T05:50:30.500973" level="INFO">Typing text 'invalid@email.com' into text field 'id=username'.</msg>
 <arg>${locator}</arg>
 <arg>${credential}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T23:44:58.278571" elapsed="0.084011"/>
+<status status="PASS" start="2024-11-22T05:50:30.500973" elapsed="0.080163"/>
 </kw>
 <arg>${credential}</arg>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-21T23:44:58.278571" elapsed="0.084011"/>
+<status status="PASS" start="2024-11-22T05:50:30.500973" elapsed="0.080163"/>
 </kw>
 <arg>${INVALID_EMAIL}</arg>
 <arg>${EMAIL}</arg>
-<status status="PASS" start="2024-11-21T23:44:58.278571" elapsed="0.084011"/>
+<status status="PASS" start="2024-11-22T05:50:30.499874" elapsed="0.082259"/>
 </kw>
 <kw name="AND I enter" owner="KadenaApp">
 <kw name="Enter Credential" owner="Login">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:44:58.363591" level="INFO">Typing text 'password' into text field 'id=password'.</msg>
+<msg time="2024-11-22T05:50:30.583130" level="INFO">Typing text 'password' into text field 'id=password'.</msg>
 <arg>${locator}</arg>
 <arg>${credential}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T23:44:58.363591" elapsed="0.077699"/>
+<status status="PASS" start="2024-11-22T05:50:30.582133" elapsed="0.074954"/>
 </kw>
 <arg>${credential}</arg>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-21T23:44:58.363591" elapsed="0.078696"/>
+<status status="PASS" start="2024-11-22T05:50:30.582133" elapsed="0.074954"/>
 </kw>
 <arg>${VALID_PASSWORD}</arg>
 <arg>${PASSWORD}</arg>
-<status status="PASS" start="2024-11-21T23:44:58.362582" elapsed="0.079705"/>
+<status status="PASS" start="2024-11-22T05:50:30.582133" elapsed="0.074954"/>
 </kw>
 <kw name="WHEN I click the button" owner="KadenaApp">
 <kw name="Click submit button" owner="Login">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:44:58.443284" level="INFO">Clicking button 'name=login'.</msg>
+<msg time="2024-11-22T05:50:30.658240" level="INFO">Clicking button 'name=login'.</msg>
 <arg>${locator}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T23:44:58.443284" elapsed="1.341726"/>
+<status status="PASS" start="2024-11-22T05:50:30.658240" elapsed="1.554952"/>
 </kw>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-21T23:44:58.442287" elapsed="1.343725"/>
+<status status="PASS" start="2024-11-22T05:50:30.657087" elapsed="1.556105"/>
 </kw>
 <arg>${LOGIN_BUTTON}</arg>
-<status status="PASS" start="2024-11-21T23:44:58.442287" elapsed="1.343725"/>
+<status status="PASS" start="2024-11-22T05:50:30.657087" elapsed="1.556105"/>
 </kw>
 <kw name="THEN A message should display" owner="KadenaApp">
 <kw name="Validate Error Message" owner="Login">
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:44:59.800556" level="INFO">Current page contains text 'Invalid username or password.'.</msg>
+<msg time="2024-11-22T05:50:32.227787" level="INFO">Current page contains text 'Invalid username or password.'.</msg>
 <arg>${text}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-11-21T23:44:59.787010" elapsed="0.013546"/>
+<status status="PASS" start="2024-11-22T05:50:32.214200" elapsed="0.013587"/>
 </kw>
 <arg>${text}</arg>
-<status status="PASS" start="2024-11-21T23:44:59.786012" elapsed="0.014544"/>
+<status status="PASS" start="2024-11-22T05:50:32.214200" elapsed="0.013587"/>
 </kw>
 <arg>${INVALID_ERROR_MESSAGE}</arg>
-<status status="PASS" start="2024-11-21T23:44:59.786012" elapsed="0.014544"/>
+<status status="PASS" start="2024-11-22T05:50:32.214200" elapsed="0.013587"/>
 </kw>
 <kw name="Close Test Browser" owner="Common" type="TEARDOWN">
 <kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:44:59.863524" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-22T05:50:32.286962" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-21T23:44:59.801567" elapsed="0.062961"/>
+<status status="PASS" start="2024-11-22T05:50:32.228790" elapsed="0.058172"/>
 </kw>
 <arg>10</arg>
 <arg>1s</arg>
 <arg>Capture Page Screenshot</arg>
 <doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2024-11-21T23:44:59.801567" elapsed="0.062961"/>
+<status status="PASS" start="2024-11-22T05:50:32.228790" elapsed="0.058172"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-11-21T23:44:59.864528" elapsed="6.098550"/>
+<status status="PASS" start="2024-11-22T05:50:32.286962" elapsed="6.092029"/>
 </kw>
-<status status="PASS" start="2024-11-21T23:44:59.800556" elapsed="6.162522"/>
+<status status="PASS" start="2024-11-22T05:50:32.227787" elapsed="6.151204"/>
 </kw>
 <doc>Login with invalid credentials</doc>
 <tag>M0MAIN-SIT-001</tag>
-<tag>TS-SIT-001</tag>
-<status status="PASS" start="2024-11-21T23:44:54.645821" elapsed="11.317257"/>
+<tag>MAIN</tag>
+<status status="PASS" start="2024-11-22T05:50:26.355623" elapsed="12.023368"/>
 </test>
-<test id="s1-t3" name="Test Scenario 3: Login with access to Forecasting" line="35">
+<test id="s1-t3" name="Test Case 3: Login with access to Forecasting" line="36">
 <kw name="Open Test Browser" owner="Common" type="SETUP">
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-11-21T23:45:05.963078" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:50:38.378991" elapsed="0.000000"/>
 </kw>
 <kw name="Empty Directory" owner="OperatingSystem">
-<msg time="2024-11-21T23:45:05.963078" level="INFO" html="true">Listing contents of directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
-<msg time="2024-11-21T23:45:05.963078" level="INFO" html="true">Emptied directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-22T05:50:38.378991" level="INFO" html="true">Listing contents of directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-22T05:50:38.378991" level="INFO" html="true">Emptied directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
 <arg>testsuites/screenshots</arg>
 <doc>Deletes all the content from the given directory.</doc>
-<status status="PASS" start="2024-11-21T23:45:05.963078" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:50:38.378991" elapsed="0.000000"/>
 </kw>
 <kw name="Set Screenshot Directory" owner="SeleniumLibrary">
 <arg>testsuites/screenshots</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" start="2024-11-21T23:45:05.963078" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:50:38.378991" elapsed="0.000000"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-21T23:45:05.963078" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002461A93BB30&gt;</msg>
+<msg time="2024-11-22T05:50:38.378991" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002545460DC70&gt;</msg>
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].${name}Options()</arg>
 <arg>sys, selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-21T23:45:05.963078" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:50:38.378991" elapsed="0.000000"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--incognito</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2024-11-21T23:45:05.963078" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:50:38.378991" elapsed="0.000000"/>
 </kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:45:05.963078" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-11-22T05:50:38.378991" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>${name}</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-11-21T23:45:05.963078" elapsed="1.274129"/>
+<status status="PASS" start="2024-11-22T05:50:38.378991" elapsed="1.249067"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-21T23:45:07.237207" elapsed="0.035683"/>
+<status status="PASS" start="2024-11-22T05:50:39.628058" elapsed="0.035638"/>
 </kw>
 <arg>${BROWSER_NAME}</arg>
-<status status="PASS" start="2024-11-21T23:45:05.963078" elapsed="1.309812"/>
+<status status="PASS" start="2024-11-22T05:50:38.378991" elapsed="1.284705"/>
 </kw>
 <kw name="GIVEN I go to Login page" owner="KadenaApp">
 <kw name="Navigate to login page" owner="Login">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:45:07.273886" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
+<msg time="2024-11-22T05:50:39.664696" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
 <arg>${LOGINPAGE_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-21T23:45:07.273886" elapsed="2.035081"/>
+<status status="PASS" start="2024-11-22T05:50:39.664696" elapsed="2.601071"/>
 </kw>
-<status status="PASS" start="2024-11-21T23:45:07.273886" elapsed="2.035081"/>
+<status status="PASS" start="2024-11-22T05:50:39.664696" elapsed="2.601071"/>
 </kw>
 <kw name="Verify Page Loaded" owner="Login">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${LOGIN_HEADER}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-21T23:45:09.309977" elapsed="0.013262"/>
+<status status="PASS" start="2024-11-22T05:50:42.266758" elapsed="0.012702"/>
 </kw>
-<status status="PASS" start="2024-11-21T23:45:09.309977" elapsed="0.013262"/>
+<status status="PASS" start="2024-11-22T05:50:42.265767" elapsed="0.013693"/>
 </kw>
-<status status="PASS" start="2024-11-21T23:45:07.272890" elapsed="2.051326"/>
+<status status="PASS" start="2024-11-22T05:50:39.663696" elapsed="2.615764"/>
 </kw>
 <kw name="AND I enter" owner="KadenaApp">
 <kw name="Enter Credential" owner="Login">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:45:09.324216" level="INFO">Typing text 'econsista@agsx.net' into text field 'id=username'.</msg>
+<msg time="2024-11-22T05:50:42.279460" level="INFO">Typing text 'econsista@agsx.net' into text field 'id=username'.</msg>
 <arg>${locator}</arg>
 <arg>${credential}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T23:45:09.324216" elapsed="0.084960"/>
+<status status="PASS" start="2024-11-22T05:50:42.279460" elapsed="0.082658"/>
 </kw>
 <arg>${credential}</arg>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-21T23:45:09.324216" elapsed="0.084960"/>
+<status status="PASS" start="2024-11-22T05:50:42.279460" elapsed="0.082800"/>
 </kw>
 <arg>${VALID_FORECASTING_EMAIL}</arg>
 <arg>${EMAIL}</arg>
-<status status="PASS" start="2024-11-21T23:45:09.324216" elapsed="0.084960"/>
+<status status="PASS" start="2024-11-22T05:50:42.279460" elapsed="0.083137"/>
 </kw>
 <kw name="AND I enter" owner="KadenaApp">
 <kw name="Enter Credential" owner="Login">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:45:09.410172" level="INFO">Typing text 'password' into text field 'id=password'.</msg>
+<msg time="2024-11-22T05:50:42.363923" level="INFO">Typing text 'password' into text field 'id=password'.</msg>
 <arg>${locator}</arg>
 <arg>${credential}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T23:45:09.410172" elapsed="0.077138"/>
+<status status="PASS" start="2024-11-22T05:50:42.362923" elapsed="0.075697"/>
 </kw>
 <arg>${credential}</arg>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-21T23:45:09.409176" elapsed="0.078134"/>
+<status status="PASS" start="2024-11-22T05:50:42.362923" elapsed="0.075697"/>
 </kw>
 <arg>${VALID_PASSWORD}</arg>
 <arg>${PASSWORD}</arg>
-<status status="PASS" start="2024-11-21T23:45:09.409176" elapsed="0.078134"/>
+<status status="PASS" start="2024-11-22T05:50:42.362923" elapsed="0.075697"/>
 </kw>
 <kw name="WHEN I click the button" owner="KadenaApp">
 <kw name="Click submit button" owner="Login">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:45:09.488318" level="INFO">Clicking button 'name=login'.</msg>
+<msg time="2024-11-22T05:50:42.439616" level="INFO">Clicking button 'name=login'.</msg>
 <arg>${locator}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T23:45:09.488318" elapsed="2.134315"/>
+<status status="PASS" start="2024-11-22T05:50:42.439616" elapsed="2.589980"/>
 </kw>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-21T23:45:09.487310" elapsed="2.135323"/>
+<status status="PASS" start="2024-11-22T05:50:42.438620" elapsed="2.590976"/>
 </kw>
 <arg>${LOGIN_BUTTON}</arg>
-<status status="PASS" start="2024-11-21T23:45:09.487310" elapsed="2.135323"/>
+<status status="PASS" start="2024-11-22T05:50:42.438620" elapsed="2.590976"/>
 </kw>
 <kw name="AND A message should display" owner="KadenaApp">
 <kw name="Validate Error Message" owner="Login">
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:45:11.659611" level="INFO">Current page contains text 'Welcome'.</msg>
+<msg time="2024-11-22T05:50:45.054112" level="INFO">Current page contains text 'Welcome'.</msg>
 <arg>${text}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-11-21T23:45:11.623635" elapsed="0.035976"/>
+<status status="PASS" start="2024-11-22T05:50:45.030601" elapsed="0.024515"/>
 </kw>
 <arg>${text}</arg>
-<status status="PASS" start="2024-11-21T23:45:11.623635" elapsed="0.035976"/>
+<status status="PASS" start="2024-11-22T05:50:45.030601" elapsed="0.024515"/>
 </kw>
 <arg>Welcome</arg>
-<status status="PASS" start="2024-11-21T23:45:11.623635" elapsed="0.035976"/>
+<status status="PASS" start="2024-11-22T05:50:45.029596" elapsed="0.025520"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <kw name="Verify element if clickable" owner="Home">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:45:11.662617" level="INFO">Clicking element 'css=img[alt="Ordering"]'.</msg>
-<msg time="2024-11-21T23:45:12.813876" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-11-21T23:45:12.813876" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Ordering" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fordering-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (941, 302). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
+<msg time="2024-11-22T05:50:45.057114" level="INFO">Clicking element 'css=img[alt="Ordering"]'.</msg>
+<msg time="2024-11-22T05:50:46.206138" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-22T05:50:46.206138" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Ordering" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fordering-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (941, 302). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
   (Session info: chrome=131.0.6778.70)
 Stacktrace:
-	GetHandleVerifier [0x00007FF70E072775+28773]
-	(No symbol) [0x00007FF70DFDAFB0]
-	(No symbol) [0x00007FF70DE7552A]
-	(No symbol) [0x00007FF70DED0B5E]
-	(No symbol) [0x00007FF70DECE5FC]
-	(No symbol) [0x00007FF70DECB7E6]
-	(No symbol) [0x00007FF70DECA741]
-	(No symbol) [0x00007FF70DEBC970]
-	(No symbol) [0x00007FF70DEEEF9A]
-	(No symbol) [0x00007FF70DEBC1C6]
-	(No symbol) [0x00007FF70DEEF1B0]
-	(No symbol) [0x00007FF70DF0F1A4]
-	(No symbol) [0x00007FF70DEEED43]
-	(No symbol) [0x00007FF70DEBA548]
-	(No symbol) [0x00007FF70DEBB6B1]
-	GetHandleVerifier [0x00007FF70E39F45D+3358029]
-	GetHandleVerifier [0x00007FF70E3B430D+3443709]
-	GetHandleVerifier [0x00007FF70E3A83FD+3394797]
-	GetHandleVerifier [0x00007FF70E13929B+842635]
-	(No symbol) [0x00007FF70DFE654F]
-	(No symbol) [0x00007FF70DFE1FA4]
-	(No symbol) [0x00007FF70DFE213D]
-	(No symbol) [0x00007FF70DFD1629]
-	BaseThreadInitThunk [0x00007FFF140C4CB0+16]
-	RtlUserThreadStart [0x00007FFF145DEDCB+43]
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
 </msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-11-21T23:45:11.662617" elapsed="1.151259">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Ordering" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fordering-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (941, 302). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
+<status status="FAIL" start="2024-11-22T05:50:45.057114" elapsed="1.149024">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Ordering" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fordering-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (941, 302). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
   (Session info: chrome=131.0.6778.70)
 Stacktrace:
-	GetHandleVerifier [0x00007FF70E072775+28773]
-	(No symbol) [0x00007FF70DFDAFB0]
-	(No symbol) [0x00007FF70DE7552A]
-	(No symbol) [0x00007FF70DED0B5E]
-	(No symbol) [0x00007FF70DECE5FC]
-	(No symbol) [0x00007FF70DECB7E6]
-	(No symbol) [0x00007FF70DECA741]
-	(No symbol) [0x00007FF70DEBC970]
-	(No symbol) [0x00007FF70DEEEF9A]
-	(No symbol) [0x00007FF70DEBC1C6]
-	(No symbol) [0x00007FF70DEEF1B0]
-	(No symbol) [0x00007FF70DF0F1A4]
-	(No symbol) [0x00007FF70DEEED43]
-	(No symbol) [0x00007FF70DEBA548]
-	(No symbol) [0x00007FF70DEBB6B1]
-	GetHandleVerifier [0x00007FF70E39F45D+3358029]
-	GetHandleVerifier [0x00007FF70E3B430D+3443709]
-	GetHandleVerifier [0x00007FF70E3A83FD+3394797]
-	GetHandleVerifier [0x00007FF70E13929B+842635]
-	(No symbol) [0x00007FF70DFE654F]
-	(No symbol) [0x00007FF70DFE1FA4]
-	(No symbol) [0x00007FF70DFE213D]
-	(No symbol) [0x00007FF70DFD1629]
-	BaseThreadInitThunk [0x00007FFF140C4CB0+16]
-	RtlUserThreadStart [0x00007FFF145DEDCB+43]
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
 </status>
 </kw>
-<msg time="2024-11-21T23:45:12.813876" level="INFO">${actual_status} = False</msg>
+<msg time="2024-11-22T05:50:46.206138" level="INFO">${actual_status} = False</msg>
 <var>${actual_status}</var>
 <arg>Click Element</arg>
 <arg>${locator}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-11-21T23:45:11.661611" elapsed="1.168006"/>
+<status status="PASS" start="2024-11-22T05:50:45.056112" elapsed="1.150026"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${actual_status}</arg>
 <arg>${expected_status}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-21T23:45:12.829617" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:50:46.206138" elapsed="0.000000"/>
 </kw>
 <arg>${locator}</arg>
 <arg>${False}</arg>
-<status status="PASS" start="2024-11-21T23:45:11.661611" elapsed="1.168006"/>
+<status status="PASS" start="2024-11-22T05:50:45.056112" elapsed="1.165672"/>
 </kw>
 <arg>${ORDERING_LINK}</arg>
-<status status="PASS" start="2024-11-21T23:45:11.661611" elapsed="1.168006"/>
+<status status="PASS" start="2024-11-22T05:50:45.056112" elapsed="1.165672"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <kw name="Verify element if clickable" owner="Home">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:45:12.829617" level="INFO">Clicking element 'css=img[alt="Procurement"]'.</msg>
-<msg time="2024-11-21T23:45:13.985554" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-2.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-11-21T23:45:13.985554" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Procurement" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (853, 494). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
+<msg time="2024-11-22T05:50:46.221784" level="INFO">Clicking element 'css=img[alt="Procurement"]'.</msg>
+<msg time="2024-11-22T05:50:47.377831" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-2.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-22T05:50:47.377831" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Procurement" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (853, 494). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
   (Session info: chrome=131.0.6778.70)
 Stacktrace:
-	GetHandleVerifier [0x00007FF70E072775+28773]
-	(No symbol) [0x00007FF70DFDAFB0]
-	(No symbol) [0x00007FF70DE7552A]
-	(No symbol) [0x00007FF70DED0B5E]
-	(No symbol) [0x00007FF70DECE5FC]
-	(No symbol) [0x00007FF70DECB7E6]
-	(No symbol) [0x00007FF70DECA741]
-	(No symbol) [0x00007FF70DEBC970]
-	(No symbol) [0x00007FF70DEEEF9A]
-	(No symbol) [0x00007FF70DEBC1C6]
-	(No symbol) [0x00007FF70DEEF1B0]
-	(No symbol) [0x00007FF70DF0F1A4]
-	(No symbol) [0x00007FF70DEEED43]
-	(No symbol) [0x00007FF70DEBA548]
-	(No symbol) [0x00007FF70DEBB6B1]
-	GetHandleVerifier [0x00007FF70E39F45D+3358029]
-	GetHandleVerifier [0x00007FF70E3B430D+3443709]
-	GetHandleVerifier [0x00007FF70E3A83FD+3394797]
-	GetHandleVerifier [0x00007FF70E13929B+842635]
-	(No symbol) [0x00007FF70DFE654F]
-	(No symbol) [0x00007FF70DFE1FA4]
-	(No symbol) [0x00007FF70DFE213D]
-	(No symbol) [0x00007FF70DFD1629]
-	BaseThreadInitThunk [0x00007FFF140C4CB0+16]
-	RtlUserThreadStart [0x00007FFF145DEDCB+43]
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
 </msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-11-21T23:45:12.829617" elapsed="1.155937">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Procurement" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (853, 494). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
+<status status="FAIL" start="2024-11-22T05:50:46.221784" elapsed="1.156047">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Procurement" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (853, 494). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
   (Session info: chrome=131.0.6778.70)
 Stacktrace:
-	GetHandleVerifier [0x00007FF70E072775+28773]
-	(No symbol) [0x00007FF70DFDAFB0]
-	(No symbol) [0x00007FF70DE7552A]
-	(No symbol) [0x00007FF70DED0B5E]
-	(No symbol) [0x00007FF70DECE5FC]
-	(No symbol) [0x00007FF70DECB7E6]
-	(No symbol) [0x00007FF70DECA741]
-	(No symbol) [0x00007FF70DEBC970]
-	(No symbol) [0x00007FF70DEEEF9A]
-	(No symbol) [0x00007FF70DEBC1C6]
-	(No symbol) [0x00007FF70DEEF1B0]
-	(No symbol) [0x00007FF70DF0F1A4]
-	(No symbol) [0x00007FF70DEEED43]
-	(No symbol) [0x00007FF70DEBA548]
-	(No symbol) [0x00007FF70DEBB6B1]
-	GetHandleVerifier [0x00007FF70E39F45D+3358029]
-	GetHandleVerifier [0x00007FF70E3B430D+3443709]
-	GetHandleVerifier [0x00007FF70E3A83FD+3394797]
-	GetHandleVerifier [0x00007FF70E13929B+842635]
-	(No symbol) [0x00007FF70DFE654F]
-	(No symbol) [0x00007FF70DFE1FA4]
-	(No symbol) [0x00007FF70DFE213D]
-	(No symbol) [0x00007FF70DFD1629]
-	BaseThreadInitThunk [0x00007FFF140C4CB0+16]
-	RtlUserThreadStart [0x00007FFF145DEDCB+43]
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
 </status>
 </kw>
-<msg time="2024-11-21T23:45:13.985554" level="INFO">${actual_status} = False</msg>
+<msg time="2024-11-22T05:50:47.377831" level="INFO">${actual_status} = False</msg>
 <var>${actual_status}</var>
 <arg>Click Element</arg>
 <arg>${locator}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-11-21T23:45:12.829617" elapsed="1.155937"/>
+<status status="PASS" start="2024-11-22T05:50:46.221784" elapsed="1.156047"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${actual_status}</arg>
 <arg>${expected_status}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-21T23:45:13.985554" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:50:47.377831" elapsed="0.000000"/>
 </kw>
 <arg>${locator}</arg>
 <arg>${False}</arg>
-<status status="PASS" start="2024-11-21T23:45:12.829617" elapsed="1.155937"/>
+<status status="PASS" start="2024-11-22T05:50:46.221784" elapsed="1.156047"/>
 </kw>
 <arg>${PROCUREMENT_LINK}</arg>
-<status status="PASS" start="2024-11-21T23:45:12.829617" elapsed="1.155937"/>
+<status status="PASS" start="2024-11-22T05:50:46.221784" elapsed="1.156047"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <kw name="Verify element if clickable" owner="Home">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:45:14.001182" level="INFO">Clicking element 'css=img[alt="Vendor Portal"]'.</msg>
-<msg time="2024-11-21T23:45:15.157305" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-3.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-11-21T23:45:15.157305" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Vendor Portal" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (653, 542). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
+<msg time="2024-11-22T05:50:47.377831" level="INFO">Clicking element 'css=img[alt="Vendor Portal"]'.</msg>
+<msg time="2024-11-22T05:50:48.486768" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-3.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-22T05:50:48.486768" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Vendor Portal" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (653, 542). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
   (Session info: chrome=131.0.6778.70)
 Stacktrace:
-	GetHandleVerifier [0x00007FF70E072775+28773]
-	(No symbol) [0x00007FF70DFDAFB0]
-	(No symbol) [0x00007FF70DE7552A]
-	(No symbol) [0x00007FF70DED0B5E]
-	(No symbol) [0x00007FF70DECE5FC]
-	(No symbol) [0x00007FF70DECB7E6]
-	(No symbol) [0x00007FF70DECA741]
-	(No symbol) [0x00007FF70DEBC970]
-	(No symbol) [0x00007FF70DEEEF9A]
-	(No symbol) [0x00007FF70DEBC1C6]
-	(No symbol) [0x00007FF70DEEF1B0]
-	(No symbol) [0x00007FF70DF0F1A4]
-	(No symbol) [0x00007FF70DEEED43]
-	(No symbol) [0x00007FF70DEBA548]
-	(No symbol) [0x00007FF70DEBB6B1]
-	GetHandleVerifier [0x00007FF70E39F45D+3358029]
-	GetHandleVerifier [0x00007FF70E3B430D+3443709]
-	GetHandleVerifier [0x00007FF70E3A83FD+3394797]
-	GetHandleVerifier [0x00007FF70E13929B+842635]
-	(No symbol) [0x00007FF70DFE654F]
-	(No symbol) [0x00007FF70DFE1FA4]
-	(No symbol) [0x00007FF70DFE213D]
-	(No symbol) [0x00007FF70DFD1629]
-	BaseThreadInitThunk [0x00007FFF140C4CB0+16]
-	RtlUserThreadStart [0x00007FFF145DEDCB+43]
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
 </msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-11-21T23:45:14.001182" elapsed="1.156123">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Vendor Portal" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (653, 542). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
+<status status="FAIL" start="2024-11-22T05:50:47.377831" elapsed="1.108937">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Vendor Portal" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (653, 542). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
   (Session info: chrome=131.0.6778.70)
 Stacktrace:
-	GetHandleVerifier [0x00007FF70E072775+28773]
-	(No symbol) [0x00007FF70DFDAFB0]
-	(No symbol) [0x00007FF70DE7552A]
-	(No symbol) [0x00007FF70DED0B5E]
-	(No symbol) [0x00007FF70DECE5FC]
-	(No symbol) [0x00007FF70DECB7E6]
-	(No symbol) [0x00007FF70DECA741]
-	(No symbol) [0x00007FF70DEBC970]
-	(No symbol) [0x00007FF70DEEEF9A]
-	(No symbol) [0x00007FF70DEBC1C6]
-	(No symbol) [0x00007FF70DEEF1B0]
-	(No symbol) [0x00007FF70DF0F1A4]
-	(No symbol) [0x00007FF70DEEED43]
-	(No symbol) [0x00007FF70DEBA548]
-	(No symbol) [0x00007FF70DEBB6B1]
-	GetHandleVerifier [0x00007FF70E39F45D+3358029]
-	GetHandleVerifier [0x00007FF70E3B430D+3443709]
-	GetHandleVerifier [0x00007FF70E3A83FD+3394797]
-	GetHandleVerifier [0x00007FF70E13929B+842635]
-	(No symbol) [0x00007FF70DFE654F]
-	(No symbol) [0x00007FF70DFE1FA4]
-	(No symbol) [0x00007FF70DFE213D]
-	(No symbol) [0x00007FF70DFD1629]
-	BaseThreadInitThunk [0x00007FFF140C4CB0+16]
-	RtlUserThreadStart [0x00007FFF145DEDCB+43]
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
 </status>
 </kw>
-<msg time="2024-11-21T23:45:15.157305" level="INFO">${actual_status} = False</msg>
+<msg time="2024-11-22T05:50:48.486768" level="INFO">${actual_status} = False</msg>
 <var>${actual_status}</var>
 <arg>Click Element</arg>
 <arg>${locator}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-11-21T23:45:13.985554" elapsed="1.171751"/>
+<status status="PASS" start="2024-11-22T05:50:47.377831" elapsed="1.108937"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${actual_status}</arg>
 <arg>${expected_status}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-21T23:45:15.157305" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:50:48.486768" elapsed="0.000000"/>
 </kw>
 <arg>${locator}</arg>
 <arg>${False}</arg>
-<status status="PASS" start="2024-11-21T23:45:13.985554" elapsed="1.171751"/>
+<status status="PASS" start="2024-11-22T05:50:47.377831" elapsed="1.108937"/>
 </kw>
 <arg>${VENDOR_LINK}</arg>
-<status status="PASS" start="2024-11-21T23:45:13.985554" elapsed="1.171751"/>
+<status status="PASS" start="2024-11-22T05:50:47.377831" elapsed="1.108937"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <kw name="Verify element if clickable" owner="Home">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:45:15.172932" level="INFO">Clicking element 'css=img[alt="Quality Management"]'.</msg>
-<msg time="2024-11-21T23:45:16.282671" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-4.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-11-21T23:45:16.282671" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Quality Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (461, 454). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
+<msg time="2024-11-22T05:50:48.486768" level="INFO">Clicking element 'css=img[alt="Quality Management"]'.</msg>
+<msg time="2024-11-22T05:50:49.658742" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-4.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-22T05:50:49.658742" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Quality Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (461, 454). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
   (Session info: chrome=131.0.6778.70)
 Stacktrace:
-	GetHandleVerifier [0x00007FF70E072775+28773]
-	(No symbol) [0x00007FF70DFDAFB0]
-	(No symbol) [0x00007FF70DE7552A]
-	(No symbol) [0x00007FF70DED0B5E]
-	(No symbol) [0x00007FF70DECE5FC]
-	(No symbol) [0x00007FF70DECB7E6]
-	(No symbol) [0x00007FF70DECA741]
-	(No symbol) [0x00007FF70DEBC970]
-	(No symbol) [0x00007FF70DEEEF9A]
-	(No symbol) [0x00007FF70DEBC1C6]
-	(No symbol) [0x00007FF70DEEF1B0]
-	(No symbol) [0x00007FF70DF0F1A4]
-	(No symbol) [0x00007FF70DEEED43]
-	(No symbol) [0x00007FF70DEBA548]
-	(No symbol) [0x00007FF70DEBB6B1]
-	GetHandleVerifier [0x00007FF70E39F45D+3358029]
-	GetHandleVerifier [0x00007FF70E3B430D+3443709]
-	GetHandleVerifier [0x00007FF70E3A83FD+3394797]
-	GetHandleVerifier [0x00007FF70E13929B+842635]
-	(No symbol) [0x00007FF70DFE654F]
-	(No symbol) [0x00007FF70DFE1FA4]
-	(No symbol) [0x00007FF70DFE213D]
-	(No symbol) [0x00007FF70DFD1629]
-	BaseThreadInitThunk [0x00007FFF140C4CB0+16]
-	RtlUserThreadStart [0x00007FFF145DEDCB+43]
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
 </msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-11-21T23:45:15.157305" elapsed="1.125366">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Quality Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (461, 454). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
+<status status="FAIL" start="2024-11-22T05:50:48.486768" elapsed="1.171974">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Quality Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (461, 454). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
   (Session info: chrome=131.0.6778.70)
 Stacktrace:
-	GetHandleVerifier [0x00007FF70E072775+28773]
-	(No symbol) [0x00007FF70DFDAFB0]
-	(No symbol) [0x00007FF70DE7552A]
-	(No symbol) [0x00007FF70DED0B5E]
-	(No symbol) [0x00007FF70DECE5FC]
-	(No symbol) [0x00007FF70DECB7E6]
-	(No symbol) [0x00007FF70DECA741]
-	(No symbol) [0x00007FF70DEBC970]
-	(No symbol) [0x00007FF70DEEEF9A]
-	(No symbol) [0x00007FF70DEBC1C6]
-	(No symbol) [0x00007FF70DEEF1B0]
-	(No symbol) [0x00007FF70DF0F1A4]
-	(No symbol) [0x00007FF70DEEED43]
-	(No symbol) [0x00007FF70DEBA548]
-	(No symbol) [0x00007FF70DEBB6B1]
-	GetHandleVerifier [0x00007FF70E39F45D+3358029]
-	GetHandleVerifier [0x00007FF70E3B430D+3443709]
-	GetHandleVerifier [0x00007FF70E3A83FD+3394797]
-	GetHandleVerifier [0x00007FF70E13929B+842635]
-	(No symbol) [0x00007FF70DFE654F]
-	(No symbol) [0x00007FF70DFE1FA4]
-	(No symbol) [0x00007FF70DFE213D]
-	(No symbol) [0x00007FF70DFD1629]
-	BaseThreadInitThunk [0x00007FFF140C4CB0+16]
-	RtlUserThreadStart [0x00007FFF145DEDCB+43]
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
 </status>
 </kw>
-<msg time="2024-11-21T23:45:16.282671" level="INFO">${actual_status} = False</msg>
+<msg time="2024-11-22T05:50:49.658742" level="INFO">${actual_status} = False</msg>
 <var>${actual_status}</var>
 <arg>Click Element</arg>
 <arg>${locator}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-11-21T23:45:15.157305" elapsed="1.125366"/>
+<status status="PASS" start="2024-11-22T05:50:48.486768" elapsed="1.171974"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${actual_status}</arg>
 <arg>${expected_status}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-21T23:45:16.282671" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:50:49.658742" elapsed="0.000000"/>
 </kw>
 <arg>${locator}</arg>
 <arg>${False}</arg>
-<status status="PASS" start="2024-11-21T23:45:15.157305" elapsed="1.125366"/>
+<status status="PASS" start="2024-11-22T05:50:48.486768" elapsed="1.171974"/>
 </kw>
 <arg>${QUALITY_LINK}</arg>
-<status status="PASS" start="2024-11-21T23:45:15.157305" elapsed="1.125366"/>
+<status status="PASS" start="2024-11-22T05:50:48.486768" elapsed="1.171974"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <kw name="Verify element if clickable" owner="Home">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:45:16.282671" level="INFO">Clicking element 'css=img[alt="Inventory Management"]'.</msg>
-<msg time="2024-11-21T23:45:17.455165" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-5.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-11-21T23:45:17.455165" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Inventory Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (413, 274). Other element would receive the click: &lt;div class="sm:mb-[100px] lg:mb-[174px]"&gt;...&lt;/div&gt;
+<msg time="2024-11-22T05:50:49.658742" level="INFO">Clicking element 'css=img[alt="Inventory Management"]'.</msg>
+<msg time="2024-11-22T05:50:50.830761" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-5.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-22T05:50:50.830761" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Inventory Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (413, 274). Other element would receive the click: &lt;div class="sm:mb-[100px] lg:mb-[174px]"&gt;...&lt;/div&gt;
   (Session info: chrome=131.0.6778.70)
 Stacktrace:
-	GetHandleVerifier [0x00007FF70E072775+28773]
-	(No symbol) [0x00007FF70DFDAFB0]
-	(No symbol) [0x00007FF70DE7552A]
-	(No symbol) [0x00007FF70DED0B5E]
-	(No symbol) [0x00007FF70DECE5FC]
-	(No symbol) [0x00007FF70DECB7E6]
-	(No symbol) [0x00007FF70DECA741]
-	(No symbol) [0x00007FF70DEBC970]
-	(No symbol) [0x00007FF70DEEEF9A]
-	(No symbol) [0x00007FF70DEBC1C6]
-	(No symbol) [0x00007FF70DEEF1B0]
-	(No symbol) [0x00007FF70DF0F1A4]
-	(No symbol) [0x00007FF70DEEED43]
-	(No symbol) [0x00007FF70DEBA548]
-	(No symbol) [0x00007FF70DEBB6B1]
-	GetHandleVerifier [0x00007FF70E39F45D+3358029]
-	GetHandleVerifier [0x00007FF70E3B430D+3443709]
-	GetHandleVerifier [0x00007FF70E3A83FD+3394797]
-	GetHandleVerifier [0x00007FF70E13929B+842635]
-	(No symbol) [0x00007FF70DFE654F]
-	(No symbol) [0x00007FF70DFE1FA4]
-	(No symbol) [0x00007FF70DFE213D]
-	(No symbol) [0x00007FF70DFD1629]
-	BaseThreadInitThunk [0x00007FFF140C4CB0+16]
-	RtlUserThreadStart [0x00007FFF145DEDCB+43]
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
 </msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-11-21T23:45:16.282671" elapsed="1.172494">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Inventory Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (413, 274). Other element would receive the click: &lt;div class="sm:mb-[100px] lg:mb-[174px]"&gt;...&lt;/div&gt;
+<status status="FAIL" start="2024-11-22T05:50:49.658742" elapsed="1.172019">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Inventory Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (413, 274). Other element would receive the click: &lt;div class="sm:mb-[100px] lg:mb-[174px]"&gt;...&lt;/div&gt;
   (Session info: chrome=131.0.6778.70)
 Stacktrace:
-	GetHandleVerifier [0x00007FF70E072775+28773]
-	(No symbol) [0x00007FF70DFDAFB0]
-	(No symbol) [0x00007FF70DE7552A]
-	(No symbol) [0x00007FF70DED0B5E]
-	(No symbol) [0x00007FF70DECE5FC]
-	(No symbol) [0x00007FF70DECB7E6]
-	(No symbol) [0x00007FF70DECA741]
-	(No symbol) [0x00007FF70DEBC970]
-	(No symbol) [0x00007FF70DEEEF9A]
-	(No symbol) [0x00007FF70DEBC1C6]
-	(No symbol) [0x00007FF70DEEF1B0]
-	(No symbol) [0x00007FF70DF0F1A4]
-	(No symbol) [0x00007FF70DEEED43]
-	(No symbol) [0x00007FF70DEBA548]
-	(No symbol) [0x00007FF70DEBB6B1]
-	GetHandleVerifier [0x00007FF70E39F45D+3358029]
-	GetHandleVerifier [0x00007FF70E3B430D+3443709]
-	GetHandleVerifier [0x00007FF70E3A83FD+3394797]
-	GetHandleVerifier [0x00007FF70E13929B+842635]
-	(No symbol) [0x00007FF70DFE654F]
-	(No symbol) [0x00007FF70DFE1FA4]
-	(No symbol) [0x00007FF70DFE213D]
-	(No symbol) [0x00007FF70DFD1629]
-	BaseThreadInitThunk [0x00007FFF140C4CB0+16]
-	RtlUserThreadStart [0x00007FFF145DEDCB+43]
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
 </status>
 </kw>
-<msg time="2024-11-21T23:45:17.455165" level="INFO">${actual_status} = False</msg>
+<msg time="2024-11-22T05:50:50.830761" level="INFO">${actual_status} = False</msg>
 <var>${actual_status}</var>
 <arg>Click Element</arg>
 <arg>${locator}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-11-21T23:45:16.282671" elapsed="1.172494"/>
+<status status="PASS" start="2024-11-22T05:50:49.658742" elapsed="1.172019"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${actual_status}</arg>
 <arg>${expected_status}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-21T23:45:17.455165" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:50:50.830761" elapsed="0.000000"/>
 </kw>
 <arg>${locator}</arg>
 <arg>${False}</arg>
-<status status="PASS" start="2024-11-21T23:45:16.282671" elapsed="1.172494"/>
+<status status="PASS" start="2024-11-22T05:50:49.658742" elapsed="1.172019"/>
 </kw>
 <arg>${INVENTORY_LINK}</arg>
-<status status="PASS" start="2024-11-21T23:45:16.282671" elapsed="1.172494"/>
+<status status="PASS" start="2024-11-22T05:50:49.658742" elapsed="1.172019"/>
 </kw>
 <kw name="AND The link should be clickable" owner="KadenaApp">
 <kw name="Verify element if clickable" owner="Home">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:45:17.455165" level="INFO">Clicking element 'css=img[alt="Forecasting"]'.</msg>
+<msg time="2024-11-22T05:50:50.830761" level="INFO">Clicking element 'css=img[alt="Forecasting"]'.</msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T23:45:17.455165" elapsed="1.365589"/>
+<status status="PASS" start="2024-11-22T05:50:50.830761" elapsed="1.896126"/>
 </kw>
-<msg time="2024-11-21T23:45:18.820754" level="INFO">${actual_status} = True</msg>
+<msg time="2024-11-22T05:50:52.727891" level="INFO">${actual_status} = True</msg>
 <var>${actual_status}</var>
 <arg>Click Element</arg>
 <arg>${locator}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-11-21T23:45:17.455165" elapsed="1.365589"/>
+<status status="PASS" start="2024-11-22T05:50:50.830761" elapsed="1.897130"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${actual_status}</arg>
 <arg>${expected_status}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-21T23:45:18.820754" elapsed="0.000999"/>
+<status status="PASS" start="2024-11-22T05:50:52.727891" elapsed="0.000000"/>
 </kw>
 <arg>${locator}</arg>
 <arg>${True}</arg>
-<status status="PASS" start="2024-11-21T23:45:17.455165" elapsed="1.367597"/>
+<status status="PASS" start="2024-11-22T05:50:50.830761" elapsed="1.897130"/>
 </kw>
 <arg>${FORECAST_LINK}</arg>
-<status status="PASS" start="2024-11-21T23:45:17.455165" elapsed="1.367597"/>
+<status status="PASS" start="2024-11-22T05:50:50.830761" elapsed="1.897130"/>
 </kw>
 <kw name="THEN I should be redirected to the" owner="KadenaApp">
 <kw name="I redirected to the" owner="Home">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${text}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-21T23:45:18.823749" elapsed="1.194936"/>
+<status status="PASS" start="2024-11-22T05:50:52.728890" elapsed="1.549041"/>
 </kw>
 <arg>${text}</arg>
-<status status="PASS" start="2024-11-21T23:45:18.822762" elapsed="1.195923"/>
+<status status="PASS" start="2024-11-22T05:50:52.728890" elapsed="1.549041"/>
 </kw>
 <arg>Forecasting</arg>
-<status status="PASS" start="2024-11-21T23:45:18.822762" elapsed="1.195923"/>
+<status status="PASS" start="2024-11-22T05:50:52.727891" elapsed="1.550040"/>
 </kw>
 <kw name="Close Test Browser" owner="Common" type="TEARDOWN">
 <kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:45:20.061068" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-6.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-22T05:50:54.326556" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-6.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-21T23:45:20.018685" elapsed="0.042383"/>
+<status status="PASS" start="2024-11-22T05:50:54.277931" elapsed="0.048625"/>
 </kw>
 <arg>10</arg>
 <arg>1s</arg>
 <arg>Capture Page Screenshot</arg>
 <doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2024-11-21T23:45:20.018685" elapsed="0.042383"/>
+<status status="PASS" start="2024-11-22T05:50:54.277931" elapsed="0.049154"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-11-21T23:45:20.061068" elapsed="6.072842"/>
+<status status="PASS" start="2024-11-22T05:50:54.327085" elapsed="6.101993"/>
 </kw>
-<status status="PASS" start="2024-11-21T23:45:20.018685" elapsed="6.115225"/>
+<status status="PASS" start="2024-11-22T05:50:54.277931" elapsed="6.151147"/>
 </kw>
 <doc>Login with access to Forecasting</doc>
 <tag>M0MAIN-SIT-002</tag>
-<tag>TS-SIT-001</tag>
-<status status="PASS" start="2024-11-21T23:45:05.963078" elapsed="20.170832"/>
+<tag>MAIN</tag>
+<status status="PASS" start="2024-11-22T05:50:38.378991" elapsed="22.050087"/>
 </test>
-<test id="s1-t4" name="Test Scenario 4: Login with access to Supply Planning modules" line="52">
+<test id="s1-t4" name="Test Case 4: Login with access to Supply Planning modules" line="53">
 <kw name="Open Test Browser" owner="Common" type="SETUP">
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-11-21T23:45:26.133910" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:51:00.429078" elapsed="0.000000"/>
 </kw>
 <kw name="Empty Directory" owner="OperatingSystem">
-<msg time="2024-11-21T23:45:26.133910" level="INFO" html="true">Listing contents of directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
-<msg time="2024-11-21T23:45:26.133910" level="INFO" html="true">Emptied directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-22T05:51:00.429078" level="INFO" html="true">Listing contents of directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-22T05:51:00.429078" level="INFO" html="true">Emptied directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
 <arg>testsuites/screenshots</arg>
 <doc>Deletes all the content from the given directory.</doc>
-<status status="PASS" start="2024-11-21T23:45:26.133910" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:51:00.429078" elapsed="0.000000"/>
 </kw>
 <kw name="Set Screenshot Directory" owner="SeleniumLibrary">
 <arg>testsuites/screenshots</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" start="2024-11-21T23:45:26.133910" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:51:00.429078" elapsed="0.000000"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-21T23:45:26.133910" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002461A96A000&gt;</msg>
+<msg time="2024-11-22T05:51:00.429078" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000025454655F10&gt;</msg>
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].${name}Options()</arg>
 <arg>sys, selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-21T23:45:26.133910" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:51:00.429078" elapsed="0.000000"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--incognito</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2024-11-21T23:45:26.133910" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:51:00.429078" elapsed="0.000000"/>
 </kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:45:26.133910" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-11-22T05:51:00.429078" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>${name}</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-11-21T23:45:26.133910" elapsed="1.239430"/>
+<status status="PASS" start="2024-11-22T05:51:00.429078" elapsed="1.246960"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-21T23:45:27.373340" elapsed="0.024454"/>
+<status status="PASS" start="2024-11-22T05:51:01.676038" elapsed="0.033547"/>
 </kw>
 <arg>${BROWSER_NAME}</arg>
-<status status="PASS" start="2024-11-21T23:45:26.133910" elapsed="1.263884"/>
+<status status="PASS" start="2024-11-22T05:51:00.429078" elapsed="1.281509"/>
 </kw>
 <kw name="GIVEN I go to Login page" owner="KadenaApp">
 <kw name="Navigate to login page" owner="Login">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:45:27.398792" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
+<msg time="2024-11-22T05:51:01.711591" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
 <arg>${LOGINPAGE_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-21T23:45:27.398792" elapsed="2.004418"/>
+<status status="PASS" start="2024-11-22T05:51:01.710587" elapsed="2.576037"/>
 </kw>
-<status status="PASS" start="2024-11-21T23:45:27.398792" elapsed="2.004418"/>
+<status status="PASS" start="2024-11-22T05:51:01.710587" elapsed="2.576037"/>
 </kw>
 <kw name="Verify Page Loaded" owner="Login">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${LOGIN_HEADER}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-21T23:45:29.404214" elapsed="0.012796"/>
+<status status="PASS" start="2024-11-22T05:51:04.287625" elapsed="0.012004"/>
 </kw>
-<status status="PASS" start="2024-11-21T23:45:29.403210" elapsed="0.013800"/>
+<status status="PASS" start="2024-11-22T05:51:04.286624" elapsed="0.013005"/>
 </kw>
-<status status="PASS" start="2024-11-21T23:45:27.398792" elapsed="2.018218"/>
+<status status="PASS" start="2024-11-22T05:51:01.710587" elapsed="2.589042"/>
 </kw>
 <kw name="AND I enter" owner="KadenaApp">
 <kw name="Enter Credential" owner="Login">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:45:29.417010" level="INFO">Typing text 'econsista@agsx.net' into text field 'id=username'.</msg>
+<msg time="2024-11-22T05:51:04.300635" level="INFO">Typing text 'econsista@agsx.net' into text field 'id=username'.</msg>
 <arg>${locator}</arg>
 <arg>${credential}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T23:45:29.417010" elapsed="0.086337"/>
+<status status="PASS" start="2024-11-22T05:51:04.300635" elapsed="0.080566"/>
 </kw>
 <arg>${credential}</arg>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-21T23:45:29.417010" elapsed="0.087340"/>
+<status status="PASS" start="2024-11-22T05:51:04.300635" elapsed="0.081562"/>
 </kw>
 <arg>${VALID_FORECASTING_EMAIL}</arg>
 <arg>${EMAIL}</arg>
-<status status="PASS" start="2024-11-21T23:45:29.417010" elapsed="0.087340"/>
+<status status="PASS" start="2024-11-22T05:51:04.299629" elapsed="0.082568"/>
 </kw>
 <kw name="AND I enter" owner="KadenaApp">
 <kw name="Enter Credential" owner="Login">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:45:29.505351" level="INFO">Typing text 'password' into text field 'id=password'.</msg>
+<msg time="2024-11-22T05:51:04.383193" level="INFO">Typing text 'password' into text field 'id=password'.</msg>
 <arg>${locator}</arg>
 <arg>${credential}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T23:45:29.505351" elapsed="0.076828"/>
+<status status="PASS" start="2024-11-22T05:51:04.383193" elapsed="0.074440"/>
 </kw>
 <arg>${credential}</arg>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-21T23:45:29.504350" elapsed="0.077829"/>
+<status status="PASS" start="2024-11-22T05:51:04.382197" elapsed="0.075436"/>
 </kw>
 <arg>${VALID_PASSWORD}</arg>
 <arg>${PASSWORD}</arg>
-<status status="PASS" start="2024-11-21T23:45:29.504350" elapsed="0.078183"/>
+<status status="PASS" start="2024-11-22T05:51:04.382197" elapsed="0.075436"/>
 </kw>
 <kw name="WHEN I click the button" owner="KadenaApp">
 <kw name="Click submit button" owner="Login">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:45:29.583539" level="INFO">Clicking button 'name=login'.</msg>
+<msg time="2024-11-22T05:51:04.459033" level="INFO">Clicking button 'name=login'.</msg>
 <arg>${locator}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T23:45:29.583539" elapsed="2.118803"/>
+<status status="PASS" start="2024-11-22T05:51:04.459033" elapsed="2.591673"/>
 </kw>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-21T23:45:29.582533" elapsed="2.120821"/>
+<status status="PASS" start="2024-11-22T05:51:04.459033" elapsed="2.592676"/>
 </kw>
 <arg>${LOGIN_BUTTON}</arg>
-<status status="PASS" start="2024-11-21T23:45:29.582533" elapsed="2.120821"/>
+<status status="PASS" start="2024-11-22T05:51:04.458731" elapsed="2.592978"/>
 </kw>
 <kw name="AND A message should display" owner="KadenaApp">
 <kw name="Validate Error Message" owner="Login">
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:45:31.727207" level="INFO">Current page contains text 'Welcome'.</msg>
+<msg time="2024-11-22T05:51:07.079898" level="INFO">Current page contains text 'Welcome'.</msg>
 <arg>${text}</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2024-11-21T23:45:31.705863" elapsed="0.021344"/>
+<status status="PASS" start="2024-11-22T05:51:07.052714" elapsed="0.027184"/>
 </kw>
 <arg>${text}</arg>
-<status status="PASS" start="2024-11-21T23:45:31.704864" elapsed="0.022343"/>
+<status status="PASS" start="2024-11-22T05:51:07.052714" elapsed="0.027184"/>
 </kw>
 <arg>Welcome</arg>
-<status status="PASS" start="2024-11-21T23:45:31.703354" elapsed="0.023853"/>
+<status status="PASS" start="2024-11-22T05:51:07.051709" elapsed="0.028189"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <kw name="Verify element if clickable" owner="Home">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:45:31.729205" level="INFO">Clicking element 'css=img[alt="Ordering"]'.</msg>
-<msg time="2024-11-21T23:45:32.829790" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-11-21T23:45:32.829790" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Ordering" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fordering-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (941, 302). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
+<msg time="2024-11-22T05:51:07.080895" level="INFO">Clicking element 'css=img[alt="Ordering"]'.</msg>
+<msg time="2024-11-22T05:51:08.222189" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-22T05:51:08.222189" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Ordering" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fordering-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (941, 302). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
   (Session info: chrome=131.0.6778.70)
 Stacktrace:
-	GetHandleVerifier [0x00007FF70E072775+28773]
-	(No symbol) [0x00007FF70DFDAFB0]
-	(No symbol) [0x00007FF70DE7552A]
-	(No symbol) [0x00007FF70DED0B5E]
-	(No symbol) [0x00007FF70DECE5FC]
-	(No symbol) [0x00007FF70DECB7E6]
-	(No symbol) [0x00007FF70DECA741]
-	(No symbol) [0x00007FF70DEBC970]
-	(No symbol) [0x00007FF70DEEEF9A]
-	(No symbol) [0x00007FF70DEBC1C6]
-	(No symbol) [0x00007FF70DEEF1B0]
-	(No symbol) [0x00007FF70DF0F1A4]
-	(No symbol) [0x00007FF70DEEED43]
-	(No symbol) [0x00007FF70DEBA548]
-	(No symbol) [0x00007FF70DEBB6B1]
-	GetHandleVerifier [0x00007FF70E39F45D+3358029]
-	GetHandleVerifier [0x00007FF70E3B430D+3443709]
-	GetHandleVerifier [0x00007FF70E3A83FD+3394797]
-	GetHandleVerifier [0x00007FF70E13929B+842635]
-	(No symbol) [0x00007FF70DFE654F]
-	(No symbol) [0x00007FF70DFE1FA4]
-	(No symbol) [0x00007FF70DFE213D]
-	(No symbol) [0x00007FF70DFD1629]
-	BaseThreadInitThunk [0x00007FFF140C4CB0+16]
-	RtlUserThreadStart [0x00007FFF145DEDCB+43]
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
 </msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-11-21T23:45:31.728207" elapsed="1.101583">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Ordering" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fordering-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (941, 302). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
+<status status="FAIL" start="2024-11-22T05:51:07.080895" elapsed="1.141294">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Ordering" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fordering-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fordering-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (941, 302). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
   (Session info: chrome=131.0.6778.70)
 Stacktrace:
-	GetHandleVerifier [0x00007FF70E072775+28773]
-	(No symbol) [0x00007FF70DFDAFB0]
-	(No symbol) [0x00007FF70DE7552A]
-	(No symbol) [0x00007FF70DED0B5E]
-	(No symbol) [0x00007FF70DECE5FC]
-	(No symbol) [0x00007FF70DECB7E6]
-	(No symbol) [0x00007FF70DECA741]
-	(No symbol) [0x00007FF70DEBC970]
-	(No symbol) [0x00007FF70DEEEF9A]
-	(No symbol) [0x00007FF70DEBC1C6]
-	(No symbol) [0x00007FF70DEEF1B0]
-	(No symbol) [0x00007FF70DF0F1A4]
-	(No symbol) [0x00007FF70DEEED43]
-	(No symbol) [0x00007FF70DEBA548]
-	(No symbol) [0x00007FF70DEBB6B1]
-	GetHandleVerifier [0x00007FF70E39F45D+3358029]
-	GetHandleVerifier [0x00007FF70E3B430D+3443709]
-	GetHandleVerifier [0x00007FF70E3A83FD+3394797]
-	GetHandleVerifier [0x00007FF70E13929B+842635]
-	(No symbol) [0x00007FF70DFE654F]
-	(No symbol) [0x00007FF70DFE1FA4]
-	(No symbol) [0x00007FF70DFE213D]
-	(No symbol) [0x00007FF70DFD1629]
-	BaseThreadInitThunk [0x00007FFF140C4CB0+16]
-	RtlUserThreadStart [0x00007FFF145DEDCB+43]
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
 </status>
 </kw>
-<msg time="2024-11-21T23:45:32.829790" level="INFO">${actual_status} = False</msg>
+<msg time="2024-11-22T05:51:08.222189" level="INFO">${actual_status} = False</msg>
 <var>${actual_status}</var>
 <arg>Click Element</arg>
 <arg>${locator}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-11-21T23:45:31.728207" elapsed="1.101583"/>
+<status status="PASS" start="2024-11-22T05:51:07.080895" elapsed="1.141294"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${actual_status}</arg>
 <arg>${expected_status}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-21T23:45:32.829790" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:51:08.222189" elapsed="0.000000"/>
 </kw>
 <arg>${locator}</arg>
 <arg>${False}</arg>
-<status status="PASS" start="2024-11-21T23:45:31.728207" elapsed="1.101583"/>
+<status status="PASS" start="2024-11-22T05:51:07.080895" elapsed="1.141294"/>
 </kw>
 <arg>${ORDERING_LINK}</arg>
-<status status="PASS" start="2024-11-21T23:45:31.728207" elapsed="1.101583"/>
+<status status="PASS" start="2024-11-22T05:51:07.079898" elapsed="1.142291"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <kw name="Verify element if clickable" owner="Home">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:45:32.829790" level="INFO">Clicking element 'css=img[alt="Procurement"]'.</msg>
-<msg time="2024-11-21T23:45:34.002011" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-2.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-11-21T23:45:34.002011" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Procurement" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (853, 494). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
+<msg time="2024-11-22T05:51:08.222189" level="INFO">Clicking element 'css=img[alt="Procurement"]'.</msg>
+<msg time="2024-11-22T05:51:09.331281" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-2.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-22T05:51:09.331281" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Procurement" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (853, 494). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
   (Session info: chrome=131.0.6778.70)
 Stacktrace:
-	GetHandleVerifier [0x00007FF70E072775+28773]
-	(No symbol) [0x00007FF70DFDAFB0]
-	(No symbol) [0x00007FF70DE7552A]
-	(No symbol) [0x00007FF70DED0B5E]
-	(No symbol) [0x00007FF70DECE5FC]
-	(No symbol) [0x00007FF70DECB7E6]
-	(No symbol) [0x00007FF70DECA741]
-	(No symbol) [0x00007FF70DEBC970]
-	(No symbol) [0x00007FF70DEEEF9A]
-	(No symbol) [0x00007FF70DEBC1C6]
-	(No symbol) [0x00007FF70DEEF1B0]
-	(No symbol) [0x00007FF70DF0F1A4]
-	(No symbol) [0x00007FF70DEEED43]
-	(No symbol) [0x00007FF70DEBA548]
-	(No symbol) [0x00007FF70DEBB6B1]
-	GetHandleVerifier [0x00007FF70E39F45D+3358029]
-	GetHandleVerifier [0x00007FF70E3B430D+3443709]
-	GetHandleVerifier [0x00007FF70E3A83FD+3394797]
-	GetHandleVerifier [0x00007FF70E13929B+842635]
-	(No symbol) [0x00007FF70DFE654F]
-	(No symbol) [0x00007FF70DFE1FA4]
-	(No symbol) [0x00007FF70DFE213D]
-	(No symbol) [0x00007FF70DFD1629]
-	BaseThreadInitThunk [0x00007FFF140C4CB0+16]
-	RtlUserThreadStart [0x00007FFF145DEDCB+43]
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
 </msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-11-21T23:45:32.829790" elapsed="1.172221">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Procurement" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (853, 494). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
+<status status="FAIL" start="2024-11-22T05:51:08.222189" elapsed="1.109092">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Procurement" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (853, 494). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
   (Session info: chrome=131.0.6778.70)
 Stacktrace:
-	GetHandleVerifier [0x00007FF70E072775+28773]
-	(No symbol) [0x00007FF70DFDAFB0]
-	(No symbol) [0x00007FF70DE7552A]
-	(No symbol) [0x00007FF70DED0B5E]
-	(No symbol) [0x00007FF70DECE5FC]
-	(No symbol) [0x00007FF70DECB7E6]
-	(No symbol) [0x00007FF70DECA741]
-	(No symbol) [0x00007FF70DEBC970]
-	(No symbol) [0x00007FF70DEEEF9A]
-	(No symbol) [0x00007FF70DEBC1C6]
-	(No symbol) [0x00007FF70DEEF1B0]
-	(No symbol) [0x00007FF70DF0F1A4]
-	(No symbol) [0x00007FF70DEEED43]
-	(No symbol) [0x00007FF70DEBA548]
-	(No symbol) [0x00007FF70DEBB6B1]
-	GetHandleVerifier [0x00007FF70E39F45D+3358029]
-	GetHandleVerifier [0x00007FF70E3B430D+3443709]
-	GetHandleVerifier [0x00007FF70E3A83FD+3394797]
-	GetHandleVerifier [0x00007FF70E13929B+842635]
-	(No symbol) [0x00007FF70DFE654F]
-	(No symbol) [0x00007FF70DFE1FA4]
-	(No symbol) [0x00007FF70DFE213D]
-	(No symbol) [0x00007FF70DFD1629]
-	BaseThreadInitThunk [0x00007FFF140C4CB0+16]
-	RtlUserThreadStart [0x00007FFF145DEDCB+43]
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
 </status>
 </kw>
-<msg time="2024-11-21T23:45:34.002011" level="INFO">${actual_status} = False</msg>
+<msg time="2024-11-22T05:51:09.331281" level="INFO">${actual_status} = False</msg>
 <var>${actual_status}</var>
 <arg>Click Element</arg>
 <arg>${locator}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-11-21T23:45:32.829790" elapsed="1.172221"/>
+<status status="PASS" start="2024-11-22T05:51:08.222189" elapsed="1.109092"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${actual_status}</arg>
 <arg>${expected_status}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-21T23:45:34.002011" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:51:09.331281" elapsed="0.000000"/>
 </kw>
 <arg>${locator}</arg>
 <arg>${False}</arg>
-<status status="PASS" start="2024-11-21T23:45:32.829790" elapsed="1.172221"/>
+<status status="PASS" start="2024-11-22T05:51:08.222189" elapsed="1.109092"/>
 </kw>
 <arg>${PROCUREMENT_LINK}</arg>
-<status status="PASS" start="2024-11-21T23:45:32.829790" elapsed="1.172221"/>
+<status status="PASS" start="2024-11-22T05:51:08.222189" elapsed="1.109092"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <kw name="Verify element if clickable" owner="Home">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:45:34.002011" level="INFO">Clicking element 'css=img[alt="Vendor Portal"]'.</msg>
-<msg time="2024-11-21T23:45:35.172839" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-3.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-11-21T23:45:35.172839" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Vendor Portal" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (653, 542). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
+<msg time="2024-11-22T05:51:09.331281" level="INFO">Clicking element 'css=img[alt="Vendor Portal"]'.</msg>
+<msg time="2024-11-22T05:51:10.440193" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-3.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-22T05:51:10.440193" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Vendor Portal" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (653, 542). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
   (Session info: chrome=131.0.6778.70)
 Stacktrace:
-	GetHandleVerifier [0x00007FF70E072775+28773]
-	(No symbol) [0x00007FF70DFDAFB0]
-	(No symbol) [0x00007FF70DE7552A]
-	(No symbol) [0x00007FF70DED0B5E]
-	(No symbol) [0x00007FF70DECE5FC]
-	(No symbol) [0x00007FF70DECB7E6]
-	(No symbol) [0x00007FF70DECA741]
-	(No symbol) [0x00007FF70DEBC970]
-	(No symbol) [0x00007FF70DEEEF9A]
-	(No symbol) [0x00007FF70DEBC1C6]
-	(No symbol) [0x00007FF70DEEF1B0]
-	(No symbol) [0x00007FF70DF0F1A4]
-	(No symbol) [0x00007FF70DEEED43]
-	(No symbol) [0x00007FF70DEBA548]
-	(No symbol) [0x00007FF70DEBB6B1]
-	GetHandleVerifier [0x00007FF70E39F45D+3358029]
-	GetHandleVerifier [0x00007FF70E3B430D+3443709]
-	GetHandleVerifier [0x00007FF70E3A83FD+3394797]
-	GetHandleVerifier [0x00007FF70E13929B+842635]
-	(No symbol) [0x00007FF70DFE654F]
-	(No symbol) [0x00007FF70DFE1FA4]
-	(No symbol) [0x00007FF70DFE213D]
-	(No symbol) [0x00007FF70DFD1629]
-	BaseThreadInitThunk [0x00007FFF140C4CB0+16]
-	RtlUserThreadStart [0x00007FFF145DEDCB+43]
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
 </msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-11-21T23:45:34.002011" elapsed="1.170828">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Vendor Portal" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (653, 542). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
+<status status="FAIL" start="2024-11-22T05:51:09.331281" elapsed="1.108912">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Vendor Portal" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (653, 542). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
   (Session info: chrome=131.0.6778.70)
 Stacktrace:
-	GetHandleVerifier [0x00007FF70E072775+28773]
-	(No symbol) [0x00007FF70DFDAFB0]
-	(No symbol) [0x00007FF70DE7552A]
-	(No symbol) [0x00007FF70DED0B5E]
-	(No symbol) [0x00007FF70DECE5FC]
-	(No symbol) [0x00007FF70DECB7E6]
-	(No symbol) [0x00007FF70DECA741]
-	(No symbol) [0x00007FF70DEBC970]
-	(No symbol) [0x00007FF70DEEEF9A]
-	(No symbol) [0x00007FF70DEBC1C6]
-	(No symbol) [0x00007FF70DEEF1B0]
-	(No symbol) [0x00007FF70DF0F1A4]
-	(No symbol) [0x00007FF70DEEED43]
-	(No symbol) [0x00007FF70DEBA548]
-	(No symbol) [0x00007FF70DEBB6B1]
-	GetHandleVerifier [0x00007FF70E39F45D+3358029]
-	GetHandleVerifier [0x00007FF70E3B430D+3443709]
-	GetHandleVerifier [0x00007FF70E3A83FD+3394797]
-	GetHandleVerifier [0x00007FF70E13929B+842635]
-	(No symbol) [0x00007FF70DFE654F]
-	(No symbol) [0x00007FF70DFE1FA4]
-	(No symbol) [0x00007FF70DFE213D]
-	(No symbol) [0x00007FF70DFD1629]
-	BaseThreadInitThunk [0x00007FFF140C4CB0+16]
-	RtlUserThreadStart [0x00007FFF145DEDCB+43]
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
 </status>
 </kw>
-<msg time="2024-11-21T23:45:35.172839" level="INFO">${actual_status} = False</msg>
+<msg time="2024-11-22T05:51:10.440193" level="INFO">${actual_status} = False</msg>
 <var>${actual_status}</var>
 <arg>Click Element</arg>
 <arg>${locator}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-11-21T23:45:34.002011" elapsed="1.170828"/>
+<status status="PASS" start="2024-11-22T05:51:09.331281" elapsed="1.108912"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${actual_status}</arg>
 <arg>${expected_status}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-21T23:45:35.172839" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:51:10.440193" elapsed="0.000000"/>
 </kw>
 <arg>${locator}</arg>
 <arg>${False}</arg>
-<status status="PASS" start="2024-11-21T23:45:34.002011" elapsed="1.170828"/>
+<status status="PASS" start="2024-11-22T05:51:09.331281" elapsed="1.108912"/>
 </kw>
 <arg>${VENDOR_LINK}</arg>
-<status status="PASS" start="2024-11-21T23:45:34.002011" elapsed="1.170828"/>
+<status status="PASS" start="2024-11-22T05:51:09.331281" elapsed="1.108912"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <kw name="Verify element if clickable" owner="Home">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:45:35.188474" level="INFO">Clicking element 'css=img[alt="Quality Management"]'.</msg>
-<msg time="2024-11-21T23:45:36.298768" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-4.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-11-21T23:45:36.298768" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Quality Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (461, 454). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
+<msg time="2024-11-22T05:51:10.440193" level="INFO">Clicking element 'css=img[alt="Quality Management"]'.</msg>
+<msg time="2024-11-22T05:51:11.550066" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-4.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-22T05:51:11.550066" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Quality Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (461, 454). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
   (Session info: chrome=131.0.6778.70)
 Stacktrace:
-	GetHandleVerifier [0x00007FF70E072775+28773]
-	(No symbol) [0x00007FF70DFDAFB0]
-	(No symbol) [0x00007FF70DE7552A]
-	(No symbol) [0x00007FF70DED0B5E]
-	(No symbol) [0x00007FF70DECE5FC]
-	(No symbol) [0x00007FF70DECB7E6]
-	(No symbol) [0x00007FF70DECA741]
-	(No symbol) [0x00007FF70DEBC970]
-	(No symbol) [0x00007FF70DEEEF9A]
-	(No symbol) [0x00007FF70DEBC1C6]
-	(No symbol) [0x00007FF70DEEF1B0]
-	(No symbol) [0x00007FF70DF0F1A4]
-	(No symbol) [0x00007FF70DEEED43]
-	(No symbol) [0x00007FF70DEBA548]
-	(No symbol) [0x00007FF70DEBB6B1]
-	GetHandleVerifier [0x00007FF70E39F45D+3358029]
-	GetHandleVerifier [0x00007FF70E3B430D+3443709]
-	GetHandleVerifier [0x00007FF70E3A83FD+3394797]
-	GetHandleVerifier [0x00007FF70E13929B+842635]
-	(No symbol) [0x00007FF70DFE654F]
-	(No symbol) [0x00007FF70DFE1FA4]
-	(No symbol) [0x00007FF70DFE213D]
-	(No symbol) [0x00007FF70DFD1629]
-	BaseThreadInitThunk [0x00007FFF140C4CB0+16]
-	RtlUserThreadStart [0x00007FFF145DEDCB+43]
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
 </msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-11-21T23:45:35.172839" elapsed="1.125929">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Quality Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (461, 454). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
+<status status="FAIL" start="2024-11-22T05:51:10.440193" elapsed="1.109873">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Quality Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (461, 454). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
   (Session info: chrome=131.0.6778.70)
 Stacktrace:
-	GetHandleVerifier [0x00007FF70E072775+28773]
-	(No symbol) [0x00007FF70DFDAFB0]
-	(No symbol) [0x00007FF70DE7552A]
-	(No symbol) [0x00007FF70DED0B5E]
-	(No symbol) [0x00007FF70DECE5FC]
-	(No symbol) [0x00007FF70DECB7E6]
-	(No symbol) [0x00007FF70DECA741]
-	(No symbol) [0x00007FF70DEBC970]
-	(No symbol) [0x00007FF70DEEEF9A]
-	(No symbol) [0x00007FF70DEBC1C6]
-	(No symbol) [0x00007FF70DEEF1B0]
-	(No symbol) [0x00007FF70DF0F1A4]
-	(No symbol) [0x00007FF70DEEED43]
-	(No symbol) [0x00007FF70DEBA548]
-	(No symbol) [0x00007FF70DEBB6B1]
-	GetHandleVerifier [0x00007FF70E39F45D+3358029]
-	GetHandleVerifier [0x00007FF70E3B430D+3443709]
-	GetHandleVerifier [0x00007FF70E3A83FD+3394797]
-	GetHandleVerifier [0x00007FF70E13929B+842635]
-	(No symbol) [0x00007FF70DFE654F]
-	(No symbol) [0x00007FF70DFE1FA4]
-	(No symbol) [0x00007FF70DFE213D]
-	(No symbol) [0x00007FF70DFD1629]
-	BaseThreadInitThunk [0x00007FFF140C4CB0+16]
-	RtlUserThreadStart [0x00007FFF145DEDCB+43]
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
 </status>
 </kw>
-<msg time="2024-11-21T23:45:36.298768" level="INFO">${actual_status} = False</msg>
+<msg time="2024-11-22T05:51:11.550066" level="INFO">${actual_status} = False</msg>
 <var>${actual_status}</var>
 <arg>Click Element</arg>
 <arg>${locator}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-11-21T23:45:35.172839" elapsed="1.125929"/>
+<status status="PASS" start="2024-11-22T05:51:10.440193" elapsed="1.109873"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${actual_status}</arg>
 <arg>${expected_status}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-21T23:45:36.298768" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:51:11.550066" elapsed="0.000000"/>
 </kw>
 <arg>${locator}</arg>
 <arg>${False}</arg>
-<status status="PASS" start="2024-11-21T23:45:35.172839" elapsed="1.125929"/>
+<status status="PASS" start="2024-11-22T05:51:10.440193" elapsed="1.109873"/>
 </kw>
 <arg>${QUALITY_LINK}</arg>
-<status status="PASS" start="2024-11-21T23:45:35.172839" elapsed="1.125929"/>
+<status status="PASS" start="2024-11-22T05:51:10.440193" elapsed="1.109873"/>
 </kw>
 <kw name="AND The link should not be clickable" owner="KadenaApp">
 <kw name="Verify element if clickable" owner="Home">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:45:36.298768" level="INFO">Clicking element 'css=img[alt="Inventory Management"]'.</msg>
-<msg time="2024-11-21T23:45:37.407449" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-5.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-11-21T23:45:37.407449" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Inventory Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (413, 274). Other element would receive the click: &lt;div class="sm:mb-[100px] lg:mb-[174px]"&gt;...&lt;/div&gt;
+<msg time="2024-11-22T05:51:11.550066" level="INFO">Clicking element 'css=img[alt="Inventory Management"]'.</msg>
+<msg time="2024-11-22T05:51:12.722681" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-5.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-22T05:51:12.722681" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Inventory Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (413, 274). Other element would receive the click: &lt;div class="sm:mb-[100px] lg:mb-[174px]"&gt;...&lt;/div&gt;
   (Session info: chrome=131.0.6778.70)
 Stacktrace:
-	GetHandleVerifier [0x00007FF70E072775+28773]
-	(No symbol) [0x00007FF70DFDAFB0]
-	(No symbol) [0x00007FF70DE7552A]
-	(No symbol) [0x00007FF70DED0B5E]
-	(No symbol) [0x00007FF70DECE5FC]
-	(No symbol) [0x00007FF70DECB7E6]
-	(No symbol) [0x00007FF70DECA741]
-	(No symbol) [0x00007FF70DEBC970]
-	(No symbol) [0x00007FF70DEEEF9A]
-	(No symbol) [0x00007FF70DEBC1C6]
-	(No symbol) [0x00007FF70DEEF1B0]
-	(No symbol) [0x00007FF70DF0F1A4]
-	(No symbol) [0x00007FF70DEEED43]
-	(No symbol) [0x00007FF70DEBA548]
-	(No symbol) [0x00007FF70DEBB6B1]
-	GetHandleVerifier [0x00007FF70E39F45D+3358029]
-	GetHandleVerifier [0x00007FF70E3B430D+3443709]
-	GetHandleVerifier [0x00007FF70E3A83FD+3394797]
-	GetHandleVerifier [0x00007FF70E13929B+842635]
-	(No symbol) [0x00007FF70DFE654F]
-	(No symbol) [0x00007FF70DFE1FA4]
-	(No symbol) [0x00007FF70DFE213D]
-	(No symbol) [0x00007FF70DFD1629]
-	BaseThreadInitThunk [0x00007FFF140C4CB0+16]
-	RtlUserThreadStart [0x00007FFF145DEDCB+43]
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
 </msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-11-21T23:45:36.298768" elapsed="1.108681">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Inventory Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (413, 274). Other element would receive the click: &lt;div class="sm:mb-[100px] lg:mb-[174px]"&gt;...&lt;/div&gt;
+<status status="FAIL" start="2024-11-22T05:51:11.550066" elapsed="1.172615">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Inventory Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (413, 274). Other element would receive the click: &lt;div class="sm:mb-[100px] lg:mb-[174px]"&gt;...&lt;/div&gt;
   (Session info: chrome=131.0.6778.70)
 Stacktrace:
-	GetHandleVerifier [0x00007FF70E072775+28773]
-	(No symbol) [0x00007FF70DFDAFB0]
-	(No symbol) [0x00007FF70DE7552A]
-	(No symbol) [0x00007FF70DED0B5E]
-	(No symbol) [0x00007FF70DECE5FC]
-	(No symbol) [0x00007FF70DECB7E6]
-	(No symbol) [0x00007FF70DECA741]
-	(No symbol) [0x00007FF70DEBC970]
-	(No symbol) [0x00007FF70DEEEF9A]
-	(No symbol) [0x00007FF70DEBC1C6]
-	(No symbol) [0x00007FF70DEEF1B0]
-	(No symbol) [0x00007FF70DF0F1A4]
-	(No symbol) [0x00007FF70DEEED43]
-	(No symbol) [0x00007FF70DEBA548]
-	(No symbol) [0x00007FF70DEBB6B1]
-	GetHandleVerifier [0x00007FF70E39F45D+3358029]
-	GetHandleVerifier [0x00007FF70E3B430D+3443709]
-	GetHandleVerifier [0x00007FF70E3A83FD+3394797]
-	GetHandleVerifier [0x00007FF70E13929B+842635]
-	(No symbol) [0x00007FF70DFE654F]
-	(No symbol) [0x00007FF70DFE1FA4]
-	(No symbol) [0x00007FF70DFE213D]
-	(No symbol) [0x00007FF70DFD1629]
-	BaseThreadInitThunk [0x00007FFF140C4CB0+16]
-	RtlUserThreadStart [0x00007FFF145DEDCB+43]
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
 </status>
 </kw>
-<msg time="2024-11-21T23:45:37.407449" level="INFO">${actual_status} = False</msg>
+<msg time="2024-11-22T05:51:12.722681" level="INFO">${actual_status} = False</msg>
 <var>${actual_status}</var>
 <arg>Click Element</arg>
 <arg>${locator}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-11-21T23:45:36.298768" elapsed="1.108681"/>
+<status status="PASS" start="2024-11-22T05:51:11.550066" elapsed="1.172615"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${actual_status}</arg>
 <arg>${expected_status}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-21T23:45:37.407449" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:51:12.722681" elapsed="0.000000"/>
 </kw>
 <arg>${locator}</arg>
 <arg>${False}</arg>
-<status status="PASS" start="2024-11-21T23:45:36.298768" elapsed="1.108681"/>
+<status status="PASS" start="2024-11-22T05:51:11.550066" elapsed="1.172615"/>
 </kw>
 <arg>${INVENTORY_LINK}</arg>
-<status status="PASS" start="2024-11-21T23:45:36.298768" elapsed="1.108681"/>
+<status status="PASS" start="2024-11-22T05:51:11.550066" elapsed="1.172615"/>
 </kw>
 <kw name="AND The link should be clickable" owner="KadenaApp">
 <kw name="Verify element if clickable" owner="Home">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:45:37.423087" level="INFO">Clicking element 'css=img[alt="Supply Planning"]'.</msg>
+<msg time="2024-11-22T05:51:12.722681" level="INFO">Clicking element 'css=img[alt="Supply Planning"]'.</msg>
 <arg>${locator}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-21T23:45:37.423087" elapsed="1.304205"/>
+<status status="PASS" start="2024-11-22T05:51:12.722681" elapsed="2.055532"/>
 </kw>
-<msg time="2024-11-21T23:45:38.728297" level="INFO">${actual_status} = True</msg>
+<msg time="2024-11-22T05:51:14.778213" level="INFO">${actual_status} = True</msg>
 <var>${actual_status}</var>
 <arg>Click Element</arg>
 <arg>${locator}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-11-21T23:45:37.423087" elapsed="1.305210"/>
+<status status="PASS" start="2024-11-22T05:51:12.722681" elapsed="2.055532"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${actual_status}</arg>
 <arg>${expected_status}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-11-21T23:45:38.728297" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-22T05:51:14.778213" elapsed="0.000000"/>
 </kw>
 <arg>${locator}</arg>
 <arg>${True}</arg>
-<status status="PASS" start="2024-11-21T23:45:37.407449" elapsed="1.320848"/>
+<status status="PASS" start="2024-11-22T05:51:12.722681" elapsed="2.055532"/>
 </kw>
 <arg>${SUPPLY_LINK}</arg>
-<status status="PASS" start="2024-11-21T23:45:37.407449" elapsed="1.320848"/>
+<status status="PASS" start="2024-11-22T05:51:12.722681" elapsed="2.055532"/>
 </kw>
 <kw name="THEN I should be redirected to the" owner="KadenaApp">
 <kw name="I redirected to the" owner="Home">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${text}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-21T23:45:38.729298" elapsed="1.193360"/>
+<status status="PASS" start="2024-11-22T05:51:14.779209" elapsed="1.553046"/>
 </kw>
 <arg>${text}</arg>
-<status status="PASS" start="2024-11-21T23:45:38.729298" elapsed="1.193360"/>
+<status status="PASS" start="2024-11-22T05:51:14.779209" elapsed="1.553046"/>
 </kw>
 <arg>Supply Planning</arg>
-<status status="PASS" start="2024-11-21T23:45:38.728297" elapsed="1.194361"/>
+<status status="PASS" start="2024-11-22T05:51:14.779209" elapsed="1.553046"/>
 </kw>
 <kw name="Close Test Browser" owner="Common" type="TEARDOWN">
 <kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-21T23:45:39.966726" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-6.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-22T05:51:16.374857" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-6.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-21T23:45:39.922658" elapsed="0.044068"/>
+<status status="PASS" start="2024-11-22T05:51:16.332255" elapsed="0.042602"/>
 </kw>
 <arg>10</arg>
 <arg>1s</arg>
 <arg>Capture Page Screenshot</arg>
 <doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2024-11-21T23:45:39.922658" elapsed="0.044068"/>
+<status status="PASS" start="2024-11-22T05:51:16.332255" elapsed="0.042602"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-11-21T23:45:39.966726" elapsed="6.140984"/>
+<status status="PASS" start="2024-11-22T05:51:16.375863" elapsed="6.117200"/>
 </kw>
-<status status="PASS" start="2024-11-21T23:45:39.922658" elapsed="6.185052"/>
+<status status="PASS" start="2024-11-22T05:51:16.332255" elapsed="6.160808"/>
 </kw>
 <doc>Login with access to Supply Planning</doc>
 <tag>M0MAIN-SIT-002</tag>
-<tag>TS-SIT-001</tag>
-<status status="PASS" start="2024-11-21T23:45:26.133910" elapsed="19.973800"/>
+<tag>MAIN</tag>
+<status status="PASS" start="2024-11-22T05:51:00.429078" elapsed="22.063985"/>
 </test>
-<status status="PASS" start="2024-11-21T23:44:36.442530" elapsed="69.665180"/>
+<test id="s1-t5" name="Test Case 5: Login with access to Ordering module" line="70">
+<kw name="Open Test Browser" owner="Common" type="SETUP">
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2024-11-22T05:51:22.493063" elapsed="0.000000"/>
+</kw>
+<kw name="Empty Directory" owner="OperatingSystem">
+<msg time="2024-11-22T05:51:22.493063" level="INFO" html="true">Listing contents of directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-22T05:51:22.493063" level="INFO" html="true">Emptied directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
+<arg>testsuites/screenshots</arg>
+<doc>Deletes all the content from the given directory.</doc>
+<status status="PASS" start="2024-11-22T05:51:22.493063" elapsed="0.000000"/>
+</kw>
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<arg>testsuites/screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2024-11-22T05:51:22.493063" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-22T05:51:22.493063" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000025454648560&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].${name}Options()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-22T05:51:22.493063" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--incognito</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-11-22T05:51:22.493063" elapsed="0.000000"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-11-22T05:51:22.493063" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${name}</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-11-22T05:51:22.493063" elapsed="1.244969"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-22T05:51:23.738032" elapsed="0.034502"/>
+</kw>
+<arg>${BROWSER_NAME}</arg>
+<status status="PASS" start="2024-11-22T05:51:22.493063" elapsed="1.279471"/>
+</kw>
+<kw name="GIVEN I go to Login page" owner="KadenaApp">
+<kw name="Navigate to login page" owner="Login">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-22T05:51:23.773536" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
+<arg>${LOGINPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-22T05:51:23.772534" elapsed="2.873554"/>
+</kw>
+<status status="PASS" start="2024-11-22T05:51:23.772534" elapsed="2.874548"/>
+</kw>
+<kw name="Verify Page Loaded" owner="Login">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${LOGIN_HEADER}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-22T05:51:26.647082" elapsed="0.014964"/>
+</kw>
+<status status="PASS" start="2024-11-22T05:51:26.647082" elapsed="0.014964"/>
+</kw>
+<status status="PASS" start="2024-11-22T05:51:23.772534" elapsed="2.889512"/>
+</kw>
+<kw name="AND I enter" owner="KadenaApp">
+<kw name="Enter Credential" owner="Login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T05:51:26.663554" level="INFO">Typing text 'test-order-receiver-3@example.com' into text field 'id=username'.</msg>
+<arg>${locator}</arg>
+<arg>${credential}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T05:51:26.663554" elapsed="0.095081"/>
+</kw>
+<arg>${credential}</arg>
+<arg>${locator}</arg>
+<status status="PASS" start="2024-11-22T05:51:26.663554" elapsed="0.095081"/>
+</kw>
+<arg>${VALID_ORDERING_EMAIL}</arg>
+<arg>${EMAIL}</arg>
+<status status="PASS" start="2024-11-22T05:51:26.663044" elapsed="0.095591"/>
+</kw>
+<kw name="AND I enter" owner="KadenaApp">
+<kw name="Enter Credential" owner="Login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-22T05:51:26.759637" level="INFO">Typing text 'password' into text field 'id=password'.</msg>
+<arg>${locator}</arg>
+<arg>${credential}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T05:51:26.759637" elapsed="0.072285"/>
+</kw>
+<arg>${credential}</arg>
+<arg>${locator}</arg>
+<status status="PASS" start="2024-11-22T05:51:26.759637" elapsed="0.072285"/>
+</kw>
+<arg>${VALID_PASSWORD}</arg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2024-11-22T05:51:26.758635" elapsed="0.073287"/>
+</kw>
+<kw name="WHEN I click the button" owner="KadenaApp">
+<kw name="Click submit button" owner="Login">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-22T05:51:26.833290" level="INFO">Clicking button 'name=login'.</msg>
+<arg>${locator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T05:51:26.833290" elapsed="2.573247"/>
+</kw>
+<arg>${locator}</arg>
+<status status="PASS" start="2024-11-22T05:51:26.832988" elapsed="2.573549"/>
+</kw>
+<arg>${LOGIN_BUTTON}</arg>
+<status status="PASS" start="2024-11-22T05:51:26.831922" elapsed="2.574615"/>
+</kw>
+<kw name="AND The link should not be clickable" owner="KadenaApp">
+<kw name="Verify element if clickable" owner="Home">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T05:51:29.407543" level="INFO">Clicking element 'css=img[alt="Forecasting"]'.</msg>
+<msg time="2024-11-22T05:51:30.581378" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-22T05:51:30.581378" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Forecasting" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fforecasting-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fforecasting-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fforecasting-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (685, 23). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
+</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-11-22T05:51:29.407543" elapsed="1.173835">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Forecasting" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fforecasting-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fforecasting-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fforecasting-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (685, 23). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
+</status>
+</kw>
+<msg time="2024-11-22T05:51:30.581378" level="INFO">${actual_status} = False</msg>
+<var>${actual_status}</var>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-22T05:51:29.407543" elapsed="1.173835"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_status}</arg>
+<arg>${expected_status}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-11-22T05:51:30.597013" elapsed="0.000000"/>
+</kw>
+<arg>${locator}</arg>
+<arg>${False}</arg>
+<status status="PASS" start="2024-11-22T05:51:29.407543" elapsed="1.189470"/>
+</kw>
+<arg>${FORECAST_LINK}</arg>
+<status status="PASS" start="2024-11-22T05:51:29.406537" elapsed="1.190476"/>
+</kw>
+<kw name="AND The link should not be clickable" owner="KadenaApp">
+<kw name="Verify element if clickable" owner="Home">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T05:51:30.597013" level="INFO">Clicking element 'css=img[alt="Supply Planning"]'.</msg>
+<msg time="2024-11-22T05:51:31.753233" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-2.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-22T05:51:31.753233" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Supply Planning" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fsupply-planning-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fsupply-planning-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fsupply-planning-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (893, 110). Other element would receive the click: &lt;div class="sm:mb-[100px] lg:mb-[174px]"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
+</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-11-22T05:51:30.597013" elapsed="1.156220">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Supply Planning" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fsupply-planning-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fsupply-planning-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fsupply-planning-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (893, 110). Other element would receive the click: &lt;div class="sm:mb-[100px] lg:mb-[174px]"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
+</status>
+</kw>
+<msg time="2024-11-22T05:51:31.753233" level="INFO">${actual_status} = False</msg>
+<var>${actual_status}</var>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-22T05:51:30.597013" elapsed="1.156220"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_status}</arg>
+<arg>${expected_status}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-11-22T05:51:31.753233" elapsed="0.000000"/>
+</kw>
+<arg>${locator}</arg>
+<arg>${False}</arg>
+<status status="PASS" start="2024-11-22T05:51:30.597013" elapsed="1.156220"/>
+</kw>
+<arg>${SUPPLY_LINK}</arg>
+<status status="PASS" start="2024-11-22T05:51:30.597013" elapsed="1.156220"/>
+</kw>
+<kw name="AND The link should not be clickable" owner="KadenaApp">
+<kw name="Verify element if clickable" owner="Home">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T05:51:31.768864" level="INFO">Clicking element 'css=img[alt="Procurement"]'.</msg>
+<msg time="2024-11-22T05:51:32.910189" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-3.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-22T05:51:32.910189" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Procurement" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (853, 494). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
+</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-11-22T05:51:31.753233" elapsed="1.156956">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Procurement" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fprocurement-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (853, 494). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
+</status>
+</kw>
+<msg time="2024-11-22T05:51:32.910189" level="INFO">${actual_status} = False</msg>
+<var>${actual_status}</var>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-22T05:51:31.753233" elapsed="1.156956"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_status}</arg>
+<arg>${expected_status}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-11-22T05:51:32.910189" elapsed="0.000000"/>
+</kw>
+<arg>${locator}</arg>
+<arg>${False}</arg>
+<status status="PASS" start="2024-11-22T05:51:31.753233" elapsed="1.156956"/>
+</kw>
+<arg>${PROCUREMENT_LINK}</arg>
+<status status="PASS" start="2024-11-22T05:51:31.753233" elapsed="1.156956"/>
+</kw>
+<kw name="AND The link should not be clickable" owner="KadenaApp">
+<kw name="Verify element if clickable" owner="Home">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T05:51:32.910189" level="INFO">Clicking element 'css=img[alt="Vendor Portal"]'.</msg>
+<msg time="2024-11-22T05:51:34.081251" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-4.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-22T05:51:34.081251" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Vendor Portal" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (653, 542). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
+</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-11-22T05:51:32.910189" elapsed="1.171062">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Vendor Portal" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fvendor-portal-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (653, 542). Other element would receive the click: &lt;div class="absolute inset-0"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
+</status>
+</kw>
+<msg time="2024-11-22T05:51:34.081251" level="INFO">${actual_status} = False</msg>
+<var>${actual_status}</var>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-22T05:51:32.910189" elapsed="1.171062"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_status}</arg>
+<arg>${expected_status}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-11-22T05:51:34.081251" elapsed="0.000000"/>
+</kw>
+<arg>${locator}</arg>
+<arg>${False}</arg>
+<status status="PASS" start="2024-11-22T05:51:32.910189" elapsed="1.171062"/>
+</kw>
+<arg>${VENDOR_LINK}</arg>
+<status status="PASS" start="2024-11-22T05:51:32.910189" elapsed="1.171062"/>
+</kw>
+<kw name="AND The link should not be clickable" owner="KadenaApp">
+<kw name="Verify element if clickable" owner="Home">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T05:51:34.081251" level="INFO">Clicking element 'css=img[alt="Quality Management"]'.</msg>
+<msg time="2024-11-22T05:51:35.253625" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-5.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-22T05:51:35.253625" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Quality Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (461, 454). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
+</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-11-22T05:51:34.081251" elapsed="1.172374">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Quality Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Fquality-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (461, 454). Other element would receive the click: &lt;div class="relative sm:ml-[5%] xl:ml-[10%] my-auto min-w-[255px]"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
+</status>
+</kw>
+<msg time="2024-11-22T05:51:35.253625" level="INFO">${actual_status} = False</msg>
+<var>${actual_status}</var>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-22T05:51:34.081251" elapsed="1.172374"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_status}</arg>
+<arg>${expected_status}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-11-22T05:51:35.253625" elapsed="0.000000"/>
+</kw>
+<arg>${locator}</arg>
+<arg>${False}</arg>
+<status status="PASS" start="2024-11-22T05:51:34.081251" elapsed="1.172374"/>
+</kw>
+<arg>${QUALITY_LINK}</arg>
+<status status="PASS" start="2024-11-22T05:51:34.081251" elapsed="1.172374"/>
+</kw>
+<kw name="AND The link should not be clickable" owner="KadenaApp">
+<kw name="Verify element if clickable" owner="Home">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T05:51:35.269274" level="INFO">Clicking element 'css=img[alt="Inventory Management"]'.</msg>
+<msg time="2024-11-22T05:51:36.429217" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-6.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-22T05:51:36.429217" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Inventory Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (413, 274). Other element would receive the click: &lt;div class="sm:mb-[100px] lg:mb-[174px]"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
+</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2024-11-22T05:51:35.253625" elapsed="1.176184">ElementClickInterceptedException: Message: element click intercepted: Element &lt;img alt="Inventory Management" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="2xl:w-[60px] 2xl:h-[60px] lg:w-[50px] lg:h-[50px] md:w-[40px] md:h-[40px] sm:w-[30px] sm:h-[30px] z-1" style="color:transparent" srcset="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=64&amp;amp;q=75 1x, /_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75 2x" src="/_next/image?url=%2Finventory-management-orange.png&amp;amp;w=128&amp;amp;q=75"&gt; is not clickable at point (413, 274). Other element would receive the click: &lt;div class="sm:mb-[100px] lg:mb-[174px]"&gt;...&lt;/div&gt;
+  (Session info: chrome=131.0.6778.70)
+Stacktrace:
+	GetHandleVerifier [0x00007FF6323F2775+28773]
+	(No symbol) [0x00007FF63235AFB0]
+	(No symbol) [0x00007FF6321F552A]
+	(No symbol) [0x00007FF632250B5E]
+	(No symbol) [0x00007FF63224E5FC]
+	(No symbol) [0x00007FF63224B7E6]
+	(No symbol) [0x00007FF63224A741]
+	(No symbol) [0x00007FF63223C970]
+	(No symbol) [0x00007FF63226EF9A]
+	(No symbol) [0x00007FF63223C1C6]
+	(No symbol) [0x00007FF63226F1B0]
+	(No symbol) [0x00007FF63228F1A4]
+	(No symbol) [0x00007FF63226ED43]
+	(No symbol) [0x00007FF63223A548]
+	(No symbol) [0x00007FF63223B6B1]
+	GetHandleVerifier [0x00007FF63271F45D+3358029]
+	GetHandleVerifier [0x00007FF63273430D+3443709]
+	GetHandleVerifier [0x00007FF6327283FD+3394797]
+	GetHandleVerifier [0x00007FF6324B929B+842635]
+	(No symbol) [0x00007FF63236654F]
+	(No symbol) [0x00007FF632361FA4]
+	(No symbol) [0x00007FF63236213D]
+	(No symbol) [0x00007FF632351629]
+	BaseThreadInitThunk [0x00007FFE39A64CB0+16]
+	RtlUserThreadStart [0x00007FFE3AEFEDCB+43]
+</status>
+</kw>
+<msg time="2024-11-22T05:51:36.430409" level="INFO">${actual_status} = False</msg>
+<var>${actual_status}</var>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-22T05:51:35.253625" elapsed="1.176784"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_status}</arg>
+<arg>${expected_status}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-11-22T05:51:36.430409" elapsed="0.000584"/>
+</kw>
+<arg>${locator}</arg>
+<arg>${False}</arg>
+<status status="PASS" start="2024-11-22T05:51:35.253625" elapsed="1.177368"/>
+</kw>
+<arg>${INVENTORY_LINK}</arg>
+<status status="PASS" start="2024-11-22T05:51:35.253625" elapsed="1.177368"/>
+</kw>
+<kw name="AND The link should be clickable" owner="KadenaApp">
+<kw name="Verify element if clickable" owner="Home">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-22T05:51:36.432150" level="INFO">Clicking element 'css=img[alt="Ordering"]'.</msg>
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-22T05:51:36.432150" elapsed="0.064272"/>
+</kw>
+<msg time="2024-11-22T05:51:36.497083" level="INFO">${actual_status} = True</msg>
+<var>${actual_status}</var>
+<arg>Click Element</arg>
+<arg>${locator}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-11-22T05:51:36.432150" elapsed="0.065005"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_status}</arg>
+<arg>${expected_status}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-11-22T05:51:36.497216" elapsed="0.000531"/>
+</kw>
+<arg>${locator}</arg>
+<arg>${True}</arg>
+<status status="PASS" start="2024-11-22T05:51:36.431574" elapsed="0.066274"/>
+</kw>
+<arg>${ORDERING_LINK}</arg>
+<status status="PASS" start="2024-11-22T05:51:36.430993" elapsed="0.066855"/>
+</kw>
+<kw name="THEN I should be redirected to the" owner="KadenaApp">
+<kw name="I redirected to the" owner="Home">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${text}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-22T05:51:36.499019" elapsed="0.012908"/>
+</kw>
+<arg>${text}</arg>
+<status status="PASS" start="2024-11-22T05:51:36.498493" elapsed="0.013434"/>
+</kw>
+<arg>Ordering</arg>
+<status status="PASS" start="2024-11-22T05:51:36.497848" elapsed="0.014079"/>
+</kw>
+<kw name="Close Test Browser" owner="Common" type="TEARDOWN">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-11-22T05:51:36.615710" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-7.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-11-22T05:51:36.512943" elapsed="0.103316"/>
+</kw>
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-11-22T05:51:36.512943" elapsed="0.103316"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-11-22T05:51:36.616259" elapsed="6.107927"/>
+</kw>
+<status status="PASS" start="2024-11-22T05:51:36.511927" elapsed="6.212259"/>
+</kw>
+<doc>Login with access to Ordering module</doc>
+<tag>M0MAIN-SIT-003</tag>
+<tag>MAIN</tag>
+<status status="PASS" start="2024-11-22T05:51:22.493063" elapsed="20.231123"/>
+</test>
+<test id="s1-t6" name="Test Case 6: Login with access to Procurement module as a Procurement Supervisor" line="87">
+<kw name="Open Test Browser" owner="Common" type="SETUP">
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2024-11-22T05:51:42.724186" elapsed="0.000000"/>
+</kw>
+<kw name="Empty Directory" owner="OperatingSystem">
+<msg time="2024-11-22T05:51:42.724186" level="INFO" html="true">Listing contents of directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-22T05:51:42.724186" level="INFO" html="true">Emptied directory '&lt;a href="file://D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots"&gt;D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\screenshots&lt;/a&gt;'.</msg>
+<arg>testsuites/screenshots</arg>
+<doc>Deletes all the content from the given directory.</doc>
+<status status="PASS" start="2024-11-22T05:51:42.724186" elapsed="0.000000"/>
+</kw>
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<arg>testsuites/screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2024-11-22T05:51:42.724186" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-22T05:51:42.724186" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000025454A24DD0&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].${name}Options()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-22T05:51:42.724186" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--incognito</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-11-22T05:51:42.724186" elapsed="0.000000"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-11-22T05:51:42.724186" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${name}</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-11-22T05:51:42.724186" elapsed="1.327286"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-22T05:51:44.051472" elapsed="0.033237"/>
+</kw>
+<arg>${BROWSER_NAME}</arg>
+<status status="PASS" start="2024-11-22T05:51:42.724186" elapsed="1.360523"/>
+</kw>
+<kw name="GIVEN I go to Login page" owner="KadenaApp">
+<kw name="Navigate to login page" owner="Login">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-22T05:51:44.085716" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
+<arg>${LOGINPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-22T05:51:44.085716" elapsed="2.908810"/>
+</kw>
+<status status="PASS" start="2024-11-22T05:51:44.085716" elapsed="2.909812"/>
+</kw>
+<kw name="Verify Page Loaded" owner="Login">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${LOGIN_HEADER}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-22T05:51:46.995528" elapsed="0.013624"/>
+</kw>
+<status status="PASS" start="2024-11-22T05:51:46.995528" elapsed="0.013624"/>
+</kw>
+<status status="PASS" start="2024-11-22T05:51:44.085716" elapsed="2.923436"/>
+</kw>
+<kw name="AND I enter" owner="KadenaApp">
+<msg time="2024-11-22T05:51:47.009152" level="FAIL">Variable '${VALID_PROCUREMENT_EMAIL}' not found.</msg>
+<arg>${VALID_PROCUREMENT_EMAIL}</arg>
+<arg>${EMAIL}</arg>
+<status status="FAIL" start="2024-11-22T05:51:47.009152" elapsed="0.000000">Variable '${VALID_PROCUREMENT_EMAIL}' not found.</status>
+</kw>
+<kw name="AND I enter" owner="KadenaApp">
+<arg>${VALID_PASSWORD}</arg>
+<arg>${PASSWORD}</arg>
+<status status="NOT RUN" start="2024-11-22T05:51:47.009152" elapsed="0.000000"/>
+</kw>
+<kw name="WHEN I click the button" owner="KadenaApp">
+<arg>${LOGIN_BUTTON}</arg>
+<status status="NOT RUN" start="2024-11-22T05:51:47.009152" elapsed="0.000000"/>
+</kw>
+<kw name="AND The link should not be clickable" owner="KadenaApp">
+<arg>${FORECAST_LINK}</arg>
+<status status="NOT RUN" start="2024-11-22T05:51:47.009152" elapsed="0.000000"/>
+</kw>
+<kw name="AND The link should not be clickable" owner="KadenaApp">
+<arg>${SUPPLY_LINK}</arg>
+<status status="NOT RUN" start="2024-11-22T05:51:47.009152" elapsed="0.000000"/>
+</kw>
+<kw name="AND The link should not be clickable" owner="KadenaApp">
+<arg>${ORDERING_LINK}</arg>
+<status status="NOT RUN" start="2024-11-22T05:51:47.009152" elapsed="0.000000"/>
+</kw>
+<kw name="AND The link should not be clickable" owner="KadenaApp">
+<arg>${VENDOR_LINK}</arg>
+<status status="NOT RUN" start="2024-11-22T05:51:47.009152" elapsed="0.000000"/>
+</kw>
+<kw name="AND The link should not be clickable" owner="KadenaApp">
+<arg>${QUALITY_LINK}</arg>
+<status status="NOT RUN" start="2024-11-22T05:51:47.011561" elapsed="0.000000"/>
+</kw>
+<kw name="AND The link should not be clickable" owner="KadenaApp">
+<arg>${INVENTORY_LINK}</arg>
+<status status="NOT RUN" start="2024-11-22T05:51:47.011561" elapsed="0.000000"/>
+</kw>
+<kw name="AND The link should be clickable" owner="KadenaApp">
+<arg>${PROCUREMENT_LINK}</arg>
+<status status="NOT RUN" start="2024-11-22T05:51:47.011561" elapsed="0.000000"/>
+</kw>
+<kw name="THEN I should be redirected to the" owner="KadenaApp">
+<arg>Procurement</arg>
+<status status="NOT RUN" start="2024-11-22T05:51:47.011561" elapsed="0.000000"/>
+</kw>
+<kw name="Close Test Browser" owner="Common" type="TEARDOWN">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-11-22T05:51:47.068344" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-11-22T05:51:47.012559" elapsed="0.055785"/>
+</kw>
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-11-22T05:51:47.012559" elapsed="0.055785"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-11-22T05:51:47.068344" elapsed="6.142010"/>
+</kw>
+<status status="PASS" start="2024-11-22T05:51:47.011561" elapsed="6.198793"/>
+</kw>
+<doc>Login with access to Procurement module as a Procurement Supervisor</doc>
+<tag>M0MAIN-SIT-004</tag>
+<tag>MAIN</tag>
+<status status="FAIL" start="2024-11-22T05:51:42.724186" elapsed="10.486168">Variable '${VALID_PROCUREMENT_EMAIL}' not found.</status>
+</test>
+<doc>This is the main test suite of the Kadena project</doc>
+<status status="FAIL" start="2024-11-22T05:49:36.125007" elapsed="137.085347"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0" skip="0">All Tests</stat>
+<stat pass="5" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 <stat pass="2" fail="0" skip="0">M0MAIN-SIT-001</stat>
 <stat pass="2" fail="0" skip="0">M0MAIN-SIT-002</stat>
-<stat pass="4" fail="0" skip="0">TS-SIT-001</stat>
+<stat pass="1" fail="0" skip="0">M0MAIN-SIT-003</stat>
+<stat pass="0" fail="1" skip="0">M0MAIN-SIT-004</stat>
+<stat pass="5" fail="1" skip="0">MAIN</stat>
 </tag>
 <suite>
-<stat pass="4" fail="0" skip="0" id="s1" name="Kadena Tests">Kadena Tests</stat>
+<stat pass="5" fail="1" skip="0" id="s1" name="Kadena Tests">Kadena Tests</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-11-21T23:44:36.473780" level="ERROR">Error in file 'D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\Kadena_Tests.robot' on line 3: Resource file '..\variables\KadenaCredentials.robot' does not exist.</msg>
-<msg time="2024-11-21T23:44:36.755580" level="WARN">Imported resource file 'D:\a\KadenaTestAutomation\KadenaTestAutomation\resources\PO\Ordering.robot' is empty.</msg>
+<msg time="2024-11-22T05:49:36.156256" level="ERROR">Error in file 'D:\a\KadenaTestAutomation\KadenaTestAutomation\testsuites\Kadena_Tests.robot' on line 4: Resource file '..\variables\KadenaCredentials.robot' does not exist.</msg>
+<msg time="2024-11-22T05:49:36.437886" level="WARN">Imported resource file 'D:\a\KadenaTestAutomation\KadenaTestAutomation\resources\PO\Ordering.robot' is empty.</msg>
 </errors>
 </robot>
