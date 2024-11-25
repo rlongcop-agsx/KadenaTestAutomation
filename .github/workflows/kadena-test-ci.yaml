@@ -36,7 +36,14 @@ jobs:
         -v LOGINPAGE_URL:${{ secrets.LOGINPAGE_URL }} \
         -v VALID_ORDERING_EMAIL:${{ secrets.VALID_ORDERING_EMAIL }} \
         -v VALID_FORECASTING_EMAIL:${{ secrets.VALID_FORECASTING_EMAIL }} \
+        -v VALID_SUPPLYPLAN_EMAIL:${{ secrets.VALID_SUPPLYPLAN_EMAIL }} \
+        -v VALID_PROCUREMENTSP_EMAIL:${{ secrets.VALID_PROCUREMENTSP_EMAIL }} \
         -v VALID_PROCUREMENT_EMAIL:${{ secrets.VALID_PROCUREMENT_EMAIL }} \
+        -v VALID_VENDOR_EMAIL:${{ secrets.VALID_VENDOR_EMAIL }} \
+        -v VALID_INVENTORY_EMAIL:${{ secrets.VALID_INVENTORY_EMAIL }} \
+        -v VALID_INVENTORY_EMAIL:${{ secrets.VALID_INVENTORY_EMAIL }} \
+        -v VALID_QUALITYMANAGEMENT_EMAIL:${{ secrets.VALID_QUALITYMANAGEMENT_EMAIL }} \
+        -v VALID_ANALYTICS_EMAIL:${{ secrets.VALID_ANALYTICS_EMAIL }} \
         testsuites/Kadena_Tests.robot
 
     - name: Archive test results
@@ -46,8 +53,22 @@ jobs:
         name: test-results
         path: results/
 
+  publish:
+    runs-on: ubuntu-latest
+    needs: test
+    if: always()
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Download test results artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: test-results
+        path: ./results
+
     - name: Publish test results as a GitHub Pages site
-      if: always()
       uses: peaceiris/actions-gh-pages@v3
       with:
         personal_token: ${{ secrets.GH_PAGES_TOKEN }}
