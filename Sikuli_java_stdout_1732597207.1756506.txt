@@ -1,0 +1,89 @@
+2024-11-26 05:00:13
+Full thread dump OpenJDK 64-Bit Server VM (25.432-b06 mixed mode):
+
+"Service Thread" #9 daemon prio=9 os_prio=0 tid=0x000001647bbf7000 nid=0x139c runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C1 CompilerThread2" #8 daemon prio=9 os_prio=2 tid=0x000001647bba7800 nid=0xeb8 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread1" #7 daemon prio=9 os_prio=2 tid=0x000001647bba6000 nid=0x1910 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #6 daemon prio=9 os_prio=2 tid=0x000001647bbac000 nid=0x1a2c waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Attach Listener" #5 daemon prio=5 os_prio=2 tid=0x000001647bb9c000 nid=0x1c44 runnable [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Signal Dispatcher" #4 daemon prio=9 os_prio=2 tid=0x000001647bb9b000 nid=0x1c34 waiting on condition [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Finalizer" #3 daemon prio=8 os_prio=1 tid=0x000001647bb78800 nid=0x1f80 in Object.wait() [0x0000003b1a8fe000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x000000076ab08f00> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
+	- locked <0x000000076ab08f00> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:165)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:188)
+
+"Reference Handler" #2 daemon prio=10 os_prio=2 tid=0x000001647bb6f800 nid=0x1e64 in Object.wait() [0x0000003b1a7ff000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait(Native Method)
+	- waiting on <0x000000076ab06b98> (a java.lang.ref.Reference$Lock)
+	at java.lang.Object.wait(Object.java:502)
+	at java.lang.ref.Reference.tryHandlePending(Reference.java:191)
+	- locked <0x000000076ab06b98> (a java.lang.ref.Reference$Lock)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:153)
+
+"main" #1 prio=5 os_prio=0 tid=0x000001647788c800 nid=0x1e20 runnable [0x0000003b1a1fe000]
+   java.lang.Thread.State: RUNNABLE
+	at sun.reflect.annotation.AnnotationParser.parseSig(AnnotationParser.java:438)
+	at sun.reflect.annotation.AnnotationParser.parseAnnotation2(AnnotationParser.java:241)
+	at sun.reflect.annotation.AnnotationParser.parseAnnotations2(AnnotationParser.java:120)
+	at sun.reflect.annotation.AnnotationParser.parseAnnotations(AnnotationParser.java:72)
+	at java.lang.Class.createAnnotationData(Class.java:3521)
+	at java.lang.Class.annotationData(Class.java:3510)
+	at java.lang.Class.getAnnotation(Class.java:3415)
+	at org.apache.logging.log4j.core.pattern.PatternParser.<init>(PatternParser.java:143)
+	at org.apache.logging.log4j.core.pattern.PatternParser.<init>(PatternParser.java:113)
+	at org.apache.logging.log4j.core.layout.PatternLayout.createPatternParser(PatternLayout.java:258)
+	at org.apache.logging.log4j.core.layout.PatternLayout$SerializerBuilder.build(PatternLayout.java:397)
+	at org.apache.logging.log4j.core.layout.PatternLayout.<init>(PatternLayout.java:139)
+	at org.apache.logging.log4j.core.layout.PatternLayout.<init>(PatternLayout.java:60)
+	at org.apache.logging.log4j.core.layout.PatternLayout$Builder.build(PatternLayout.java:686)
+	at org.apache.logging.log4j.core.config.AbstractConfiguration.setToDefault(AbstractConfiguration.java:625)
+	at org.apache.logging.log4j.core.config.DefaultConfiguration.<init>(DefaultConfiguration.java:47)
+	at org.robotframework.remoteserver.RemoteServer.configureLogging(RemoteServer.java:253)
+	at com.github.rainmanwy.robotframework.sikulilib.SikuliLibrary.main(SikuliLibrary.java:27)
+
+"VM Thread" os_prio=2 tid=0x000001647bb45000 nid=0x11cc runnable 
+
+"GC task thread#0 (ParallelGC)" os_prio=0 tid=0x00000164778a3800 nid=0x970 runnable 
+
+"GC task thread#1 (ParallelGC)" os_prio=0 tid=0x00000164778a4800 nid=0x170c runnable 
+
+"GC task thread#2 (ParallelGC)" os_prio=0 tid=0x00000164778a8000 nid=0x1914 runnable 
+
+"GC task thread#3 (ParallelGC)" os_prio=0 tid=0x00000164778a9800 nid=0x11d0 runnable 
+
+"VM Periodic Task Thread" os_prio=2 tid=0x000001647bc01000 nid=0x1f74 waiting on condition 
+
+JNI global references: 332
+
+Heap
+ PSYoungGen      total 76288K, used 14475K [0x000000076ab00000, 0x0000000770000000, 0x00000007c0000000)
+  eden space 65536K, 22% used [0x000000076ab00000,0x000000076b922c18,0x000000076eb00000)
+  from space 10752K, 0% used [0x000000076f580000,0x000000076f580000,0x0000000770000000)
+  to   space 10752K, 0% used [0x000000076eb00000,0x000000076eb00000,0x000000076f580000)
+ ParOldGen       total 175104K, used 0K [0x00000006c0000000, 0x00000006cab00000, 0x000000076ab00000)
+  object space 175104K, 0% used [0x00000006c0000000,0x00000006c0000000,0x00000006cab00000)
+ Metaspace       used 7249K, capacity 7436K, committed 7680K, reserved 1056768K
+  class space    used 889K, capacity 966K, committed 1024K, reserved 1048576K
+
+05:00:15.456 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @6933ms to org.robotframework.remoteserver.logging.Jetty2Log4J
+05:00:15.811 [main] INFO  org.eclipse.jetty.server.Server - jetty-9.4.31.v20200723; built: 2020-07-23T17:57:36.812Z; git: 450ba27947e13e66baa8cd1ce7e85a4461cacc1d; jvm 1.8.0_432-b06
+05:00:16.438 [main] INFO  org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@c267ef4{/,null,AVAILABLE}
+05:00:17.585 [main] INFO  org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@23a5fd2{HTTP/1.1, (http/1.1)}{0.0.0.0:52026}
+05:00:17.585 [main] INFO  org.eclipse.jetty.server.Server - Started @9091ms
