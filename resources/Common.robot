@@ -14,6 +14,7 @@ Open Test Browser
 
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].${name}Options()    sys, selenium.webdriver
     Call Method    ${options}    add_argument    --incognito
+    Call Method    ${options}    add_argument    --disable-application-cache
     Create WebDriver    ${name}    options=${options}
 
     Maximize Browser Window

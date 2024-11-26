@@ -10,6 +10,7 @@ Resource                           ../resources/PO/Ordering.robot
 Resource                           Common.robot
 Library    ../venv/lib/python3.13/site-packages/robot/libraries/Collections.py
 Library                            JSONLibrary
+Library                            SikuliLibrary
 
 *** Variables ***
 ${LOAD_TIME_RESULT}=        LOAD_TIME_RESULT.json
@@ -67,17 +68,20 @@ I logged in with valid credentials
     I enter            ${password}    ${password_locator}
 
 I get the load time
-    [Arguments]        ${page_header}
+    [Arguments]        ${module}
     ...                ${iteration}
     ...                ${element}
+    ...                ${url}
+    ...                ${text}
     
     ${load_results}=     Create List
 
     FOR    ${counter}    IN RANGE    0    ${iteration}
-        
-        I navigate to      ${page_header}
-        ${result}=       Tableau.Validate Load Time    ${element}
+        Home.Verify element if clickable   ${module}    ${True}
+        ${result}=       Tableau.Validate Load Time    ${text}
         Append To List   ${load_results}    ${result}
+        ${last_iteration}=    Evaluate    ${iteration} - 1    modules=builtins
+        Run Keyword If    ${counter} != ${last_iteration}    Go To    ${url}
     END
 
     CreateJSON.Write Load Times to JSON    ${load_results}

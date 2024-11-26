@@ -17,7 +17,7 @@ Test Case 1: Login with invalid password
     [Tags]                                 M0MAIN-SIT-001    
     ...                                    MAIN
     GIVEN I go to Login page
-    AND I enter                            ${VALID_ORDERING_EMAIL}    ${EMAIL}
+    AND I enter                            test-order-receiver-3@example.com    ${EMAIL}
     AND I enter                            ${INVALID_PASSWORD}        ${PASSWORD}
     WHEN I click the button                ${LOGIN_BUTTON}
     THEN A message should display          ${INVALID_ERROR_MESSAGE}
@@ -102,7 +102,7 @@ Test Case 6: Login with access to Procurement module as a Procurement Supervisor
 
 Test Case 7: Login with access to Procurement module as a Procurement Specialist
     [Documentation]                        Login with access to Procurement module as a Procurement Specialist
-    [Tags]                                 M0MAIN-SIT-005    
+    [Tags]                                 M0MAIN-SIT-005
     ...                                    MAIN
     GIVEN I go to Login page
     AND I enter                            ${VALID_PROCUREMENTSP_EMAIL}    ${EMAIL}

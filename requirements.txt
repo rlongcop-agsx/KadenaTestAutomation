@@ -1,4 +1,5 @@
 robotframework-seleniumlibrary
 robotframework-jsonlibrary
+robotframework-sikulilibrary
 webdriver-manager
 python-dotenv

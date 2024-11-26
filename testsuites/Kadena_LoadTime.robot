@@ -8,6 +8,7 @@ Resource                                   ../resources/Common.robot
 Resource                                   ../resources/KadenaApp.robot
 Test Setup                                 Common.Open Test Browser            ${BROWSER_NAME}
 Test Teardown                              Common.Close Test Browser
+Library                                    
 
 *** Variables ***
 ${login_btn}=        name=login
@@ -22,6 +23,8 @@ Test Case 11: Forecasting Tableau load time
     GIVEN I logged in with valid credentials    ${VALID_FORECASTING_EMAIL}    ${EMAIL}    
     ...                                         ${VALID_PASSWORD}             ${PASSWORD}
     AND I click the button                      ${LOGIN_BUTTON}
-    WHEN I get the load time                    ${FORECASTPAGE_URL}    
-    ...                                         5                             
+    AND I get the load time                     ${FORECAST_LINK}    
+    ...                                         100
     ...                                         ${tableau_element}
+    ...                                         ${LOGINPAGE_URL}
+    ...                                         Forecasting

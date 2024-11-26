@@ -1,566 +1,361 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1.1 (Python 3.13.0 on darwin)" generated="2024-11-25T19:29:25.133888" rpa="false" schemaversion="5">
-<suite id="s1" name="Kadena LoadTime" source="/Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/Kadena_LoadTime.robot">
-<test id="s1-t1" name="Test Case 11: Forecasting Tableau load time" line="18">
+<robot generator="Robot 7.1.1 (Python 3.13.0 on darwin)" generated="2024-11-26T12:54:09.208478" rpa="false" schemaversion="5">
+<suite id="s1" name="Kadena Tests" source="/Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/Kadena_Tests.robot">
+<test id="s1-t1" name="Test Case 1: Login with invalid password" line="15">
 <kw name="Open Test Browser" owner="Common" type="SETUP">
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>10s</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2024-11-25T19:29:25.284214" elapsed="0.000111"/>
+<status status="PASS" start="2024-11-26T12:54:53.860354" elapsed="0.000466"/>
 </kw>
 <kw name="Empty Directory" owner="OperatingSystem">
-<msg time="2024-11-25T19:29:25.284474" level="INFO" html="true">Listing contents of directory '&lt;a href="file:///Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/screenshots"&gt;/Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/screenshots&lt;/a&gt;'.</msg>
-<msg time="2024-11-25T19:29:25.285076" level="INFO" html="true">Emptied directory '&lt;a href="file:///Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/screenshots"&gt;/Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-26T12:54:53.861371" level="INFO" html="true">Listing contents of directory '&lt;a href="file:///Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/screenshots"&gt;/Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-26T12:54:53.885683" level="INFO" html="true">Emptied directory '&lt;a href="file:///Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/screenshots"&gt;/Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/screenshots&lt;/a&gt;'.</msg>
 <arg>testsuites/screenshots</arg>
 <doc>Deletes all the content from the given directory.</doc>
-<status status="PASS" start="2024-11-25T19:29:25.284399" elapsed="0.000717"/>
+<status status="PASS" start="2024-11-26T12:54:53.861071" elapsed="0.024770"/>
 </kw>
 <kw name="Set Screenshot Directory" owner="SeleniumLibrary">
 <arg>testsuites/screenshots</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" start="2024-11-25T19:29:25.285193" elapsed="0.000099"/>
+<status status="PASS" start="2024-11-26T12:54:53.886076" elapsed="0.000284"/>
 </kw>
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-25T19:29:25.285503" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x107e12a50&gt;</msg>
+<msg time="2024-11-26T12:54:53.886904" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x1066bea50&gt;</msg>
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].${name}Options()</arg>
 <arg>sys, selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-25T19:29:25.285359" elapsed="0.000157"/>
+<status status="PASS" start="2024-11-26T12:54:53.886524" elapsed="0.000405"/>
 </kw>
 <kw name="Call Method" owner="BuiltIn">
 <arg>${options}</arg>
 <arg>add_argument</arg>
 <arg>--incognito</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2024-11-25T19:29:25.285575" elapsed="0.000053"/>
+<status status="PASS" start="2024-11-26T12:54:53.887043" elapsed="0.000104"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-application-cache</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-11-26T12:54:53.887246" elapsed="0.000088"/>
 </kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-11-25T19:29:25.285757" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-11-26T12:54:53.887597" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>${name}</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-11-25T19:29:25.285684" elapsed="1.441297"/>
+<status status="PASS" start="2024-11-26T12:54:53.887445" elapsed="2.041839"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-11-25T19:29:26.728392" elapsed="0.374949"/>
+<status status="PASS" start="2024-11-26T12:54:55.929709" elapsed="0.384062"/>
 </kw>
 <arg>${BROWSER_NAME}</arg>
-<status status="PASS" start="2024-11-25T19:29:25.283717" elapsed="1.819810"/>
+<status status="PASS" start="2024-11-26T12:54:53.858590" elapsed="2.455422"/>
 </kw>
-<kw name="GIVEN I logged in with valid credentials" owner="KadenaApp">
-<kw name="I go to Login page" owner="KadenaApp">
+<kw name="GIVEN I go to Login page" owner="KadenaApp">
 <kw name="Navigate to login page" owner="Login">
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-25T19:29:27.104918" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
+<msg time="2024-11-26T12:54:56.315264" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
 <arg>${LOGINPAGE_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-25T19:29:27.104814" elapsed="0.706478"/>
+<status status="PASS" start="2024-11-26T12:54:56.315142" elapsed="1.284959"/>
 </kw>
-<status status="PASS" start="2024-11-25T19:29:27.104673" elapsed="0.706701"/>
+<status status="PASS" start="2024-11-26T12:54:56.314966" elapsed="1.285354"/>
 </kw>
 <kw name="Verify Page Loaded" owner="Login">
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>${LOGIN_HEADER}</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2024-11-25T19:29:27.811705" elapsed="0.011443"/>
+<status status="PASS" start="2024-11-26T12:54:57.600825" elapsed="0.011013"/>
 </kw>
-<status status="PASS" start="2024-11-25T19:29:27.811505" elapsed="0.011720"/>
+<status status="PASS" start="2024-11-26T12:54:57.600575" elapsed="0.011343"/>
 </kw>
-<status status="PASS" start="2024-11-25T19:29:27.104487" elapsed="0.718765"/>
+<status status="PASS" start="2024-11-26T12:54:56.314558" elapsed="1.297394"/>
 </kw>
-<kw name="I enter" owner="KadenaApp">
+<kw name="AND I enter" owner="KadenaApp">
 <kw name="Enter Credential" owner="Login">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-25T19:29:27.824045" level="INFO">Typing text 'econsista@agsx.net' into text field 'id=username'.</msg>
+<msg time="2024-11-26T12:54:57.613459" level="INFO">Typing text 'test-order-receiver-3@example.com' into text field 'id=username'.</msg>
 <arg>${locator}</arg>
 <arg>${credential}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-25T19:29:27.823709" elapsed="0.100992"/>
+<status status="PASS" start="2024-11-26T12:54:57.612573" elapsed="0.131088"/>
 </kw>
 <arg>${credential}</arg>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-25T19:29:27.823567" elapsed="0.101213"/>
+<status status="PASS" start="2024-11-26T12:54:57.612397" elapsed="0.131346"/>
 </kw>
-<arg>${email}</arg>
-<arg>${email_locator}</arg>
-<status status="PASS" start="2024-11-25T19:29:27.823372" elapsed="0.101445"/>
-</kw>
-<kw name="I enter" owner="KadenaApp">
-<kw name="Enter Credential" owner="Login">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-11-25T19:29:27.925417" level="INFO">Typing text 'password' into text field 'id=password'.</msg>
-<arg>${locator}</arg>
-<arg>${credential}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-25T19:29:27.925303" elapsed="0.036795"/>
-</kw>
-<arg>${credential}</arg>
-<arg>${locator}</arg>
-<status status="PASS" start="2024-11-25T19:29:27.925147" elapsed="0.037024"/>
-</kw>
-<arg>${password}</arg>
-<arg>${password_locator}</arg>
-<status status="PASS" start="2024-11-25T19:29:27.924923" elapsed="0.037277"/>
-</kw>
-<arg>${VALID_FORECASTING_EMAIL}</arg>
+<arg>${VALID_ORDERING_EMAIL}</arg>
 <arg>${EMAIL}</arg>
-<arg>${VALID_PASSWORD}</arg>
-<arg>${PASSWORD}</arg>
-<status status="PASS" start="2024-11-25T19:29:27.104060" elapsed="0.858165"/>
+<status status="PASS" start="2024-11-26T12:54:57.612150" elapsed="0.131629"/>
 </kw>
-<kw name="AND I click the button" owner="KadenaApp">
+<kw name="AND I enter" owner="KadenaApp">
+<kw name="Enter Credential" owner="Login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-26T12:54:57.744430" level="INFO">Typing text 'invalidpassword' into text field 'id=password'.</msg>
+<arg>${locator}</arg>
+<arg>${credential}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T12:54:57.744321" elapsed="0.042568"/>
+</kw>
+<arg>${credential}</arg>
+<arg>${locator}</arg>
+<status status="PASS" start="2024-11-26T12:54:57.744163" elapsed="0.042793"/>
+</kw>
+<arg>${INVALID_PASSWORD}</arg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2024-11-26T12:54:57.743939" elapsed="0.043049"/>
+</kw>
+<kw name="WHEN I click the button" owner="KadenaApp">
 <kw name="Click submit button" owner="Login">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2024-11-25T19:29:27.962860" level="INFO">Clicking button 'name=login'.</msg>
+<msg time="2024-11-26T12:54:57.787567" level="INFO">Clicking button 'name=login'.</msg>
 <arg>${locator}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2024-11-25T19:29:27.962745" elapsed="1.191018"/>
+<status status="PASS" start="2024-11-26T12:54:57.787457" elapsed="1.267166"/>
 </kw>
 <arg>${locator}</arg>
-<status status="PASS" start="2024-11-25T19:29:27.962578" elapsed="1.191759"/>
+<status status="PASS" start="2024-11-26T12:54:57.787320" elapsed="1.267501"/>
 </kw>
 <arg>${LOGIN_BUTTON}</arg>
-<status status="PASS" start="2024-11-25T19:29:27.962393" elapsed="1.192122"/>
+<status status="PASS" start="2024-11-26T12:54:57.787138" elapsed="1.267789"/>
 </kw>
-<kw name="WHEN I get the load time" owner="KadenaApp">
-<kw name="Create List" owner="BuiltIn">
-<msg time="2024-11-25T19:29:29.155733" level="INFO">${load_results} = []</msg>
-<var>${load_results}</var>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2024-11-25T19:29:29.155487" elapsed="0.000269"/>
+<kw name="THEN A message should display" owner="KadenaApp">
+<kw name="Validate Error Message" owner="Login">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-26T12:54:59.072736" level="INFO">Current page contains text 'Invalid username or password.'.</msg>
+<arg>${text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-26T12:54:59.056329" elapsed="0.016504"/>
 </kw>
-<for flavor="IN RANGE">
-<iter>
-<kw name="I navigate to" owner="KadenaApp">
-<kw name="Navigate to page" owner="Home">
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-25T19:29:29.156928" level="INFO">Opening url 'https://kadena.test.tableau.launcher.amihan.net/#forecasting_dashboard'</msg>
-<arg>${url}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-25T19:29:29.156794" elapsed="0.618840"/>
+<arg>${text}</arg>
+<status status="PASS" start="2024-11-26T12:54:59.055961" elapsed="0.016993"/>
 </kw>
-<arg>${url}</arg>
-<status status="PASS" start="2024-11-25T19:29:29.156579" elapsed="0.619170"/>
-</kw>
-<arg>${page_header}</arg>
-<status status="PASS" start="2024-11-25T19:29:29.156197" elapsed="0.619606"/>
-</kw>
-<kw name="Validate Load Time" owner="Tableau">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-25T19:29:29.776612" level="INFO">${start_time} = 1732534169.776564</msg>
-<var>${start_time}</var>
-<arg>time.time()</arg>
-<arg>modules=time</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-25T19:29:29.776329" elapsed="0.000308"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-25T19:29:29.776763" elapsed="0.015203"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-25T19:29:29.792382" level="INFO">${end_time} = 1732534169.7923331</msg>
-<var>${end_time}</var>
-<arg>time.time()</arg>
-<arg>modules=time</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-25T19:29:29.792146" elapsed="0.000257"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-25T19:29:29.792745" level="INFO">${load_time} = 0.015769243240356445</msg>
-<var>${load_time}</var>
-<arg>${end_time} - ${start_time}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-25T19:29:29.792592" elapsed="0.000169"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-11-25T19:29:29.792945" level="INFO">Load time: 0.015769243240356445 seconds</msg>
-<arg>Load time: ${load_time} seconds</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-11-25T19:29:29.792854" elapsed="0.000116"/>
-</kw>
-<return>
-<value>${load_time}</value>
-<status status="PASS" start="2024-11-25T19:29:29.793009" elapsed="0.000065"/>
-</return>
-<msg time="2024-11-25T19:29:29.793168" level="INFO">${result} = 0.015769243240356445</msg>
-<var>${result}</var>
-<arg>${element}</arg>
-<status status="PASS" start="2024-11-25T19:29:29.776040" elapsed="0.017143"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${load_results}</arg>
-<arg>${result}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-11-25T19:29:29.793269" elapsed="0.000097"/>
-</kw>
-<var name="${counter}">0</var>
-<status status="PASS" start="2024-11-25T19:29:29.156072" elapsed="0.637322"/>
-</iter>
-<iter>
-<kw name="I navigate to" owner="KadenaApp">
-<kw name="Navigate to page" owner="Home">
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-25T19:29:29.793949" level="INFO">Opening url 'https://kadena.test.tableau.launcher.amihan.net/#forecasting_dashboard'</msg>
-<arg>${url}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-25T19:29:29.793881" elapsed="0.002825"/>
-</kw>
-<arg>${url}</arg>
-<status status="PASS" start="2024-11-25T19:29:29.793740" elapsed="0.003024"/>
-</kw>
-<arg>${page_header}</arg>
-<status status="PASS" start="2024-11-25T19:29:29.793558" elapsed="0.003238"/>
-</kw>
-<kw name="Validate Load Time" owner="Tableau">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-25T19:29:29.797223" level="INFO">${start_time} = 1732534169.7971961</msg>
-<var>${start_time}</var>
-<arg>time.time()</arg>
-<arg>modules=time</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-25T19:29:29.797088" elapsed="0.000149"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-25T19:29:29.797318" elapsed="0.008922"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-25T19:29:29.806551" level="INFO">${end_time} = 1732534169.8065128</msg>
-<var>${end_time}</var>
-<arg>time.time()</arg>
-<arg>modules=time</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-25T19:29:29.806377" elapsed="0.000191"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-25T19:29:29.806762" level="INFO">${load_time} = 0.009316682815551758</msg>
-<var>${load_time}</var>
-<arg>${end_time} - ${start_time}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-25T19:29:29.806643" elapsed="0.000132"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-11-25T19:29:29.806899" level="INFO">Load time: 0.009316682815551758 seconds</msg>
-<arg>Load time: ${load_time} seconds</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-11-25T19:29:29.806840" elapsed="0.000080"/>
-</kw>
-<return>
-<value>${load_time}</value>
-<status status="PASS" start="2024-11-25T19:29:29.806950" elapsed="0.000031"/>
-</return>
-<msg time="2024-11-25T19:29:29.807052" level="INFO">${result} = 0.009316682815551758</msg>
-<var>${result}</var>
-<arg>${element}</arg>
-<status status="PASS" start="2024-11-25T19:29:29.796922" elapsed="0.010141"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${load_results}</arg>
-<arg>${result}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-11-25T19:29:29.807134" elapsed="0.000070"/>
-</kw>
-<var name="${counter}">1</var>
-<status status="PASS" start="2024-11-25T19:29:29.793476" elapsed="0.013752"/>
-</iter>
-<iter>
-<kw name="I navigate to" owner="KadenaApp">
-<kw name="Navigate to page" owner="Home">
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-25T19:29:29.807686" level="INFO">Opening url 'https://kadena.test.tableau.launcher.amihan.net/#forecasting_dashboard'</msg>
-<arg>${url}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-25T19:29:29.807633" elapsed="0.002038"/>
-</kw>
-<arg>${url}</arg>
-<status status="PASS" start="2024-11-25T19:29:29.807509" elapsed="0.002204"/>
-</kw>
-<arg>${page_header}</arg>
-<status status="PASS" start="2024-11-25T19:29:29.807359" elapsed="0.002379"/>
-</kw>
-<kw name="Validate Load Time" owner="Tableau">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-25T19:29:29.810074" level="INFO">${start_time} = 1732534169.810048</msg>
-<var>${start_time}</var>
-<arg>time.time()</arg>
-<arg>modules=time</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-25T19:29:29.809969" elapsed="0.000118"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<msg time="2024-11-25T19:29:29.926330" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
-<arg>${element}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-25T19:29:29.810157" elapsed="0.328825"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-25T19:29:30.139335" level="INFO">${end_time} = 1732534170.1392992</msg>
-<var>${end_time}</var>
-<arg>time.time()</arg>
-<arg>modules=time</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-25T19:29:30.139173" elapsed="0.000177"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-25T19:29:30.139531" level="INFO">${load_time} = 0.3292510509490967</msg>
-<var>${load_time}</var>
-<arg>${end_time} - ${start_time}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-25T19:29:30.139419" elapsed="0.000124"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-11-25T19:29:30.139663" level="INFO">Load time: 0.3292510509490967 seconds</msg>
-<arg>Load time: ${load_time} seconds</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-11-25T19:29:30.139605" elapsed="0.000077"/>
-</kw>
-<return>
-<value>${load_time}</value>
-<status status="PASS" start="2024-11-25T19:29:30.139709" elapsed="0.000026"/>
-</return>
-<msg time="2024-11-25T19:29:30.139798" level="INFO">${result} = 0.3292510509490967</msg>
-<var>${result}</var>
-<arg>${element}</arg>
-<status status="PASS" start="2024-11-25T19:29:29.809835" elapsed="0.329975"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${load_results}</arg>
-<arg>${result}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-11-25T19:29:30.139873" elapsed="0.000064"/>
-</kw>
-<var name="${counter}">2</var>
-<status status="PASS" start="2024-11-25T19:29:29.807290" elapsed="0.332667"/>
-</iter>
-<iter>
-<kw name="I navigate to" owner="KadenaApp">
-<kw name="Navigate to page" owner="Home">
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-25T19:29:30.140399" level="INFO">Opening url 'https://kadena.test.tableau.launcher.amihan.net/#forecasting_dashboard'</msg>
-<arg>${url}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-25T19:29:30.140347" elapsed="0.002198"/>
-</kw>
-<arg>${url}</arg>
-<status status="PASS" start="2024-11-25T19:29:30.140226" elapsed="0.002363"/>
-</kw>
-<arg>${page_header}</arg>
-<status status="PASS" start="2024-11-25T19:29:30.140079" elapsed="0.002594"/>
-</kw>
-<kw name="Validate Load Time" owner="Tableau">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-25T19:29:30.143016" level="INFO">${start_time} = 1732534170.142991</msg>
-<var>${start_time}</var>
-<arg>time.time()</arg>
-<arg>modules=time</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-25T19:29:30.142910" elapsed="0.000119"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-25T19:29:30.143096" elapsed="0.006362"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-25T19:29:30.149718" level="INFO">${end_time} = 1732534170.149687</msg>
-<var>${end_time}</var>
-<arg>time.time()</arg>
-<arg>modules=time</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-25T19:29:30.149572" elapsed="0.000161"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-25T19:29:30.149899" level="INFO">${load_time} = 0.006695985794067383</msg>
-<var>${load_time}</var>
-<arg>${end_time} - ${start_time}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-25T19:29:30.149798" elapsed="0.000112"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-11-25T19:29:30.150022" level="INFO">Load time: 0.006695985794067383 seconds</msg>
-<arg>Load time: ${load_time} seconds</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-11-25T19:29:30.149969" elapsed="0.000071"/>
-</kw>
-<return>
-<value>${load_time}</value>
-<status status="PASS" start="2024-11-25T19:29:30.150064" elapsed="0.000022"/>
-</return>
-<msg time="2024-11-25T19:29:30.150142" level="INFO">${result} = 0.006695985794067383</msg>
-<var>${result}</var>
-<arg>${element}</arg>
-<status status="PASS" start="2024-11-25T19:29:30.142775" elapsed="0.007376"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${load_results}</arg>
-<arg>${result}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-11-25T19:29:30.150206" elapsed="0.000060"/>
-</kw>
-<var name="${counter}">3</var>
-<status status="PASS" start="2024-11-25T19:29:30.140016" elapsed="0.010269"/>
-</iter>
-<iter>
-<kw name="I navigate to" owner="KadenaApp">
-<kw name="Navigate to page" owner="Home">
-<kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-11-25T19:29:30.150665" level="INFO">Opening url 'https://kadena.test.tableau.launcher.amihan.net/#forecasting_dashboard'</msg>
-<arg>${url}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-11-25T19:29:30.150621" elapsed="0.002725"/>
-</kw>
-<arg>${url}</arg>
-<status status="PASS" start="2024-11-25T19:29:30.150519" elapsed="0.002894"/>
-</kw>
-<arg>${page_header}</arg>
-<status status="PASS" start="2024-11-25T19:29:30.150392" elapsed="0.003050"/>
-</kw>
-<kw name="Validate Load Time" owner="Tableau">
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-25T19:29:30.153865" level="INFO">${start_time} = 1732534170.153837</msg>
-<var>${start_time}</var>
-<arg>time.time()</arg>
-<arg>modules=time</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-25T19:29:30.153736" elapsed="0.000143"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${element}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-11-25T19:29:30.153948" elapsed="0.006304"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-25T19:29:30.160489" level="INFO">${end_time} = 1732534170.160458</msg>
-<var>${end_time}</var>
-<arg>time.time()</arg>
-<arg>modules=time</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-25T19:29:30.160355" elapsed="0.000148"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-25T19:29:30.160667" level="INFO">${load_time} = 0.006621122360229492</msg>
-<var>${load_time}</var>
-<arg>${end_time} - ${start_time}</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-25T19:29:30.160570" elapsed="0.000108"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-11-25T19:29:30.160792" level="INFO">Load time: 0.006621122360229492 seconds</msg>
-<arg>Load time: ${load_time} seconds</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-11-25T19:29:30.160736" elapsed="0.000073"/>
-</kw>
-<return>
-<value>${load_time}</value>
-<status status="PASS" start="2024-11-25T19:29:30.160835" elapsed="0.000023"/>
-</return>
-<msg time="2024-11-25T19:29:30.160916" level="INFO">${result} = 0.006621122360229492</msg>
-<var>${result}</var>
-<arg>${element}</arg>
-<status status="PASS" start="2024-11-25T19:29:30.153563" elapsed="0.007362"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${load_results}</arg>
-<arg>${result}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-11-25T19:29:30.160982" elapsed="0.000061"/>
-</kw>
-<var name="${counter}">4</var>
-<status status="PASS" start="2024-11-25T19:29:30.150337" elapsed="0.010726"/>
-</iter>
-<var>${counter}</var>
-<value>0</value>
-<value>${iteration}</value>
-<status status="PASS" start="2024-11-25T19:29:29.155819" elapsed="1.005267"/>
-</for>
-<kw name="Write Load Times to JSON" owner="CreateJSON">
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-11-25T19:29:30.161478" level="INFO">${data} = {'Load time': [0.015769243240356445, 0.009316682815551758, 0.3292510509490967, 0.006695985794067383, 0.006621122360229492]}</msg>
-<var>${data}</var>
-<arg>Load time=${load_results}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-11-25T19:29:30.161324" elapsed="0.000165"/>
-</kw>
-<kw name="Convert Json To String" owner="JSONLibrary">
-<msg time="2024-11-25T19:29:30.161615" level="INFO">${json_string} = {"Load time": [0.015769243240356445, 0.009316682815551758, 0.3292510509490967, 0.006695985794067383, 0.006621122360229492]}</msg>
-<var>${json_string}</var>
-<arg>${data}</arg>
-<doc>Convert JSON object to string</doc>
-<status status="PASS" start="2024-11-25T19:29:30.161546" elapsed="0.000080"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-11-25T19:29:30.161729" level="INFO">${output_file} = load_times.json</msg>
-<var>${output_file}</var>
-<arg>load_times.json</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-11-25T19:29:30.161686" elapsed="0.000052"/>
-</kw>
-<kw name="Create File" owner="OperatingSystem">
-<msg time="2024-11-25T19:29:30.163321" level="INFO" html="true">Created file '&lt;a href="file:///Users/redenlongcop/Documents/KADENA_AUTOMATION/load_times.json"&gt;/Users/redenlongcop/Documents/KADENA_AUTOMATION/load_times.json&lt;/a&gt;'.</msg>
-<arg>${output_file}</arg>
-<arg>${json_string}</arg>
-<doc>Creates a file with the given content and encoding.</doc>
-<status status="PASS" start="2024-11-25T19:29:30.161786" elapsed="0.001563"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-11-25T19:29:30.163456" level="INFO">Load times written to load_times.json</msg>
-<arg>Load times written to ${output_file}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-11-25T19:29:30.163404" elapsed="0.000068"/>
-</kw>
-<arg>${load_results}</arg>
-<status status="PASS" start="2024-11-25T19:29:30.161191" elapsed="0.002306"/>
-</kw>
-<arg>${FORECASTPAGE_URL}</arg>
-<arg>5</arg>
-<arg>${tableau_element}</arg>
-<status status="PASS" start="2024-11-25T19:29:29.155220" elapsed="1.008299"/>
+<arg>${INVALID_ERROR_MESSAGE}</arg>
+<status status="PASS" start="2024-11-26T12:54:59.055361" elapsed="0.017655"/>
 </kw>
 <kw name="Close Test Browser" owner="Common" type="TEARDOWN">
 <kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-11-25T19:29:30.315175" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-11-26T12:54:59.265673" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-11-25T19:29:30.163925" elapsed="0.151333"/>
+<status status="PASS" start="2024-11-26T12:54:59.074252" elapsed="0.191493"/>
 </kw>
 <arg>10</arg>
 <arg>1s</arg>
 <arg>Capture Page Screenshot</arg>
 <doc>Runs the specified keyword and retries if it fails.</doc>
-<status status="PASS" start="2024-11-25T19:29:30.163796" elapsed="0.151509"/>
+<status status="PASS" start="2024-11-26T12:54:59.073810" elapsed="0.191987"/>
 </kw>
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2024-11-25T19:29:30.315397" elapsed="0.073940"/>
+<status status="PASS" start="2024-11-26T12:54:59.265913" elapsed="0.073474"/>
 </kw>
-<status status="PASS" start="2024-11-25T19:29:30.163680" elapsed="0.225742"/>
+<status status="PASS" start="2024-11-26T12:54:59.073418" elapsed="0.266059"/>
 </kw>
-<doc>Validate immediate forecasting tableau load time</doc>
-<tag>Forecasting</tag>
-<tag>Tableau</tag>
-<status status="PASS" start="2024-11-25T19:29:25.283339" elapsed="5.106171"/>
+<doc>Login with invalid credentials</doc>
+<tag>M0MAIN-SIT-001</tag>
+<tag>MAIN</tag>
+<status status="PASS" start="2024-11-26T12:54:53.857000" elapsed="5.482677"/>
+</test>
+<test id="s1-t2" name="Test Case 2: Login with invalid email" line="25">
+<kw name="Open Test Browser" owner="Common" type="SETUP">
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2024-11-26T12:54:59.341295" elapsed="0.000175"/>
+</kw>
+<kw name="Empty Directory" owner="OperatingSystem">
+<msg time="2024-11-26T12:54:59.341711" level="INFO" html="true">Listing contents of directory '&lt;a href="file:///Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/screenshots"&gt;/Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/screenshots&lt;/a&gt;'.</msg>
+<msg time="2024-11-26T12:54:59.341956" level="INFO" html="true">Emptied directory '&lt;a href="file:///Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/screenshots"&gt;/Users/redenlongcop/Documents/KADENA_AUTOMATION/testsuites/screenshots&lt;/a&gt;'.</msg>
+<arg>testsuites/screenshots</arg>
+<doc>Deletes all the content from the given directory.</doc>
+<status status="PASS" start="2024-11-26T12:54:59.341554" elapsed="0.000450"/>
+</kw>
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<arg>testsuites/screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2024-11-26T12:54:59.342103" elapsed="0.000129"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-11-26T12:54:59.342576" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x10a98d090&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].${name}Options()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-11-26T12:54:59.342313" elapsed="0.000277"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--incognito</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-11-26T12:54:59.342716" elapsed="0.000089"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-application-cache</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-11-26T12:54:59.342883" elapsed="0.000061"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-11-26T12:54:59.343110" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${name}</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-11-26T12:54:59.343011" elapsed="0.730438"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-26T12:55:00.073759" elapsed="0.374367"/>
+</kw>
+<arg>${BROWSER_NAME}</arg>
+<status status="PASS" start="2024-11-26T12:54:59.341076" elapsed="1.107172"/>
+</kw>
+<kw name="GIVEN I go to Login page" owner="KadenaApp">
+<kw name="Navigate to login page" owner="Login">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-26T12:55:00.449359" level="INFO">Opening url 'https://kadena.test.amihan.net/'</msg>
+<arg>${LOGINPAGE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-26T12:55:00.449252" elapsed="1.127345"/>
+</kw>
+<status status="PASS" start="2024-11-26T12:55:00.449075" elapsed="1.127653"/>
+</kw>
+<kw name="Verify Page Loaded" owner="Login">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${LOGIN_HEADER}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2024-11-26T12:55:01.577255" elapsed="0.012791"/>
+</kw>
+<status status="PASS" start="2024-11-26T12:55:01.576954" elapsed="0.013201"/>
+</kw>
+<status status="PASS" start="2024-11-26T12:55:00.448652" elapsed="1.141551"/>
+</kw>
+<kw name="AND I enter" owner="KadenaApp">
+<kw name="Enter Credential" owner="Login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-26T12:55:01.591294" level="INFO">Typing text 'invalid@email.com' into text field 'id=username'.</msg>
+<arg>${locator}</arg>
+<arg>${credential}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T12:55:01.591014" elapsed="0.108444"/>
+</kw>
+<arg>${credential}</arg>
+<arg>${locator}</arg>
+<status status="PASS" start="2024-11-26T12:55:01.590773" elapsed="0.108793"/>
+</kw>
+<arg>${INVALID_EMAIL}</arg>
+<arg>${EMAIL}</arg>
+<status status="PASS" start="2024-11-26T12:55:01.590440" elapsed="0.109184"/>
+</kw>
+<kw name="AND I enter" owner="KadenaApp">
+<kw name="Enter Credential" owner="Login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-26T12:55:01.700309" level="INFO">Typing text 'password' into text field 'id=password'.</msg>
+<arg>${locator}</arg>
+<arg>${credential}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T12:55:01.700192" elapsed="0.036110"/>
+</kw>
+<arg>${credential}</arg>
+<arg>${locator}</arg>
+<status status="PASS" start="2024-11-26T12:55:01.700029" elapsed="0.036340"/>
+</kw>
+<arg>${VALID_PASSWORD}</arg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2024-11-26T12:55:01.699798" elapsed="0.036601"/>
+</kw>
+<kw name="WHEN I click the button" owner="KadenaApp">
+<kw name="Click submit button" owner="Login">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-26T12:55:01.736940" level="INFO">Clicking button 'name=login'.</msg>
+<arg>${locator}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T12:55:01.736852" elapsed="1.140980"/>
+</kw>
+<arg>${locator}</arg>
+<status status="PASS" start="2024-11-26T12:55:01.736730" elapsed="1.141405"/>
+</kw>
+<arg>${LOGIN_BUTTON}</arg>
+<status status="PASS" start="2024-11-26T12:55:01.736555" elapsed="1.141707"/>
+</kw>
+<kw name="THEN A message should display" owner="KadenaApp">
+<kw name="Validate Error Message" owner="Login">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-11-26T12:55:02.898500" level="INFO">Current page contains text 'Invalid username or password.'.</msg>
+<arg>${text}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-11-26T12:55:02.879812" elapsed="0.018816"/>
+</kw>
+<arg>${text}</arg>
+<status status="PASS" start="2024-11-26T12:55:02.879419" elapsed="0.019323"/>
+</kw>
+<arg>${INVALID_ERROR_MESSAGE}</arg>
+<status status="PASS" start="2024-11-26T12:55:02.878807" elapsed="0.020260"/>
+</kw>
+<kw name="Close Test Browser" owner="Common" type="TEARDOWN">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-11-26T12:55:03.094118" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../testsuites/screenshots/selenium-screenshot-1.png"&gt;&lt;img src="../testsuites/screenshots/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-11-26T12:55:02.901082" elapsed="0.193099"/>
+</kw>
+<arg>10</arg>
+<arg>1s</arg>
+<arg>Capture Page Screenshot</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-11-26T12:55:02.900723" elapsed="0.193510"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-11-26T12:55:03.094336" elapsed="0.073827"/>
+</kw>
+<status status="PASS" start="2024-11-26T12:55:02.900270" elapsed="0.268016"/>
+</kw>
+<doc>Login with invalid credentials</doc>
+<tag>M0MAIN-SIT-001</tag>
+<tag>MAIN</tag>
+<status status="PASS" start="2024-11-26T12:54:59.340569" elapsed="3.827801"/>
 </test>
 <doc>This is the main test suite of the Kadena project</doc>
-<status status="PASS" start="2024-11-25T19:29:25.134712" elapsed="5.255122"/>
+<status status="PASS" start="2024-11-26T12:54:09.209535" elapsed="53.959256"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Forecasting</stat>
-<stat pass="1" fail="0" skip="0">Tableau</stat>
+<stat pass="2" fail="0" skip="0">M0MAIN-SIT-001</stat>
+<stat pass="2" fail="0" skip="0">MAIN</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Kadena LoadTime">Kadena LoadTime</stat>
+<stat pass="2" fail="0" skip="0" id="s1" name="Kadena Tests">Kadena Tests</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-11-25T19:29:25.280490" level="WARN">Imported resource file '/Users/redenlongcop/Documents/KADENA_AUTOMATION/resources/PO/Ordering.robot' is empty.</msg>
+<msg time="2024-11-26T12:54:31.544018" level="ERROR">Error in file '/Users/redenlongcop/Documents/KADENA_AUTOMATION/resources/PO/Tableau.robot' on line 5: Initializing library 'SikuliLibrary' with no arguments failed: Start sikuli java process failed!
+Traceback (most recent call last):
+  File "/Users/redenlongcop/Documents/KADENA_AUTOMATION/.venv/lib/python3.13/site-packages/SikuliLibrary/sikuli.py", line 54, in __init__
+    self.start_sikuli_process(port)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/redenlongcop/Documents/KADENA_AUTOMATION/.venv/lib/python3.13/site-packages/SikuliLibrary/sikuli.py", line 92, in start_sikuli_process
+    raise RuntimeError('Start sikuli java process failed!')
+RuntimeError: Start sikuli java process failed!</msg>
+<msg time="2024-11-26T12:54:31.610602" level="WARN">Imported resource file '/Users/redenlongcop/Documents/KADENA_AUTOMATION/resources/PO/Ordering.robot' is empty.</msg>
+<msg time="2024-11-26T12:54:31.610747" level="ERROR">Error in file '/Users/redenlongcop/Documents/KADENA_AUTOMATION/resources/KadenaApp.robot' on line 11: Library '../venv/lib/python3.13/site-packages/robot/libraries/Collections.py' does not exist.</msg>
+<msg time="2024-11-26T12:54:53.855112" level="ERROR">Error in file '/Users/redenlongcop/Documents/KADENA_AUTOMATION/resources/KadenaApp.robot' on line 13: Initializing library 'SikuliLibrary' with no arguments failed: Start sikuli java process failed!
+Traceback (most recent call last):
+  File "/Users/redenlongcop/Documents/KADENA_AUTOMATION/.venv/lib/python3.13/site-packages/SikuliLibrary/sikuli.py", line 54, in __init__
+    self.start_sikuli_process(port)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Users/redenlongcop/Documents/KADENA_AUTOMATION/.venv/lib/python3.13/site-packages/SikuliLibrary/sikuli.py", line 92, in start_sikuli_process
+    raise RuntimeError('Start sikuli java process failed!')
+RuntimeError: Start sikuli java process failed!</msg>
 </errors>
 </robot>
